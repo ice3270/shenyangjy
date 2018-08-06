@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="61cd9f89-7e44-42be-b66f-5c4089ab060d" name="Windows Apache" url="http://localhost/">
+        <fileTransfer port="0" mountedRoot="D:\wamp64\www\shenyangjy" accessType="MOUNT" />
+      </webServer>
+      <webServer id="daddf55c-df91-4782-903e-05a572ec498c" name="MacOS Apache" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="D:\wamp64\www\shenyangjy" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

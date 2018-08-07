@@ -107,4 +107,37 @@ class editIndexController extends Controller {
 
         $this->success("更新成功", U("/Admin/"), 3);
     }
+
+    public function workUpdate(){
+        //文件上传初始化
+        $upload = new \Think\Upload();
+        $upload->maxSize = 4096000; //限制文件大小
+        $upload->exts = array('png'); //上传文件类型
+        $upload->savePath = './Images/Company_show/';    //文件上传目录
+        $upload->replace = true; //如果同名则覆盖
+        $upload->autoSub = false; //不适用子目录名保存
+
+        //标题和描述处理部分
+        $banner = M("company_show_index");
+        foreach($_POST as $k => $v){
+            foreach($v as $kk => $vv){
+                $data[$kk][$k] = $vv;
+            }
+        }
+
+        foreach ($data as $k => $v){
+            $kk = $k + 1;
+            $upload->saveName = "work".$kk;
+            // echo "bannerImg{$k}";die;
+            if($_FILES['sloganImg'.$k]['size']){//判断文件大小是否大于0，如果大于0说明有文件要上传
+                $info = $upload->uploadOne($_FILES['sloganImg'.$k]);    //上传单个文件
+                if(!$info){ //如果不成功则输出错误信息
+                    $this->error($upload->getError());
+                }
+            }
+            $banner->where("id=".$kk)->save($v);    //更新数据库中标题、描述
+        }
+
+        $this->success("更新成功", U("/Admin/"), 3);
+    }
 }

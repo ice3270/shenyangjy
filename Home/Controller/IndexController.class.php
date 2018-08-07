@@ -24,6 +24,11 @@ class IndexController extends Controller {
         $slogan_info = $slogan->select();
         $this->assign("slogan_info", $slogan_info);
 
+        //公司展示板块
+        $company_show = M("company_show_index");
+        $company_show_info = $company_show->select();
+        $this->assign("company_show_info", $company_show_info);
+
         $this->display();
     }
 }

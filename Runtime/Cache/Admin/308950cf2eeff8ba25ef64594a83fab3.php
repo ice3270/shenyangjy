@@ -130,6 +130,7 @@
             <h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disCompanyBtn">企业展示区</h2>
             <h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disServeBtn">服务范围区</h2>
             <h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disSloganBtn">服务范围区</h2>
+            <h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disWorkBtn">工作展示区</h2>
             <!-- END 导航按钮区 -->
 
             <!-- banner 展示图部分 -->
@@ -245,11 +246,11 @@
                             </tr>
                             <tr>
                                 <td width="200px">服务宗旨按钮列表(<?php echo ($k + 1); ?>) - 标题：</td>
-                                <td><input name="slogan_btn[]" class="form-control" value=<?php echo ($v["slogan_btn"]); ?>></td>
+                                <td><input name="slogan_btn[]" class="form-control" value="<?php echo ($v["slogan_btn"]); ?>"></td>
                             </tr>
                             <tr>
                                 <td width="200px">服务宗旨(<?php echo ($k + 1); ?>) - 标题：</td>
-                                <td><input name="slogan_header[]" class="form-control" value=<?php echo ($v["slogan_header"]); ?>></td>
+                                <td><input name="slogan_header[]" class="form-control" value="<?php echo ($v["slogan_header"]); ?>"></td>
                             </tr>
                             <tr>
                                 <td>服务宗旨(<?php echo ($k + 1); ?>) - 描述：</td>
@@ -261,8 +262,38 @@
                     </table>
                 </form>
             </div>
-            <!-- END 服务终止 -->
+            <!-- END 服务宗旨 -->
 
+            <!-- 公司展示 -->
+            <div class="form-group" style="display: none;" id='editWork'>
+                <form action="Admin/editIndex/workUpdate" method="post" enctype="multipart/form-data">
+                    <table class="table table-hover" style="width: 80%;margin-left: 40px;">
+                        <?php if(is_array($company_show_info)): foreach($company_show_info as $k=>$v): ?><tr>
+                                <td>原图预览</td>
+                                <td>
+                                    <img src="../Uploads/Images/Company_show/work<?php echo ($k+1); ?>.png?ran=<?php echo ($ran); ?>" height="100px">
+                                    <p style="margin-top: 5px;">温馨提示：为保证上传图片与网站布局的美观，上传图片最好为：800 * 500</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>上传更新 - 公司展示图(<?php echo ($k + 1); ?>)：</td>
+                                <td><input type="file" class="form-control" name="workImg<?php echo ($k); ?>"></td>
+                            </tr>
+                            <tr>
+                                <td width="200px">公司展示图(<?php echo ($k + 1); ?>) - 标题：</td>
+                                <td><input name="company_show_title[]" class="form-control" value="<?php echo ($v["company_show_title"]); ?>"></td>
+                            </tr>
+                            <tr>
+                                <td>公司展示图(<?php echo ($k + 1); ?>) - 描述：</td>
+                                <td><input name="company_show_text[]" class="form-control" value="<?php echo ($v["company_show_text"]); ?>"></td>
+                            </tr><?php endforeach; endif; ?>
+                        <tr align="center">
+                            <td colspan="2"><input type="submit" value="更新公司展示板块"> &nbsp; | &nbsp; <input type="reset"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <!-- END 公司展示 -->
 		</div>
 
 		<div class="clearfix"></div>
@@ -297,6 +328,10 @@
             $("#disSloganBtn").click(function(event) {
                 /* Act on the event */
                 btnDown($("#editSlogan"), $(this));
+			});
+            $("#disWorkBtn").click(function(event) {
+                /* Act on the event */
+                btnDown($("#editWork"), $(this));
 			});
             function btnDown(div,btn){
                 $("div[class='form-group']").hide()

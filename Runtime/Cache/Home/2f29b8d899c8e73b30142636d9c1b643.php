@@ -141,7 +141,7 @@
         </section>
         <!-- END Banner图部分 修改后 -->
 
-        <!-- MAIN FEATURES -->
+        <!-- 四个引导图标 -->
         <div class="main-features ">
             <div class="container">
                 <div class="row">
@@ -156,7 +156,8 @@
                 </div>
             </div>
         </div>
-        <!-- END MAIN FEATURES -->
+        <!-- END 四个引导图标 -->
+
         <!-- 企业简介板块 -->
         <section>
             <div class="container">
@@ -223,45 +224,19 @@
                 <div class="clearfix"></div>
                 <div class="portfolio-static">
                     <div class="row">
-                        <div class="col-md-4">
+                        <?php if(is_array($company_show_info)): foreach($company_show_info as $k=>$v): ?><div class="col-md-4">
                             <div class="portfolio-item">
                                 <div class="overlay"></div>
                                 <div class="info">
-                                    <h4 class="title">Raining</h4>
-                                    <p class="brief-description">Photography</p>
-                                    <a href="#" class="btn">read more</a>
+                                    <h4 class="title"><?php echo ($v["company_show_title"]); ?></h4>
+                                    <p class="brief-description"><?php echo ($v["company_show_text"]); ?></p>
+                                    <a href="#" class="btn">了解更多</a>
                                 </div>
                                 <div class="media-wrapper">
-                                    <img src="Home/assets/img/portfolio/800x500/work5.png" alt="Item Thumbnail" />
+                                    <img src="Uploads/Images/Company_show/work<?php echo ($k + 1); ?>.png" alt="Item Thumbnail" />
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <div class="overlay"></div>
-                                <div class="info">
-                                    <h4 class="title">Perfect Edge</h4>
-                                    <p class="brief-description">Product Design</p>
-                                    <a href="#" class="btn">read more</a>
-                                </div>
-                                <div class="media-wrapper">
-                                    <img src="Home/assets/img/portfolio/800x500/work6.png" alt="Item Thumbnail" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <div class="overlay"></div>
-                                <div class="info">
-                                    <h4 class="title">Sunny Day</h4>
-                                    <p class="brief-description">Photography</p>
-                                    <a href="#" class="btn">read more</a>
-                                </div>
-                                <div class="media-wrapper">
-                                    <img src="Home/assets/img/portfolio/800x500/work7.png" alt="Item Thumbnail" />
-                                </div>
-                            </div>
-                        </div>
+                        </div><?php endforeach; endif; ?>
                     </div>
                 </div>
             </div>

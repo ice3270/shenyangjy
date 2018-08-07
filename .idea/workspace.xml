@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4b3c0ad-4452-4c08-aa11-78c1abd1bbfc" name="默认" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/Controller/IndexController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Controller/IndexController.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/Controller/editIndexController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Controller/EditIndexController.class.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/View/Index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/View/Index/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Home/Controller/IndexController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Home/Controller/IndexController.class.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Home/View/Index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Home/View/Index/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/308950cf2eeff8ba25ef64594a83fab3.php" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime/Cache/Admin/308950cf2eeff8ba25ef64594a83fab3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/41009cd34ac1d221b1ecbd96ea51ed7a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/897a10e832db3507afb65736d9845dbb.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/bc0fd7fdb437c9df6f218f5ef99037aa.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runtime/Cache/Home/2f29b8d899c8e73b30142636d9c1b643.php" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime/Cache/Home/2f29b8d899c8e73b30142636d9c1b643.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runtime/Cache/Home/520767d749579b6d6ab99fbfdf924082.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runtime/Cache/Home/b436fb5844ed0ac4cb5feb414a96379e.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runtime/Logs/Admin/18_08_01.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runtime/Logs/Admin/18_08_03.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runtime/Logs/Common/18_08_06.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runtime/Logs/Home/18_08_03.log" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,6 +110,36 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1682446773">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="32" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="32" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="php" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PHP" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -140,8 +155,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Home/View/Index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2964">
-              <caret line="233" column="46" selection-start-line="233" selection-start-column="46" selection-end-line="233" selection-end-column="46" />
+            <state relative-caret-position="1064">
+              <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="64" />
               <folding>
                 <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -162,11 +177,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Admin/View/Index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="156" column="60" lean-forward="true" selection-start-line="156" selection-start-column="60" selection-end-line="156" selection-end-column="60" />
+            <state relative-caret-position="1101">
+              <caret line="294" column="6" selection-start-line="294" selection-start-column="6" selection-end-line="294" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#h2#4;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#0;n#form#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -177,11 +192,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Common/Conf/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Admin/Controller/IndexController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="30" column="40" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="40" />
+            <state relative-caret-position="152">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -203,17 +227,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Common/Conf/config.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Home/View/index.html" />
         <option value="$APPLICATION_CONFIG_DIR$/phpstorm.vmoptions" />
         <option value="$PROJECT_DIR$/Admin/Controller/editIndexController.class.php" />
         <option value="$PROJECT_DIR$/Admin/View/Index/icons.html" />
         <option value="$PROJECT_DIR$/Home/Controller/IndexController.class.php" />
-        <option value="$PROJECT_DIR$/Home/View/Index/index.html" />
         <option value="$PROJECT_DIR$/Admin/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/Admin/Controller/EditIndexController.class.php" />
+        <option value="$PROJECT_DIR$/Home/View/Index/index.html" />
         <option value="$PROJECT_DIR$/Admin/View/Index/index.html" />
+        <option value="$PROJECT_DIR$/Common/Conf/config.php" />
       </list>
     </option>
   </component>
@@ -223,12 +247,12 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP - 5.6.31" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="39" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 5.6" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="63" />
+    <option name="y" value="23" />
+    <option name="width" value="1617" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -246,26 +270,13 @@
             <path>
               <item name="shenyangjy" type="b2602c69:ProjectViewProjectNode" />
               <item name="shenyangjy" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="Common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shenyangjy" type="b2602c69:ProjectViewProjectNode" />
               <item name="shenyangjy" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shenyangjy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shenyangjy" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shenyangjy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shenyangjy" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="Index" type="462c0819:PsiDirectoryNode" />
+              <item name="Common" type="462c0819:PsiDirectoryNode" />
+              <item name="Conf" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -280,7 +291,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -339,6 +350,8 @@
       <workItem from="1533627799899" duration="1094000" />
       <workItem from="1533629012126" duration="1176000" />
       <workItem from="1533630263983" duration="403000" />
+      <workItem from="1533639949100" duration="2503000" />
+      <workItem from="1533651743358" duration="774000" />
     </task>
     <servers />
   </component>
@@ -370,19 +383,23 @@
     <history-entry file="shenyangjy - 2018.08.06 at 09h 38m 55s.xml">
       <configuration name="shenyangjy" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="shenyangjy - 2018.08.07 at 19h 07m 29s.xml">
+      <configuration name="shenyangjy" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19307000" />
+    <option name="totallyTimeSpent" value="22584000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1050" extended-state="6" />
+    <frame x="63" y="23" width="1617" height="1027" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17643923" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18031746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1904762" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49968255" weight="0.19037433" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -391,7 +408,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.11790393" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32969433" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50031745" side_tool="true" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.14628822" />
       <window_info anchor="bottom" id="调试" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -441,13 +458,6 @@
     <entry file="file://$PROJECT_DIR$/tests/StackTest.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Common/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Admin/Conf/config.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -460,13 +470,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Home/View/Index/.idea/misc.xml" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/phpstorm.vmoptions" />
-    <entry file="file://$PROJECT_DIR$/Runtime/Cache/Admin/897a10e832db3507afb65736d9845dbb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="152" column="60" selection-start-line="152" selection-start-column="60" selection-end-line="152" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Runtime/Cache/Admin/897a10e832db3507afb65736d9845dbb.php" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -482,10 +486,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Home/View/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2964">
-          <caret line="233" column="46" selection-start-line="233" selection-start-column="46" selection-end-line="233" selection-end-column="46" />
+        <state relative-caret-position="1064">
+          <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="64" />
           <folding>
             <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -505,8 +516,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Admin/Controller/IndexController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="40" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="40" />
+        <state relative-caret-position="152">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -517,23 +528,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Admin/View/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="156" column="60" lean-forward="true" selection-start-line="156" selection-start-column="60" selection-end-line="156" selection-end-column="60" />
+        <state relative-caret-position="1101">
+          <caret line="294" column="6" selection-start-line="294" selection-start-column="6" selection-end-line="294" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#h2#4;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#0;n#form#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#0;n#form#0;n#div#4;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
         </state>
       </provider>
     </entry>

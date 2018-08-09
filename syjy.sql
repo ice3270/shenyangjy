@@ -11,7 +11,7 @@
  Target Server Version : 50639
  File Encoding         : utf-8
 
- Date: 08/07/2018 23:18:31 PM
+ Date: 08/09/2018 17:10:21 PM
 */
 
 SET NAMES utf8;
@@ -34,6 +34,24 @@ CREATE TABLE `banner` (
 -- ----------------------------
 BEGIN;
 INSERT INTO `banner` VALUES ('1', '展示图一 测试标题1234567890-', '展示图一 测试描述 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '1533642072'), ('2', '展示图二 测试标题', '展示图二 测试描述 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '1533642072'), ('3', '展示图三 测试标题', '展示图三 测试描述 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '1533642072');
+COMMIT;
+
+-- ----------------------------
+--  Table structure for `business_index`
+-- ----------------------------
+DROP TABLE IF EXISTS `business_index`;
+CREATE TABLE `business_index` (
+  `id` tinyint(4) NOT NULL,
+  `business_header` varchar(255) NOT NULL,
+  `business_text` varchar(4096) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+--  Records of `business_index`
+-- ----------------------------
+BEGIN;
+INSERT INTO `business_index` VALUES ('1', '演示标题文字一1111', '演示正文测试文字一'), ('2', '演示正文测试文字2', '演示正文测试文字22222222222'), ('3', '演示正文测试文字三', '演示正文测试文字三3333333333'), ('4', '演示正文测试文字四', '演示正文测试文字四4444444'), ('5', '演示标题文字五', '演示正文测试文字五5555555555'), ('6', '演示正文测试文字六66666', '演示正文测试文字六');
 COMMIT;
 
 -- ----------------------------

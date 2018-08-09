@@ -7,6 +7,7 @@ class IndexController extends Controller {
         $banner = M("banner");
         $banner_info = $banner->select();
         $this->assign("banner_info", $banner_info);
+        $this->assign("ran", time());
 
         //企业简介板块
         $company = M("company_index");
@@ -28,6 +29,11 @@ class IndexController extends Controller {
         $company_show = M("company_show_index");
         $company_show_info = $company_show->select();
         $this->assign("company_show_info", $company_show_info);
+
+        //业务范围板块
+        $business = M("business_index");
+        $business_info = $business->select();
+        $this->assign("business_info", $business_info);
 
         $this->display();
     }

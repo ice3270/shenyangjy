@@ -30,6 +30,11 @@ class IndexController extends Controller {
     	$company_show_info = $company_show->select();
     	$this->assign("company_show_info", $company_show_info);
 
+        //业务范围板块
+        $business = M("business_index");
+        $business_info = $business->select();
+        $this->assign("business_info", $business_info);
+
         $this->display();
     }
 }

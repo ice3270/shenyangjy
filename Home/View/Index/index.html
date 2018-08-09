@@ -26,6 +26,11 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="Home/assets/ico/repute72x72.png">
     <link rel="apple-touch-icon-precomposed" href="Home/assets/ico/repute57x57.png">
     <link rel="shortcut icon" href="Home/assets/ico/favicon.png">
+    <style>
+        .tlength{
+            width: 220px;
+        }
+    </style>
 </head>
 
 <body>
@@ -47,34 +52,16 @@
                 <div id="main-nav" class="navbar-collapse collapse navbar-mega-menu">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown active">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">首页 <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li class="active"><a href="index.html">Home</a></li>
-                                <li><a href="index-dark-header.html">Home Dark Header</a></li>
-                            </ul>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">首页 </a>
                         </li>
                         <li class="dropdown ">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我们 <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <!--<li><a href="feature-nav-fixed-top.html">Fixed Top Menu</a></li>-->
-                                <!--<li><a href="feature-footer-light.html">Light Footer</a></li>-->
-                            </ul>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我们 </a>
                         </li>
                         <li class="dropdown ">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">服务内容 <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="page-about-us.html">About Us</a></li>
-                                <li><a href="page-contacts.html">Contact</a></li>
-                                <li><a href="page-privacy.html">Privacy Policy</a></li>
-                                <li><a href="page-terms.html">Terms</a></li>
-                            </ul>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">服务内容 </a>
                         </li>
                         <li class="dropdown ">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">合作案例 <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="portfolio-4-columns.html">Portfolio 4 Columns</a></li>
-                                <li><a href="portfolio-single.html">Portfolio Item</a></li>
-                            </ul>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">合作案例 </a>
                         </li>
                         <li class="dropdown ">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">最新动态 <i class="fa fa-angle-down"></i></a>
@@ -133,8 +120,8 @@
                             <img src="Uploads/Images/Banner/banner{$k + 1}.png?ran={$ran}" class="img-responsive" alt="Slider Image">
                             <div class="carousel-caption">
                                 <h2 class="hero-heading">{$v.banner_header}</h2>
+                                <br><br>
                                 <p class="lead">{$v.banner_text}</p>
-                                <a href="#" class="btn btn-lg hero-button">查看详情</a>
                             </div>
                         </div>
                     </foreach>
@@ -202,7 +189,7 @@
                 <div class="tab-content">
                 <foreach name="slogan_info" item="v" key="k">
                     <div class="tab-pane fade in text-center" id="tab-bottom{$k + 1}">
-                        <img src="Uploads/Images/Slogan/sloganImg{$k + 1}.png" class="img-responsive center-block margin-bottom-30px">
+                        <img src="Uploads/Images/Slogan/sloganImg{$k + 1}.png?ran={$ran}" class="img-responsive center-block margin-bottom-30px">
                         <h3 class="text-accent-color">{$v.slogan_header}</h3>
                         <p class="lead">{$v.slogan_text}</p>
                     </div>
@@ -226,7 +213,7 @@
         <section class="recent-works">
             <div class="container">
                 <h2 class="section-heading pull-left">公司展示</h2>
-                <a href="#" class="btn btn-primary pull-right">展示全部</a>
+                <a href="#" class="btn btn-primary pull-right">查看更多</a>
                 <div class="clearfix"></div>
                 <div class="portfolio-static">
                     <div class="row">
@@ -236,11 +223,11 @@
                                 <div class="overlay"></div>
                                 <div class="info">
                                     <h4 class="title">{$v.company_show_title}</h4>
+                                    <br>
                                     <p class="brief-description">{$v.company_show_text}</p>
-                                    <a href="#" class="btn">了解更多</a>
                                 </div>
                                 <div class="media-wrapper">
-                                    <img src="Uploads/Images/Company_show/work{$k + 1}.png" alt="Item Thumbnail" />
+                                    <img src="Uploads/Images/Company_show/work{$k + 1}.png?ran={$ran}" alt="Item Thumbnail" />
                                 </div>
                             </div>
                         </div>
@@ -251,72 +238,37 @@
         </section>
         <!-- END 公司展示部分 -->
 
-        <!-- LATEST NEWS -->
+        <!-- 业务范围 -->
         <section>
             <div class="container">
                 <h2 class="section-heading">业务范围</h2>
                 <div class="row">
                     <div class="col-md-4">
+                        <!--大图标大标题大内容-->
                         <div class="news-item news-featured">
-                            <a href="#"><img src="Home/assets/img/news/featured-news.png" class="img-responsive" alt="News Thumbnail"></a>
-                            <h3 class="news-title"><a href="#">In Demand: Collaboration Skill</a></h3>
-                            <p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures. Seamlessly predominate interoperable growth strategies.</p>
-                            <div class="news-meta">
-                                <span class="news-datetime">23-02-2015</span>
-                                <span class="news-comment-count pull-right"><a href="#">65 Comments</a></span>
-                            </div>
+                            <a href="#"><img src="Uploads/Images/Business/business1.png?ran={$ran}" class="img-responsive"></a>
+                            <h3 class="news-title"><a href="#">{$business_info[0].business_header}</a></h3>
+                            <p>{$business_info[0].business_text}</p>
                         </div>
                     </div>
                     <div class="col-md-8">
+                        <!--小图标小标题小内容-->
                         <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="news-item margin-bottom-30px clearfix">
-                                    <a href="#"><img src="Home/assets/img/news/news1.png" class="img-responsive pull-left" alt="News Thumbnail"></a>
-                                    <div class="right">
-                                        <h3 class="news-title"><a href="#">Growth Strategies We Must Know</a></h3>
-                                        <p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures.</p>
+                            <for start="1" end="6">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="news-item margin-bottom-30px clearfix">
+                                        <a href="#"><img src="Uploads/Images/Business/business{$i + 1}.png?ran={$ran}" class="img-responsive pull-left"></a>
+                                        <div class="right">
+                                            <h3 class="news-title"><a href="#">{$business_info[$i].business_header}</a></h3>
+                                            <p>{$business_info[$i].business_text}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="news-item margin-bottom-30px clearfix">
-                                    <a href="#"><img src="Home/assets/img/news/news2.png" class="img-responsive pull-left" alt="News Thumbnail"></a>
-                                    <div class="right">
-                                        <h3 class="news-title"><a href="#">Alternative E-commerce</a></h3>
-                                        <p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="news-item margin-bottom-30px clearfix">
-                                    <a href="#"><img src="Home/assets/img/news/news3.png" class="img-responsive pull-left" alt="News Thumbnail"></a>
-                                    <div class="right">
-                                        <h3 class="news-title"><a href="#">Products Research Methodology &amp; Principles </a></h3>
-                                        <p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="news-item margin-bottom-30px clearfix">
-                                    <a href="#"><img src="Home/assets/img/news/news4.png" class="img-responsive pull-left" alt="News Thumbnail"></a>
-                                    <div class="right">
-                                        <h3 class="news-title"><a href="#">Understanding Globally Scale Quality Network</a></h3>
-                                        <p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="news-item margin-bottom-30px clearfix">
-                                    <a href="#"><img src="Home/assets/img/news/news5.png" class="img-responsive pull-left" alt="News Thumbnail"></a>
-                                    <div class="right">
-                                        <h3 class="news-title"><a href="#">Professional Leverage</a></h3>
-                                        <p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            </for>
+
                             <div class="col-md-6 col-sm-6">
                                 <div class="see-all-news">
-                                    <a href="#">See all news <i class="fa fa-long-arrow-right"></i></a>
+                                    <a href="#">查看更多 <i class="fa fa-long-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -324,33 +276,40 @@
                 </div>
             </div>
         </section>
-        <!-- END LATEST NEWS -->
+        <!-- END 业务范围 -->
+
         <!-- NUMBERS -->
         <section class="full-width-section no-margin">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-3 col-xs-6">
+                    <div class="col-sm-3 col-xs-6 tlength">
                         <div class="number-info horizontal text-white-color">
-                            <i class="fa fa-plug pull-left"></i>
-                            <p>5200 <span>SUBSCRIBERS</span></p>
+                            <i class="fa fa-clock-o pull-left"></i>
+                            <p>0000… <span>SUBSCRIBERS</span></p>
                         </div>
                     </div>
-                    <div class="col-sm-3 col-xs-6">
+                    <div class="col-sm-3 col-xs-6 tlength">
                         <div class="number-info horizontal text-white-color">
-                            <i class="fa fa-cubes pull-left"></i>
-                            <p>273 <span>PROJECTS</span></p>
+                            <i class="fa fa-clock-o pull-left"></i>
+                            <p>0000… <span>PROJECTS</span></p>
                         </div>
                     </div>
-                    <div class="col-sm-3 col-xs-6">
+                    <div class="col-sm-3 col-xs-6 tlength">
                         <div class="number-info horizontal text-white-color">
-                            <i class="fa fa-thumbs-up pull-left"></i>
-                            <p>640K <span>APPRECIATIONS</span></p>
+                            <i class="fa fa-clock-o pull-left"></i>
+                            <p>0000… <span>APPRECIATIONS</span></p>
                         </div>
                     </div>
-                    <div class="col-sm-3 col-xs-6">
+                    <div class="col-sm-3 col-xs-6 tlength">
                         <div class="number-info horizontal text-white-color">
-                            <i class="fa fa-users pull-left"></i>
-                            <p>132 <span>CLIENTS</span></p>
+                            <i class="fa fa-clock-o pull-left"></i>
+                            <p>0000… <span>CLIENTS</span></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 tlength">
+                        <div class="number-info horizontal text-white-color">
+                            <i class="fa fa-clock-o pull-left"></i>
+                            <p>至今…… <span>APPRECIATIONS</span></p>
                         </div>
                     </div>
                 </div>

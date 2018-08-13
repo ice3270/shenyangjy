@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4b3c0ad-4452-4c08-aa11-78c1abd1bbfc" name="默认" comment="更新数据库文件">
-      <change afterPath="$PROJECT_DIR$/Uploads/Images/Business/business1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Uploads/Images/Business/business2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Uploads/Images/Business/business3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Uploads/Images/Business/business4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Uploads/Images/Business/business5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Uploads/Images/Business/business6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" />
+    <list default="true" id="d4b3c0ad-4452-4c08-aa11-78c1abd1bbfc" name="默认" comment="业务范围板块完成。时间轴前台页面更新">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/Controller/EditIndexController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Controller/EditIndexController.class.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/Controller/IndexController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Controller/IndexController.class.php" afterDir="false" />
@@ -123,36 +116,38 @@
     <session id="1682446773">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="514" />
-          <entry key="php" value="156" />
-          <entry key="txt" value="28" />
+          <entry key="html" value="1739" />
+          <entry key="php" value="344" />
+          <entry key="txt" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="514" />
-          <entry key="PHP" value="156" />
-          <entry key="PLAIN_TEXT" value="28" />
+          <entry key="HTML" value="1739" />
+          <entry key="PHP" value="344" />
+          <entry key="PLAIN_TEXT" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="html" value="1" />
           <entry key="php" value="1" />
           <entry key="sql" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="HTML" value="1" />
           <entry key="PHP" value="1" />
           <entry key="SQL" value="1" />
         </counts>
@@ -164,8 +159,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            <state relative-caret-position="114">
+              <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -173,9 +168,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Home/View/Index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="306" column="30" lean-forward="true" selection-start-line="306" selection-start-column="30" selection-end-line="306" selection-end-column="30" />
+            <state relative-caret-position="657">
+              <caret line="411" column="13" selection-start-line="411" selection-start-column="13" selection-end-line="411" selection-end-column="13" />
               <folding>
+                <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -183,9 +179,12 @@
                 <element signature="n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#section#4;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#section#5;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#section#6;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#section#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#section#7;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#section#8;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#section#9;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#li#0;n#for#0;n#ul#0;n#div#0;n#section#8;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#section#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -194,8 +193,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Home/Controller/IndexController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+            <state relative-caret-position="502">
+              <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="45" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -203,10 +202,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Admin/View/Index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="316" column="102" selection-start-line="316" selection-start-column="102" selection-end-line="316" selection-end-column="102" />
+            <state relative-caret-position="312">
+              <caret line="381" column="73" selection-start-line="381" selection-start-column="73" selection-end-line="381" selection-end-column="73" />
               <folding>
                 <element signature="n#style#0;n#h2#4;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#7;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#table#0;n#form#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -215,7 +216,14 @@
                 <element signature="n#div#4;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#table#0;n#form#0;n#div#4;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#5;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#table#0;n#form#0;n#div#5;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#6;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#table#0;n#form#0;n#div#6;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#7;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#table#0;n#form#0;n#div#7;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -233,8 +241,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Admin/Controller/IndexController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
-              <caret line="35" column="55" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
+            <state relative-caret-position="709">
+              <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -242,8 +250,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Admin/Controller/EditIndexController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="165" column="63" selection-start-line="165" selection-start-column="63" selection-end-line="165" selection-end-column="63" />
+            <state relative-caret-position="538">
+              <caret line="192" column="25" selection-start-line="192" selection-start-column="25" selection-end-line="192" selection-end-column="25" />
+              <folding>
+                <element signature="e#122#1132#0#PHP" />
+                <element signature="e#1842#2216#0#PHP" />
+                <element signature="e#2222#3324#0#PHP" />
+                <element signature="e#3330#4433#0#PHP" />
+                <element signature="e#4439#5550#0#PHP" />
+                <element signature="e#5560#5604#0#PHP" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -265,10 +281,10 @@
         <option value="$PROJECT_DIR$/Admin/Controller/editIndexController.class.php" />
         <option value="$PROJECT_DIR$/Admin/View/Index/icons.html" />
         <option value="$PROJECT_DIR$/Common/Conf/config.php" />
-        <option value="$PROJECT_DIR$/Admin/Controller/IndexController.class.php" />
-        <option value="$PROJECT_DIR$/Admin/View/Index/index.html" />
-        <option value="$PROJECT_DIR$/Admin/Controller/EditIndexController.class.php" />
         <option value="$PROJECT_DIR$/Home/Controller/IndexController.class.php" />
+        <option value="$PROJECT_DIR$/Admin/Controller/IndexController.class.php" />
+        <option value="$PROJECT_DIR$/Admin/Controller/EditIndexController.class.php" />
+        <option value="$PROJECT_DIR$/Admin/View/Index/index.html" />
         <option value="$PROJECT_DIR$/Home/View/Index/index.html" />
       </list>
     </option>
@@ -301,6 +317,24 @@
             <path>
               <item name="shenyangjy" type="b2602c69:ProjectViewProjectNode" />
               <item name="shenyangjy" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shenyangjy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shenyangjy" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shenyangjy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shenyangjy" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
+              <item name="Index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shenyangjy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shenyangjy" type="462c0819:PsiDirectoryNode" />
               <item name="Common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -308,32 +342,6 @@
               <item name="shenyangjy" type="462c0819:PsiDirectoryNode" />
               <item name="Common" type="462c0819:PsiDirectoryNode" />
               <item name="Conf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shenyangjy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shenyangjy" type="462c0819:PsiDirectoryNode" />
-              <item name="Home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shenyangjy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shenyangjy" type="462c0819:PsiDirectoryNode" />
-              <item name="Home" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shenyangjy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shenyangjy" type="462c0819:PsiDirectoryNode" />
-              <item name="Home" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shenyangjy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shenyangjy" type="462c0819:PsiDirectoryNode" />
-              <item name="Home" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="news" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shenyangjy" type="b2602c69:ProjectViewProjectNode" />
@@ -353,6 +361,20 @@
               <item name="Images" type="462c0819:PsiDirectoryNode" />
               <item name="Business" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="shenyangjy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shenyangjy" type="462c0819:PsiDirectoryNode" />
+              <item name="Uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="Images" type="462c0819:PsiDirectoryNode" />
+              <item name="Company_show" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shenyangjy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shenyangjy" type="462c0819:PsiDirectoryNode" />
+              <item name="Uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="Images" type="462c0819:PsiDirectoryNode" />
+              <item name="FriendCom" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -367,7 +389,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="settings.editor.selected.configurable" value="preferences.updates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -430,7 +452,9 @@
       <workItem from="1533639949100" duration="2503000" />
       <workItem from="1533651743358" duration="2063000" />
       <workItem from="1533657742989" duration="20000" />
-      <workItem from="1533775164534" duration="5377000" />
+      <workItem from="1533775164534" duration="5683000" />
+      <workItem from="1533869664016" duration="627000" />
+      <workItem from="1534119426625" duration="9868000" />
     </task>
     <task id="LOCAL-00001" summary="导航栏微调，并未完全处理">
       <created>1533654687179</created>
@@ -446,7 +470,21 @@
       <option name="project" value="LOCAL" />
       <updated>1533655247619</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="业务范围板块完成。时间轴前台页面更新">
+      <created>1533805765963</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1533805765963</updated>
+    </task>
+    <task id="LOCAL-00004" summary="业务范围板块完成。时间轴前台页面更新">
+      <created>1533805848346</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1533805848347</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -482,18 +520,18 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29270000" />
+    <option name="totallyTimeSpent" value="40071000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15079366" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15445666" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498779" visible="true" weight="0.18979591" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498779" weight="0.18979591" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -544,7 +582,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="导航栏微调，并未完全处理" />
     <MESSAGE value="更新数据库文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新数据库文件" />
+    <MESSAGE value="业务范围板块完成。时间轴前台页面更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="业务范围板块完成。时间轴前台页面更新" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ThinkPHP/Tpl/page_trace.tpl">
@@ -597,26 +636,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Home/Controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="45" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Admin/Controller/IndexController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="35" column="55" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
+        <state relative-caret-position="709">
+          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Admin/Controller/EditIndexController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="165" column="63" selection-start-line="165" selection-start-column="63" selection-end-line="165" selection-end-column="63" />
+        <state relative-caret-position="538">
+          <caret line="192" column="25" selection-start-line="192" selection-start-column="25" selection-end-line="192" selection-end-column="25" />
+          <folding>
+            <element signature="e#122#1132#0#PHP" />
+            <element signature="e#1842#2216#0#PHP" />
+            <element signature="e#2222#3324#0#PHP" />
+            <element signature="e#3330#4433#0#PHP" />
+            <element signature="e#4439#5550#0#PHP" />
+            <element signature="e#5560#5604#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Admin/View/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="316" column="102" selection-start-line="316" selection-start-column="102" selection-end-line="316" selection-end-column="102" />
+        <state relative-caret-position="312">
+          <caret line="381" column="73" selection-start-line="381" selection-start-column="73" selection-end-line="381" selection-end-column="73" />
           <folding>
             <element signature="n#style#0;n#h2#4;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#7;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#table#0;n#form#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -625,30 +681,31 @@
             <element signature="n#div#4;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#table#0;n#form#0;n#div#4;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#5;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#table#0;n#form#0;n#div#5;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#6;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#table#0;n#form#0;n#div#6;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#7;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#table#0;n#form#0;n#div#7;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Home/Controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+        <state relative-caret-position="114">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Home/View/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="306" column="30" lean-forward="true" selection-start-line="306" selection-start-column="30" selection-end-line="306" selection-end-column="30" />
+        <state relative-caret-position="657">
+          <caret line="411" column="13" selection-start-line="411" selection-start-column="13" selection-end-line="411" selection-end-column="13" />
           <folding>
+            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -656,9 +713,12 @@
             <element signature="n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#section#4;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#section#5;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#6;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#section#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#section#7;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#8;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#9;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#li#0;n#for#0;n#ul#0;n#div#0;n#section#8;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#section#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

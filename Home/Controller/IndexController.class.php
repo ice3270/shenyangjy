@@ -35,6 +35,16 @@ class IndexController extends Controller {
         $business_info = $business->select();
         $this->assign("business_info", $business_info);
 
+        //时间轴板块
+        $year = M("year_index");
+        $year_info = $year->select();
+        $this->assign("year_info", $year_info);
+
+        //彩电塔滚动板块
+        $ta = M("caita_index");
+        $ta_info = $ta->find();
+        $this->assign("ta_info", $ta_info);
+
         $this->display();
     }
 }

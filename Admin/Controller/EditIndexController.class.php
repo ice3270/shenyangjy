@@ -173,4 +173,26 @@ class editIndexController extends Controller {
 
         $this->success("更新成功", U("/Admin/"), 3);
     }
+
+    public function yearUpdate(){
+        $year = M("year_index");
+        foreach($_POST as $k => $v){
+            foreach($v as $kk => $vv){
+                $data[$kk][$k] = $vv;
+            }
+        }
+
+        foreach ($data as $k => $v){
+            $kk = $k + 1;
+            $year->where("id=".$kk)->save($v);    //更新数据库中标题、描述
+        }
+        $this->success("更新成功", U("/Admin/"), 3);
+    }
+
+    public function caitaUpdate(){
+        $caita = M("caita_index");
+        $caita->where("id='1'")->save($_POST);    //更新数据库中标题、描述
+
+        $this->success("更新成功", U("/Admin/"), 3);
+    }
 }

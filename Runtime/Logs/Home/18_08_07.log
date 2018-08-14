@@ -1,0 +1,22 @@
+[ 2018-08-07T19:13:55+08:00 ] ::1 /shenyangjy/
+ERR: 1146:Table 'syjy.company_show_index' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `company_show_index`
+
+[ 2018-08-07T22:51:18+08:00 ] ::1 /shenyangjy/index.php
+ERR: SQLSTATE[HY000] [1045] Access denied for user '039c65524799461c837fd56551dbee4a'@'localhost' (using password: YES)
+
+[ 2018-08-07T22:52:34+08:00 ] ::1 /shenyangjy/index.php
+ERR: SQLSTATE[HY000] [2002] Operation timed out
+
+[ 2018-08-07T22:53:08+08:00 ] ::1 /shenyangjy/index.php
+ERR: SQLSTATE[HY000] [2002] Operation timed out
+
+[ 2018-08-07T22:53:38+08:00 ] ::1 /shenyangjy/
+ERR: SQLSTATE[HY000] [2002] Operation timed out
+
+[ 2018-08-07T22:54:19+08:00 ] ::1 /shenyangjy/
+ERR: SQLSTATE[HY000] [2002] Operation timed out
+
+[ 2018-08-07T23:05:50+08:00 ] ::1 /shenyangjy/
+ERR: SQLSTATE[HY000] [2002] Operation timed out
+

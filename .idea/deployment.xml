@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="Windows Apache">
+  <component name="PublishConfigData" serverName="PCWampServer">
     <serverData>
-      <paths name="MacOS Apache">
+      <paths name="PCWampServer">
         <serverdata>
           <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="Windows Apache">
-        <serverdata>
-          <mappings>
-            <mapping deploy="shenyangjy" local="$PROJECT_DIR$" web="shenyangjy" />
+            <mapping deploy="\" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

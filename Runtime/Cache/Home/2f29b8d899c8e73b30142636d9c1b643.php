@@ -2,30 +2,36 @@
 <html lang="en">
 
 <head>
-    <title>Home | Repute Lite - Free Bootstrap Business Template</title>
+    <title>/shenyangjy/index.php/Home | Repute Lite - Free Bootstrap Business Template</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Free Bootstrap Business Template">
     <meta name="author" content="The Develovers">
     <!-- CSS -->
-    <link rel="stylesheet" href="font_awesome/css/font-awesome.min.css">
-    <link href="Home/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="Home/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="Home/assets/css/main.css" rel="stylesheet" type="text/css">
-    <link href="Home/assets/css/my-custom-styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/shenyangjy/font_awesome/css/font-awesome.min.css">
+    <link href="/shenyangjy/Home/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="/shenyangjy/Home/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/shenyangjy/Home/assets/css/main.css" rel="stylesheet" type="text/css">
+    <link href="/shenyangjy/Home/assets/css/my-custom-styles.css" rel="stylesheet" type="text/css">
     <!-- IE 9 Fallback-->
     <!--[if IE 9]>
-		<link href="Home/assets/css/ie.css" rel="stylesheet">
+		<link href="/shenyangjy/Home/assets/css/ie.css" rel="stylesheet">
 	<![endif]-->
     <!-- GOOGLE FONTS -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400italic,700,400,300' rel='stylesheet' type='text/css'>
     <!-- FAVICONS -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="Home/assets/ico/repute144x144.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="Home/assets/ico/repute114x114.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="Home/assets/ico/repute72x72.png">
-    <link rel="apple-touch-icon-precomposed" href="Home/assets/ico/repute57x57.png">
-    <link rel="shortcut icon" href="Home/assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/shenyangjy/Home/assets/ico/repute144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/shenyangjy/Home/assets/ico/repute114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/shenyangjy/Home/assets/ico/repute72x72.png">
+    <link rel="apple-touch-icon-precomposed" href="/shenyangjy/Home/assets/ico/repute57x57.png">
+    <link rel="shortcut icon" href="/shenyangjy/Home/assets/ico/favicon.png">
+
+    <style>
+        .tlength{
+            width: 220px;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,107 +39,57 @@
     <div class="wrapper">
         <!-- 导航栏 -->
         <nav class="navbar navbar-default " role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <a href="index.html" class="navbar-brand navbar-logo" style="padding-top: 2px;padding-left: 8px">
-                        <img src="Home/assets/img/logo/LogoTest.png" alt="Repute Lite - Free Bootstrap Business Template" style="width: 280px;">
-                    </a>
-                </div>
-                <!-- MAIN NAVIGATION -->
-                <div id="main-nav" class="navbar-collapse collapse navbar-mega-menu">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown active">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">首页 <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li class="active"><a href="index.html">Home</a></li>
-                                <li><a href="index-dark-header.html">Home Dark Header</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown ">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我们 <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="feature-nav-fixed-top.html">Fixed Top Menu</a></li>
-                                <li><a href="feature-footer-light.html">Light Footer</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown ">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">服务内容 <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="page-about-us.html">About Us</a></li>
-                                <li><a href="page-contacts.html">Contact</a></li>
-                                <li><a href="page-privacy.html">Privacy Policy</a></li>
-                                <li><a href="page-terms.html">Terms</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown ">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">团队介绍 <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="portfolio-4-columns.html">Portfolio 4 Columns</a></li>
-                                <li><a href="portfolio-single.html">Portfolio Item</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown ">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">技术优势 <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="blog-medium-thumbnail.html">Blog Medium Thumbnail</a></li>
-                                <li><a href="blog-single.html">Blog Single</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="https://goo.gl/27z3vD" class="special-menu-item" target="_blank"><i class="fa fa-paper-plane-o"></i> 联系我们</a></li>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+                <span class="sr-only">Toggle Navigation</span>
+                <i class="fa fa-bars"></i>
+            </button>
+            <a href="index.html" class="navbar-brand navbar-logo" style="padding-top: 2px;padding-left: 8px">
+                <img src="/shenyangjy/Home/assets/img/logo/LogoTest.png" alt="Repute Lite - Free Bootstrap Business Template" style="width: 280px;">
+            </a>
+        </div>
+        <!-- MAIN NAVIGATION -->
+        <div id="main-nav" class="navbar-collapse collapse navbar-mega-menu">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown active">
+                    <a href="/shenyangjy">首页 </a>
+                </li>
+                <li class="dropdown">
+                    <a href="/shenyangjy/Home/Pages/about_us">关于我们 </a>
+                </li>
+                <li class="dropdown">
+                    <a href="/shenyangjy/Home/Pages/server">服务内容 </a>
+                </li>
+                <li class="dropdown">
+                    <a href="/shenyangjy/Home/Pages/ex">合作案例 </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">最新动态 <i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/shenyangjy/Home/Pages/com_new">公司动态</a></li>
+                        <li><a href="/shenyangjy/Home/Pages/law">法律法规</a></li>
                     </ul>
-                </div>
-                <!-- END MAIN NAVIGATION -->
-            </div>
-        </nav>
+                </li>
+                <li><a href="/shenyangjy/Home/Pages/callus" class="special-menu-item" target="_blank"><i class="fa fa-paper-plane-o"></i> 联系我们</a></li>
+            </ul>
+        </div>
+        <!-- END MAIN NAVIGATION -->
+    </div>
+</nav>
         <!-- END 导航栏 -->
 
-        <!-- Banner 图原型 -->
-        <!--<section class="hero-unit-slider slider-responsive no-margin">-->
-            <!--<div id="carousel-hero" class="slick-carousel">-->
-                <!--<div class="carousel-inner" role="listbox">-->
-                    <!--<div class="item active">-->
-                        <!--<img src="Home/assets/img/sliders/slider3-h500.png" class="img-responsive" alt="Slider Image">-->
-                        <!--<div class="carousel-caption">-->
-                            <!--<h2 class="hero-heading">配图标题 测试文字</h2>-->
-                            <!--<p class="lead">配图测试文字配图测试文字配图测试文字配图测试文字</p>-->
-                            <!--<a href="#" class="btn btn-lg hero-button">查看详情</a>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="item">-->
-                        <!--<img src="Home/assets/img/sliders/slider2-h500.png" class="img-responsive" alt="Slider Image">-->
-                        <!--<div class="carousel-caption">-->
-                            <!--<h2 class="hero-heading">配图标题 测试文字</h2>-->
-                            <!--<p class="lead">配图测试文字配图测试文字配图测试文字配图测试文字</p>-->
-                            <!--<a href="#" class="btn btn-lg hero-button">查看详情</a>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="item">-->
-                        <!--<img src="Home/assets/img/sliders/slider1-h500.png" class="img-responsive" alt="Slider Image">-->
-                        <!--<div class="carousel-caption">-->
-                            <!--<h2 class="hero-heading">配图标题 测试文字</h2>-->
-                            <!--<p class="lead">配图测试文字配图测试文字配图测试文字配图测试文字</p>-->
-                            <!--<a href="#" class="btn btn-lg hero-button">查看详情</a>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</section>-->
-        <!-- END Banner 图原型 -->
         <!-- Banner图部分 修改后 -->
         <section class="hero-unit-slider slider-responsive no-margin">
             <div id="carousel-hero" class="slick-carousel">
                 <div class="carousel-inner" role="listbox">
                     <!-- 一组 Banner元素-->
                     <?php if(is_array($banner_info)): foreach($banner_info as $k=>$v): ?><div class="item active">
-                            <img src="Uploads/Images/Banner/banner<?php echo ($k + 1); ?>.png?ran=<?php echo ($ran); ?>" class="img-responsive" alt="Slider Image">
+                            <img src="/shenyangjy/Uploads/Images/Banner/banner<?php echo ($k + 1); ?>.png?ran=<?php echo ($ran); ?>" class="img-responsive" alt="Slider Image">
                             <div class="carousel-caption">
                                 <h2 class="hero-heading"><?php echo ($v["banner_header"]); ?></h2>
+                                <br><br>
                                 <p class="lead"><?php echo ($v["banner_text"]); ?></p>
-                                <a href="#" class="btn btn-lg hero-button">查看详情</a>
                             </div>
                         </div><?php endforeach; endif; ?>
                 </div>
@@ -168,7 +124,7 @@
                         <p><?php echo ($company_info["company_text"]); ?></p>
                     </div>
                     <div class="col-md-6">
-                        <img src="./Uploads/Images/Company/companyIndex.png?ran=<?php echo ($ran); ?>" class="img-responsive" alt="Image Intro" style="height: 380px;margin:0 auto;">
+                        <img src="/shenyangjy/Uploads/Images/Company/companyIndex.png?ran=<?php echo ($ran); ?>" class="img-responsive" alt="Image Intro" style="height: 380px;margin:0 auto;">
                     </div>
                 </div>
             </div>
@@ -197,7 +153,7 @@
                 <!--<h2 class="section-heading sr-only">WHY REPUTE</h2>-->
                 <div class="tab-content">
                 <?php if(is_array($slogan_info)): foreach($slogan_info as $k=>$v): ?><div class="tab-pane fade in text-center" id="tab-bottom<?php echo ($k + 1); ?>">
-                        <img src="Uploads/Images/Slogan/sloganImg<?php echo ($k + 1); ?>.png" class="img-responsive center-block margin-bottom-30px">
+                        <img src="/shenyangjy/Uploads/Images/Slogan/sloganImg<?php echo ($k + 1); ?>.png?ran=<?php echo ($ran); ?>" class="img-responsive center-block margin-bottom-30px">
                         <h3 class="text-accent-color"><?php echo ($v["slogan_header"]); ?></h3>
                         <p class="lead"><?php echo ($v["slogan_text"]); ?></p>
                     </div><?php endforeach; endif; ?>
@@ -214,13 +170,11 @@
         </section>
         <!-- END 服务宗旨部分 -->
 
-        <!-- <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div> -->
-
         <!-- 公司展示部分 -->
         <section class="recent-works">
             <div class="container">
                 <h2 class="section-heading pull-left">公司展示</h2>
-                <a href="#" class="btn btn-primary pull-right">展示全部</a>
+                <a href="#" class="btn btn-primary pull-right">查看更多</a>
                 <div class="clearfix"></div>
                 <div class="portfolio-static">
                     <div class="row">
@@ -229,11 +183,11 @@
                                 <div class="overlay"></div>
                                 <div class="info">
                                     <h4 class="title"><?php echo ($v["company_show_title"]); ?></h4>
+                                    <br>
                                     <p class="brief-description"><?php echo ($v["company_show_text"]); ?></p>
-                                    <a href="#" class="btn">了解更多</a>
                                 </div>
                                 <div class="media-wrapper">
-                                    <img src="Uploads/Images/Company_show/work<?php echo ($k + 1); ?>.png" alt="Item Thumbnail" />
+                                    <img src="/shenyangjy/Uploads/Images/Company_show/work<?php echo ($k + 1); ?>.png?ran=<?php echo ($ran); ?>" alt="Item Thumbnail" />
                                 </div>
                             </div>
                         </div><?php endforeach; endif; ?>
@@ -243,72 +197,35 @@
         </section>
         <!-- END 公司展示部分 -->
 
-        <!-- LATEST NEWS -->
+        <!-- 业务范围 -->
         <section>
             <div class="container">
                 <h2 class="section-heading">业务范围</h2>
                 <div class="row">
                     <div class="col-md-4">
+                        <!--大图标大标题大内容-->
                         <div class="news-item news-featured">
-                            <a href="#"><img src="Home/assets/img/news/featured-news.png" class="img-responsive" alt="News Thumbnail"></a>
-                            <h3 class="news-title"><a href="#">In Demand: Collaboration Skill</a></h3>
-                            <p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures. Seamlessly predominate interoperable growth strategies.</p>
-                            <div class="news-meta">
-                                <span class="news-datetime">23-02-2015</span>
-                                <span class="news-comment-count pull-right"><a href="#">65 Comments</a></span>
-                            </div>
+                            <a href="#"><img src="/shenyangjy/Uploads/Images/Business/business1.png?ran=<?php echo ($ran); ?>" class="img-responsive"></a>
+                            <h3 class="news-title"><a href="#"><?php echo ($business_info[0]["business_header"]); ?></a></h3>
+                            <p><?php echo ($business_info[0]["business_text"]); ?></p>
                         </div>
                     </div>
                     <div class="col-md-8">
+                        <!--小图标小标题小内容-->
                         <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="news-item margin-bottom-30px clearfix">
-                                    <a href="#"><img src="Home/assets/img/news/news1.png" class="img-responsive pull-left" alt="News Thumbnail"></a>
-                                    <div class="right">
-                                        <h3 class="news-title"><a href="#">Growth Strategies We Must Know</a></h3>
-                                        <p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures.</p>
+                            <?php $__FOR_START_23225__=1;$__FOR_END_23225__=6;for($i=$__FOR_START_23225__;$i < $__FOR_END_23225__;$i+=1){ ?><div class="col-md-6 col-sm-6">
+                                    <div class="news-item margin-bottom-30px clearfix">
+                                        <a href="#"><img src="/shenyangjy/Uploads/Images/Business/business<?php echo ($i + 1); ?>.png?ran=<?php echo ($ran); ?>" class="img-responsive pull-left"></a>
+                                        <div class="right">
+                                            <h3 class="news-title"><a href="#"><?php echo ($business_info[$i]["business_header"]); ?></a></h3>
+                                            <p><?php echo ($business_info[$i]["business_text"]); ?></p>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="news-item margin-bottom-30px clearfix">
-                                    <a href="#"><img src="Home/assets/img/news/news2.png" class="img-responsive pull-left" alt="News Thumbnail"></a>
-                                    <div class="right">
-                                        <h3 class="news-title"><a href="#">Alternative E-commerce</a></h3>
-                                        <p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="news-item margin-bottom-30px clearfix">
-                                    <a href="#"><img src="Home/assets/img/news/news3.png" class="img-responsive pull-left" alt="News Thumbnail"></a>
-                                    <div class="right">
-                                        <h3 class="news-title"><a href="#">Products Research Methodology &amp; Principles </a></h3>
-                                        <p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="news-item margin-bottom-30px clearfix">
-                                    <a href="#"><img src="Home/assets/img/news/news4.png" class="img-responsive pull-left" alt="News Thumbnail"></a>
-                                    <div class="right">
-                                        <h3 class="news-title"><a href="#">Understanding Globally Scale Quality Network</a></h3>
-                                        <p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="news-item margin-bottom-30px clearfix">
-                                    <a href="#"><img src="Home/assets/img/news/news5.png" class="img-responsive pull-left" alt="News Thumbnail"></a>
-                                    <div class="right">
-                                        <h3 class="news-title"><a href="#">Professional Leverage</a></h3>
-                                        <p>Proactively engage orthogonal growth strategies without resource-leveling testing procedures.</p>
-                                    </div>
-                                </div>
-                            </div>
+                                </div><?php } ?>
+
                             <div class="col-md-6 col-sm-6">
                                 <div class="see-all-news">
-                                    <a href="#">See all news <i class="fa fa-long-arrow-right"></i></a>
+                                    <a href="#">查看更多 <i class="fa fa-long-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -316,106 +233,68 @@
                 </div>
             </div>
         </section>
-        <!-- END LATEST NEWS -->
-        <!-- NUMBERS -->
+        <!-- END 业务范围 -->
+
+        <!-- 发展历程 -->
         <section class="full-width-section no-margin">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-3 col-xs-6">
+                    <?php if(is_array($year_info)): foreach($year_info as $k=>$v): ?><div id="dd<?php echo ($k + 1); ?>" class="col-sm-3 col-xs-6 tlength">
                         <div class="number-info horizontal text-white-color">
-                            <i class="fa fa-plug pull-left"></i>
-                            <p>5200 <span>SUBSCRIBERS</span></p>
+                            <i class="fa fa-clock-o pull-left"></i>
+                            <p><?php echo ($v["year_num"]); ?> <span><?php echo ($v["year_title"]); ?></span></p>
                         </div>
-                    </div>
-                    <div class="col-sm-3 col-xs-6">
-                        <div class="number-info horizontal text-white-color">
-                            <i class="fa fa-cubes pull-left"></i>
-                            <p>273 <span>PROJECTS</span></p>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 col-xs-6">
-                        <div class="number-info horizontal text-white-color">
-                            <i class="fa fa-thumbs-up pull-left"></i>
-                            <p>640K <span>APPRECIATIONS</span></p>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 col-xs-6">
-                        <div class="number-info horizontal text-white-color">
-                            <i class="fa fa-users pull-left"></i>
-                            <p>132 <span>CLIENTS</span></p>
-                        </div>
-                    </div>
+                    </div><?php endforeach; endif; ?>
                 </div>
+                <br>
+                <?php if(is_array($year_info)): foreach($year_info as $k=>$v): ?><div class="row" style="display: none" id="dp<?php echo ($k + 1); ?>">
+                    <p class="text-white-color"><?php echo ($v["year_text"]); ?></p>
+                </div><?php endforeach; endif; ?>
             </div>
         </section>
-        <!-- END NUMBERS -->
-        <!-- TESTIMONIAL -->
+        <!-- END 发展历程 -->
+
+        <!-- 彩电塔板块 -->
         <section id="testimoial-parallax" class="testimonial-with-bg parallax">
             <div class="container">
                 <div class="testimonial slick-carousel">
                     <div class="testimonial-container">
                         <div class="testimonial-body">
-                            <p>Credibly extend parallel relationships after clicks-and-mortar content. Credibly pontificate team building alignments rather than diverse quality vectors.</p>
-                            <div class="testimonial-author">
-                                <img src="Home/assets/img/user2.png" alt="Author" class="pull-left">
-                                <span><span class="author-name">Antonius</span> <em>CEO of TheCompany</em></span>
-                            </div>
-                        </div>
-                        <div class="testimonial-body">
-                            <p>Credibly pontificate team building alignments rather than diverse quality vectors. Monotonectally benchmark business communities for distinctive mindshare.</p>
-                            <div class="testimonial-author">
-                                <img src="Home/assets/img/user1.png" alt="Author" class="pull-left">
-                                <span><span class="author-name">Michael</span> <em>General Manager of DreamCorp</em></span>
-                            </div>
-                        </div>
-                        <div class="testimonial-body">
-                            <p>Appropriately morph low-risk high-yield process improvements through progressive partnerships. Uniquely brand enabled. Globally network timely imperatives without plug-and-play schemas.</p>
-                            <div class="testimonial-author">
-                                <img src="Home/assets/img/user5.png" alt="Author" class="pull-left">
-                                <span><span class="author-name">Palmer</span> <em>Freelance Web Developer</em></span>
-                            </div>
+                            <p style="font-size: 40px"><?php echo ($ta_info["caita_header"]); ?></p>
+                            <p><?php echo ($ta_info["caita_text"]); ?></p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- END TESTIMONIAL -->
-        <!-- OUR CLIENTS -->
+        <!-- END 彩电塔板块 -->
+
+        <!-- 合作单位 -->
         <section class="clients">
             <div class="container">
-                <h2 class="section-heading">OUR CLIENTS</h2>
+                <h2 class="section-heading">合作单位</h2>
                 <ul class="list-inline list-client-logo">
-                    <li>
-                        <a href="#"><img src="Home/assets/img/clients/logo1.png" alt="logo"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="Home/assets/img/clients/logo2.png" alt="logo"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="Home/assets/img/clients/logo3.png" alt="logo"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="Home/assets/img/clients/logo4.png" alt="logo"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="Home/assets/img/clients/logo5.png" alt="logo"></a>
-                    </li>
+                    <?php $__FOR_START_12030__=1;$__FOR_END_12030__=19;for($i=$__FOR_START_12030__;$i < $__FOR_END_12030__;$i+=1){ ?><li>
+                        <img src="/shenyangjy/Uploads/Images/FriendCom/logo<?php echo ($i); ?>.png" height="60px" style="margin: 15px" alt="logo">
+                    </li><?php } ?>
                 </ul>
             </div>
         </section>
-        <!-- END OUR CLIENTS -->
+        <!-- END 合作单位 -->
+
         <!-- CALL-TO-ACTION -->
         <section class="call-to-action">
             <div class="container">
                 <div class="pull-left">
-                    <h2 class="section-heading">GET IN TOUCH</h2>
+                    <h2 class="section-heading">联系我们</h2>
                 </div>
                 <div class="pull-right">
-                    <span>Call us at (1800) 765 - 4321 or</span>&nbsp;&nbsp;<a href="#" class="btn btn-lg btn-primary">CONTACT US</a>
+                    <p>TEL： (024) 88516304 <br> E-mail： xxxx@xx.com</p>
                 </div>
             </div>
         </section>
         <!-- END CALL-TO-ACTION -->
+
         <!-- FOOTER -->
         <footer>
             <div class="container">
@@ -423,17 +302,10 @@
                     <div class="col-md-4">
                         <!-- COLUMN 1 -->
                         <h3 class="sr-only">ABOUT US</h3>
-                        <img src="Home/assets/img/logo/LogoTest.png" class="logo" alt="Repute" style="width: 280px;">
-                        <p>测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字</p>
-                        <br>
-                        <address class="margin-bottom-30px">
-                            <ul class="list-unstyled">
-                                <li>小北关街178号
-                                    <br/> 辽宁省沈阳市沈河区 110000</li>
-                                <li>办公电话： 88516304</li>
-                                <li>Email: email@yourdomain.com</li>
-                            </ul>
-                        </address>
+                        <img src="/shenyangjy/Home/assets/img/logo/LogoTest.png" class="logo" alt="Repute" style="width: 280px;">
+                        <p>沈阳市价业价格鉴证服务中心，成立于2009年，是沈阳市第一家价格鉴定评估机构，同时具备价格鉴证评估资质及沈阳市中级人民法院司法技术专业机构。</p>
+                        <p>成立至今，以严谨的专业态度、成熟的工作经验、良好的沟通能力，为沈阳市中级人民法院及各辖区法院、沈阳铁路监督管理局、沈阳市交警支队、人保财险、中国平安保险公司、辽宁省石油有限公司、为近1000家委托行政主体、市场主体及公民提供高品质、全方位的评估服务。受理案件2万余件，鉴定评估总额达16亿元，标的金额超百万的有1000余件。为各级人民法院，机关企事业团体及个人提供价格参考依据。</p>
+                        <p>凭借丰富的经验，一流的技术，我们价格鉴证评估领域内恪尽职守，秉承“客观、公平、公正、合理”的理念，使沈阳市价业价格鉴证服务中心更好的服务于司法、政府与社会。</p>
                         <!-- END COLUMN 1 -->
                     </div>
                     <div class="col-md-4">
@@ -458,32 +330,25 @@
                                     <li><a href="#">测试文字</a></li>
                                 </ul>
                             </div>
+                            <div class="col-xs-6" style="width: 400px;margin-top: 30px;">
+                                <h3 class="footer-heading">邮寄地址及联系方式</h3>
+                                <ul class="list-unstyled">
+                                    <li>地址：辽宁省沈阳市沈河区小北关街178号</li>
+                                    <li>邮编：110000</li>
+                                    <li>办公电话：024 - 88556897</li>
+                                    <li>Email：email@yourdomain.com</li>
+                                </ul>
+                            </div>
                         </div>
                         <!-- END COLUMN 2 -->
                     </div>
                     <div class="col-md-4">
-                        <!-- COLUMN 3 -->
-                        <div class="newsletter">
-                            <h3 class="footer-heading">最新资讯</h3>
-                            <p>测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字</p>
-                            <form class="newsletter-form" method="POST">
-                                <div class="input-group input-group-lg">
-                                    <input type="email" class="form-control" name="email" placeholder="youremail@domain.com">
-                                    <span class="input-group-btn"><button class="btn btn-primary" type="button">SUBSCRIBE</button></span>
-                                </div>
-                                <div class="alert"></div>
-                            </form>
+                        <h3 class="footer-heading">公司地址</h3>
+                        <p>辽宁省沈阳市沈河区小北关街178号</p>
+                        <div id="allmap">
+                            <iframe src="/shenyangjy/Home/View/Index/baiduMap.html" height="255px" width="390">
+                        </iframe>
                         </div>
-                        <div class="social-connect">
-                            <h3 class="footer-heading">GET CONNECTED</h3>
-                            <ul class="list-inline social-icons">
-                                <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" class="googleplus-bg"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#" class="rss-bg"><i class="fa fa-rss"></i></a></li>
-                            </ul>
-                        </div>
-                        <!-- END COLUMN 3 -->
                     </div>
                 </div>
             </div>
@@ -497,11 +362,11 @@
     </div>
     <!-- END WRAPPER -->
     <!-- JAVASCRIPTS -->
-    <script src="Home/assets/js/jquery-2.1.1.min.js"></script>
-    <script src="Home/assets/js/bootstrap.min.js"></script>
-    <script src="Home/assets/js/plugins/slick/slick.min.js"></script>
-    <script src="Home/assets/js/plugins/stellar/jquery.stellar.min.js"></script>
-    <script src="Home/assets/js/repute-scripts.js"></script>
+    <script src="/shenyangjy/Home/assets/js/jquery-2.1.1.min.js"></script>
+    <script src="/shenyangjy/Home/assets/js/bootstrap.min.js"></script>
+    <script src="/shenyangjy/Home/assets/js/plugins/slick/slick.min.js"></script>
+    <script src="/shenyangjy/Home/assets/js/plugins/stellar/jquery.stellar.min.js"></script>
+    <script src="/shenyangjy/Home/assets/js/repute-scripts.js"></script>
 
     <script>
         // active
@@ -509,7 +374,31 @@
 
         $(function(){
             $("#tab-bottom1").addClass('active');
-       
+            $("div[id^='dp']").css("display", "none");
+
+            $("div[id^='dd']").mouseover(function(){
+                switch (this.id) {
+                case 'dd1':
+                    $('#dp1').css("display", "block");
+                    break;
+                case 'dd2':
+                    $('#dp2').css("display", "block");
+                    break;
+                case 'dd3':
+                    $('#dp3').css("display", "block");
+                    break;
+                case 'dd4':
+                    $('#dp4').css("display", "block");
+                    break;
+                case 'dd5':
+                    $('#dp5').css("display", "block");
+                    break;
+                }
+            }).mouseout(function(){
+                // alert(this.id);
+                $("div[id^='dp']").css("display", "none");
+            });
+
         });
     </script>
 </body>

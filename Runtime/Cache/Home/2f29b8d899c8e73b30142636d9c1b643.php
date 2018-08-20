@@ -52,19 +52,19 @@
         <!-- MAIN NAVIGATION -->
         <div id="main-nav" class="navbar-collapse collapse navbar-mega-menu">
             <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown active">
+                <li class="dropdown active" id="pageIndex">
                     <a href="/shenyangjy">首页 </a>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown" id="pageAbout">
                     <a href="/shenyangjy/Home/Pages/about_us">关于我们 </a>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown" id="pageServer">
                     <a href="/shenyangjy/Home/Pages/server">服务内容 </a>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown" id="pageEx">
                     <a href="/shenyangjy/Home/Pages/ex">合作案例 </a>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown" id="pageDown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">最新动态 <i class="fa fa-angle-down"></i></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="/shenyangjy/Home/Pages/com_new">公司动态</a></li>
@@ -213,7 +213,7 @@
                     <div class="col-md-8">
                         <!--小图标小标题小内容-->
                         <div class="row">
-                            <?php $__FOR_START_23225__=1;$__FOR_END_23225__=6;for($i=$__FOR_START_23225__;$i < $__FOR_END_23225__;$i+=1){ ?><div class="col-md-6 col-sm-6">
+                            <?php $__FOR_START_10225__=1;$__FOR_END_10225__=6;for($i=$__FOR_START_10225__;$i < $__FOR_END_10225__;$i+=1){ ?><div class="col-md-6 col-sm-6">
                                     <div class="news-item margin-bottom-30px clearfix">
                                         <a href="#"><img src="/shenyangjy/Uploads/Images/Business/business<?php echo ($i + 1); ?>.png?ran=<?php echo ($ran); ?>" class="img-responsive pull-left"></a>
                                         <div class="right">
@@ -274,7 +274,7 @@
             <div class="container">
                 <h2 class="section-heading">合作单位</h2>
                 <ul class="list-inline list-client-logo">
-                    <?php $__FOR_START_12030__=1;$__FOR_END_12030__=19;for($i=$__FOR_START_12030__;$i < $__FOR_END_12030__;$i+=1){ ?><li>
+                    <?php $__FOR_START_8150__=1;$__FOR_END_8150__=19;for($i=$__FOR_START_8150__;$i < $__FOR_END_8150__;$i+=1){ ?><li>
                         <img src="/shenyangjy/Uploads/Images/FriendCom/logo<?php echo ($i); ?>.png" height="60px" style="margin: 15px" alt="logo">
                     </li><?php } ?>
                 </ul>
@@ -295,70 +295,70 @@
         </section>
         <!-- END CALL-TO-ACTION -->
 
-        <!-- FOOTER -->
+        <!-- 页脚部分 -->
         <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <!-- COLUMN 1 -->
-                        <h3 class="sr-only">ABOUT US</h3>
-                        <img src="/shenyangjy/Home/assets/img/logo/LogoTest.png" class="logo" alt="Repute" style="width: 280px;">
-                        <p>沈阳市价业价格鉴证服务中心，成立于2009年，是沈阳市第一家价格鉴定评估机构，同时具备价格鉴证评估资质及沈阳市中级人民法院司法技术专业机构。</p>
-                        <p>成立至今，以严谨的专业态度、成熟的工作经验、良好的沟通能力，为沈阳市中级人民法院及各辖区法院、沈阳铁路监督管理局、沈阳市交警支队、人保财险、中国平安保险公司、辽宁省石油有限公司、为近1000家委托行政主体、市场主体及公民提供高品质、全方位的评估服务。受理案件2万余件，鉴定评估总额达16亿元，标的金额超百万的有1000余件。为各级人民法院，机关企事业团体及个人提供价格参考依据。</p>
-                        <p>凭借丰富的经验，一流的技术，我们价格鉴证评估领域内恪尽职守，秉承“客观、公平、公正、合理”的理念，使沈阳市价业价格鉴证服务中心更好的服务于司法、政府与社会。</p>
-                        <!-- END COLUMN 1 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- COLUMN 1 -->
+                <h3 class="sr-only">ABOUT US</h3>
+                <img src="/shenyangjy/Home/assets/img/logo/LogoTest.png" class="logo" alt="Repute" style="width: 280px;">
+                <p>沈阳市价业价格鉴证服务中心，成立于2009年，是沈阳市第一家价格鉴定评估机构，同时具备价格鉴证评估资质及沈阳市中级人民法院司法技术专业机构。</p>
+                <p>成立至今，以严谨的专业态度、成熟的工作经验、良好的沟通能力，为沈阳市中级人民法院及各辖区法院、沈阳铁路监督管理局、沈阳市交警支队、人保财险、中国平安保险公司、辽宁省石油有限公司、为近1000家委托行政主体、市场主体及公民提供高品质、全方位的评估服务。受理案件2万余件，鉴定评估总额达16亿元，标的金额超百万的有1000余件。为各级人民法院，机关企事业团体及个人提供价格参考依据。</p>
+                <p>凭借丰富的经验，一流的技术，我们价格鉴证评估领域内恪尽职守，秉承“客观、公平、公正、合理”的理念，使沈阳市价业价格鉴证服务中心更好的服务于司法、政府与社会。</p>
+                <!-- END COLUMN 1 -->
+            </div>
+            <div class="col-md-4">
+                <!-- COLUMN 2 -->
+                <h3 class="footer-heading">相关连接</h3>
+                <div class="row margin-bottom-30px">
+                    <div class="col-xs-6">
+                        <ul class="list-unstyled footer-nav">
+                            <li><a href="#">关于我们</a></li>
+                            <li><a href="#">最新资讯</a></li>
+                            <li><a href="#">公司简介</a></li>
+                            <li><a href="#">测试文字</a></li>
+                            <li><a href="#">测试文字</a></li>
+                        </ul>
                     </div>
-                    <div class="col-md-4">
-                        <!-- COLUMN 2 -->
-                        <h3 class="footer-heading">相关连接</h3>
-                        <div class="row margin-bottom-30px">
-                            <div class="col-xs-6">
-                                <ul class="list-unstyled footer-nav">
-                                    <li><a href="#">关于我们</a></li>
-                                    <li><a href="#">最新资讯</a></li>
-                                    <li><a href="#">公司简介</a></li>
-                                    <li><a href="#">测试文字</a></li>
-                                    <li><a href="#">测试文字</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-xs-6">
-                                <ul class="list-unstyled footer-nav">
-                                    <li><a href="#">测试文字</a></li>
-                                    <li><a href="#">测试文字</a></li>
-                                    <li><a href="#">测试文字</a></li>
-                                    <li><a href="#">测试文字</a></li>
-                                    <li><a href="#">测试文字</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-xs-6" style="width: 400px;margin-top: 30px;">
-                                <h3 class="footer-heading">邮寄地址及联系方式</h3>
-                                <ul class="list-unstyled">
-                                    <li>地址：辽宁省沈阳市沈河区小北关街178号</li>
-                                    <li>邮编：110000</li>
-                                    <li>办公电话：024 - 88556897</li>
-                                    <li>Email：email@yourdomain.com</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- END COLUMN 2 -->
+                    <div class="col-xs-6">
+                        <ul class="list-unstyled footer-nav">
+                            <li><a href="#">测试文字</a></li>
+                            <li><a href="#">测试文字</a></li>
+                            <li><a href="#">测试文字</a></li>
+                            <li><a href="#">测试文字</a></li>
+                            <li><a href="#">测试文字</a></li>
+                        </ul>
                     </div>
-                    <div class="col-md-4">
-                        <h3 class="footer-heading">公司地址</h3>
-                        <p>辽宁省沈阳市沈河区小北关街178号</p>
-                        <div id="allmap">
-                            <iframe src="/shenyangjy/Home/View/Index/baiduMap.html" height="255px" width="390">
-                        </iframe>
-                        </div>
+                    <div class="col-xs-6" style="width: 400px;margin-top: 30px;">
+                        <h3 class="footer-heading">邮寄地址及联系方式</h3>
+                        <ul class="list-unstyled">
+                            <li>地址：辽宁省沈阳市沈河区小北关街178号</li>
+                            <li>邮编：110000</li>
+                            <li>办公电话：024 - 88556897</li>
+                            <li>Email：email@yourdomain.com</li>
+                        </ul>
                     </div>
                 </div>
+                <!-- END COLUMN 2 -->
             </div>
-            <!-- COPYRIGHT -->
-            <div class="text-center copyright">
-                More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
+            <div class="col-md-4">
+                <h3 class="footer-heading">公司地址</h3>
+                <p>辽宁省沈阳市沈河区小北关街178号</p>
+                <div id="allmap">
+                    <iframe src="/shenyangjy/Home/View/Index/baiduMap.html" height="255px" width="390">
+                    </iframe>
+                </div>
             </div>
-            <!-- END COPYRIGHT -->
-        </footer>
-        <!-- END FOOTER -->
+        </div>
+    </div>
+    <!-- COPYRIGHT -->
+    <div class="text-center copyright">
+        More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
+    </div>
+    <!-- END COPYRIGHT -->
+</footer>
+        <!-- END 页脚部分 -->
     </div>
     <!-- END WRAPPER -->
     <!-- JAVASCRIPTS -->
@@ -373,6 +373,8 @@
         // tab-bottom<?php echo ($k + 1); ?>
 
         $(function(){
+            $(".dropdown").removeClass("active");
+            $("#pageIndex").addClass("active");
             $("#tab-bottom1").addClass('active');
             $("div[id^='dp']").css("display", "none");
 
@@ -398,8 +400,8 @@
                 // alert(this.id);
                 $("div[id^='dp']").css("display", "none");
             });
-
         });
+
     </script>
 </body>
 

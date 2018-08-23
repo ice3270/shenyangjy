@@ -45,6 +45,20 @@ class IndexController extends Controller {
         $ta_info = $ta->find();
         $this->assign("ta_info", $ta_info);
 
+        //start 页脚相关数据信息
+        $com = M("company_info_footer");
+        $com_info = $com->find();
+        $this->assign("com_info", $com_info);
+
+        $link_in = M("link_in_index");
+        $link_in_info = $link_in->select();
+        $this->assign("link_in_info", $link_in_info);
+
+        $link_out = M("link_out_index");
+        $link_out_info = $link_out->select();
+        $this->assign("link_out_info", $link_out_info);
+        //end 页脚相关数据信息
+
         $this->display();
     }
 }

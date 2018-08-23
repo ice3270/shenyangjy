@@ -1,24 +1,22 @@
 /*
- Navicat Premium Data Transfer
+Navicat MySQL Data Transfer
 
- Source Server         : MySQL-ROOT
- Source Server Type    : MySQL
- Source Server Version : 50639
- Source Host           : localhost
- Source Database       : syjy
+Source Server         : MySQL
+Source Server Version : 50721
+Source Host           : localhost:3306
+Source Database       : syjy
 
- Target Server Type    : MySQL
- Target Server Version : 50639
- File Encoding         : utf-8
+Target Server Type    : MYSQL
+Target Server Version : 50721
+File Encoding         : 65001
 
- Date: 08/13/2018 16:56:34 PM
+Date: 2018-08-23 18:07:50
 */
 
-SET NAMES utf8;
-SET FOREIGN_KEY_CHECKS = 0;
+SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
---  Table structure for `banner`
+-- Table structure for banner
 -- ----------------------------
 DROP TABLE IF EXISTS `banner`;
 CREATE TABLE `banner` (
@@ -30,14 +28,14 @@ CREATE TABLE `banner` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
---  Records of `banner`
+-- Records of banner
 -- ----------------------------
-BEGIN;
-INSERT INTO `banner` VALUES ('1', '展示图一 测试标题1234567890-', '展示图一 测试描述 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '1533642072'), ('2', '展示图二 测试标题', '展示图二 测试描述 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '1533642072'), ('3', '展示图三 测试标题', '展示图三 测试描述 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '1533642072');
-COMMIT;
+INSERT INTO `banner` VALUES ('1', '展示图一 测试标题1234567890-', '展示图一 测试描述 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '1533642072');
+INSERT INTO `banner` VALUES ('2', '展示图二 测试标题', '展示图二 测试描述 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '1533642072');
+INSERT INTO `banner` VALUES ('3', '展示图三 测试标题', '展示图三 测试描述 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '1533642072');
 
 -- ----------------------------
---  Table structure for `business_index`
+-- Table structure for business_index
 -- ----------------------------
 DROP TABLE IF EXISTS `business_index`;
 CREATE TABLE `business_index` (
@@ -48,14 +46,17 @@ CREATE TABLE `business_index` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
---  Records of `business_index`
+-- Records of business_index
 -- ----------------------------
-BEGIN;
-INSERT INTO `business_index` VALUES ('1', '演示标题文字一1111', '演示正文测试文字一'), ('2', '演示正文测试文字2', '演示正文测试文字22222222222'), ('3', '演示正文测试文字三', '演示正文测试文字三3333333333'), ('4', '演示正文测试文字四', '演示正文测试文字四4444444'), ('5', '演示标题文字五', '演示正文测试文字五5555555555'), ('6', '演示正文测试文字六66666', '演示正文测试文字六');
-COMMIT;
+INSERT INTO `business_index` VALUES ('1', '演示标题文字一1111', '演示正文测试文字一');
+INSERT INTO `business_index` VALUES ('2', '演示正文测试文字2', '演示正文测试文字22222222222');
+INSERT INTO `business_index` VALUES ('3', '演示正文测试文字三', '演示正文测试文字三3333333333');
+INSERT INTO `business_index` VALUES ('4', '演示正文测试文字四', '演示正文测试文字四4444444');
+INSERT INTO `business_index` VALUES ('5', '演示标题文字五', '演示正文测试文字五5555555555');
+INSERT INTO `business_index` VALUES ('6', '演示正文测试文字六66666', '演示正文测试文字六');
 
 -- ----------------------------
---  Table structure for `caita_index`
+-- Table structure for caita_index
 -- ----------------------------
 DROP TABLE IF EXISTS `caita_index`;
 CREATE TABLE `caita_index` (
@@ -66,14 +67,12 @@ CREATE TABLE `caita_index` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
---  Records of `caita_index`
+-- Records of caita_index
 -- ----------------------------
-BEGIN;
 INSERT INTO `caita_index` VALUES ('1', '彩电塔标题111', '彩电塔测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
-COMMIT;
 
 -- ----------------------------
---  Table structure for `company_index`
+-- Table structure for company_index
 -- ----------------------------
 DROP TABLE IF EXISTS `company_index`;
 CREATE TABLE `company_index` (
@@ -84,14 +83,31 @@ CREATE TABLE `company_index` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
---  Records of `company_index`
+-- Records of company_index
 -- ----------------------------
-BEGIN;
 INSERT INTO `company_index` VALUES ('1', '企业板块测试标题文字', '企业板块正文测试文字 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
-COMMIT;
 
 -- ----------------------------
---  Table structure for `company_show_index`
+-- Table structure for company_info_footer
+-- ----------------------------
+DROP TABLE IF EXISTS `company_info_footer`;
+CREATE TABLE `company_info_footer` (
+  `id` int(11) NOT NULL,
+  `com_text` varchar(1024) NOT NULL,
+  `com_address` varchar(512) NOT NULL,
+  `com_postal` varchar(32) NOT NULL,
+  `com_tel` varchar(32) NOT NULL,
+  `com_email` varchar(64) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of company_info_footer
+-- ----------------------------
+INSERT INTO `company_info_footer` VALUES ('1', '沈阳市价业价格鉴证服务中心，成立于2009年，是沈阳市第一家价格鉴定评估机构，同时具备价格鉴证评估资质及沈阳市中级人民法院司法技术专业机构。', '辽宁省沈阳市沈河区小北关街178号', '110000', '024 - 88556897', 'email@spesc.cn');
+
+-- ----------------------------
+-- Table structure for company_show_index
 -- ----------------------------
 DROP TABLE IF EXISTS `company_show_index`;
 CREATE TABLE `company_show_index` (
@@ -102,14 +118,54 @@ CREATE TABLE `company_show_index` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
---  Records of `company_show_index`
+-- Records of company_show_index
 -- ----------------------------
-BEGIN;
-INSERT INTO `company_show_index` VALUES ('1', '测试标题一', '测试描述文字一'), ('2', '测试标题二', '测试描述文字二'), ('3', '测试标题三', '测试描述文字三');
-COMMIT;
+INSERT INTO `company_show_index` VALUES ('1', '测试标题一', '测试描述文字一');
+INSERT INTO `company_show_index` VALUES ('2', '测试标题二', '测试描述文字二');
+INSERT INTO `company_show_index` VALUES ('3', '测试标题三', '测试描述文字三');
 
 -- ----------------------------
---  Table structure for `serve_index`
+-- Table structure for link_in_index
+-- ----------------------------
+DROP TABLE IF EXISTS `link_in_index`;
+CREATE TABLE `link_in_index` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `link_name` varchar(255) NOT NULL,
+  `link_url` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of link_in_index
+-- ----------------------------
+INSERT INTO `link_in_index` VALUES ('1', '关于我们', 'Home/Pages/about_us');
+INSERT INTO `link_in_index` VALUES ('2', '服务内容', 'Home/Pages/server');
+INSERT INTO `link_in_index` VALUES ('3', '合作案例', 'Home/Pages/ex');
+INSERT INTO `link_in_index` VALUES ('4', '公司动态', 'Home/Pages/com_new');
+INSERT INTO `link_in_index` VALUES ('5', '法律法规', 'Home/Pages/law');
+
+-- ----------------------------
+-- Table structure for link_out_index
+-- ----------------------------
+DROP TABLE IF EXISTS `link_out_index`;
+CREATE TABLE `link_out_index` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `link_name` varchar(255) NOT NULL,
+  `link_url` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of link_out_index
+-- ----------------------------
+INSERT INTO `link_out_index` VALUES ('1', '友情链接1', '/Home/Pages/about_us');
+INSERT INTO `link_out_index` VALUES ('2', '友情链接2', '/Home/Pages/server');
+INSERT INTO `link_out_index` VALUES ('3', '友情链接3', '/Home/Pages/ex');
+INSERT INTO `link_out_index` VALUES ('4', '友情链接4', '/Home/Pages/com_new');
+INSERT INTO `link_out_index` VALUES ('5', '友情链接5', '/Home/Pages/law');
+
+-- ----------------------------
+-- Table structure for serve_index
 -- ----------------------------
 DROP TABLE IF EXISTS `serve_index`;
 CREATE TABLE `serve_index` (
@@ -121,14 +177,15 @@ CREATE TABLE `serve_index` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
---  Records of `serve_index`
+-- Records of serve_index
 -- ----------------------------
-BEGIN;
-INSERT INTO `serve_index` VALUES ('1', 'balance-scale', '服务于司法', '竭诚服务于司法 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字'), ('2', 'flag', '服务于公安', '竭诚服务于公安 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字'), ('3', 'asl-interpreting', '服务于公司', '竭诚服务于公司 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字'), ('4', 'users', '服务于百姓', '竭诚服务于百姓 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
-COMMIT;
+INSERT INTO `serve_index` VALUES ('1', 'balance-scale', '服务于司法', '竭诚服务于司法 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
+INSERT INTO `serve_index` VALUES ('2', 'flag', '服务于公安', '竭诚服务于公安 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
+INSERT INTO `serve_index` VALUES ('3', 'asl-interpreting', '服务于公司', '竭诚服务于公司 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
+INSERT INTO `serve_index` VALUES ('4', 'users', '服务于百姓', '竭诚服务于百姓 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
 
 -- ----------------------------
---  Table structure for `slogan_index`
+-- Table structure for slogan_index
 -- ----------------------------
 DROP TABLE IF EXISTS `slogan_index`;
 CREATE TABLE `slogan_index` (
@@ -140,14 +197,15 @@ CREATE TABLE `slogan_index` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
---  Records of `slogan_index`
+-- Records of slogan_index
 -- ----------------------------
-BEGIN;
-INSERT INTO `slogan_index` VALUES ('1', '（一）服务宗旨标题测试文字：最强最强我最强，最棒最棒我最棒', '（一）服务宗旨详情测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '服务一'), ('2', '（二）服务宗旨标题测试文字：最强最强我最强，最棒最棒我最棒', '（二）服务宗旨详情测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '服务二'), ('3', '（三）服务宗旨标题测试文字：最强最强我最强，最棒最棒我最棒', '（三）服务宗旨详情测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '服务三'), ('4', '（四）服务宗旨标题测试文字：最强最强我最强，最棒最棒我最棒', '（四）服务宗旨详情测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '服务四');
-COMMIT;
+INSERT INTO `slogan_index` VALUES ('1', '（一）服务宗旨标题测试文字：最强最强我最强，最棒最棒我最棒', '（一）服务宗旨详情测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '服务一');
+INSERT INTO `slogan_index` VALUES ('2', '（二）服务宗旨标题测试文字：最强最强我最强，最棒最棒我最棒', '（二）服务宗旨详情测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '服务二');
+INSERT INTO `slogan_index` VALUES ('3', '（三）服务宗旨标题测试文字：最强最强我最强，最棒最棒我最棒', '（三）服务宗旨详情测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '服务三');
+INSERT INTO `slogan_index` VALUES ('4', '（四）服务宗旨标题测试文字：最强最强我最强，最棒最棒我最棒', '（四）服务宗旨详情测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '服务四');
 
 -- ----------------------------
---  Table structure for `year_index`
+-- Table structure for year_index
 -- ----------------------------
 DROP TABLE IF EXISTS `year_index`;
 CREATE TABLE `year_index` (
@@ -159,10 +217,10 @@ CREATE TABLE `year_index` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
---  Records of `year_index`
+-- Records of year_index
 -- ----------------------------
-BEGIN;
-INSERT INTO `year_index` VALUES ('1', '2001年', '1111年发生了啥事儿就写啥事儿，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '1111标题'), ('2', '2010年', '2222年发生了啥事儿就写啥事儿，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '2222标题'), ('3', '2013年', '3333年发生了啥事儿就写啥事儿，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '3333标题'), ('4', '2017年', '4444年发生了啥事儿就写啥事儿，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '4444标题'), ('5', '至今……', '至今年发生了啥事儿就写啥事儿，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '至今标题');
-COMMIT;
-
-SET FOREIGN_KEY_CHECKS = 1;
+INSERT INTO `year_index` VALUES ('1', '2001年', '1111年发生了啥事儿就写啥事儿，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '1111标题');
+INSERT INTO `year_index` VALUES ('2', '2010年', '2222年发生了啥事儿就写啥事儿，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '2222标题');
+INSERT INTO `year_index` VALUES ('3', '2013年', '3333年发生了啥事儿就写啥事儿，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '3333标题');
+INSERT INTO `year_index` VALUES ('4', '2017年', '4444年发生了啥事儿就写啥事儿，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '4444标题');
+INSERT INTO `year_index` VALUES ('5', '至今……', '至今年发生了啥事儿就写啥事儿，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '至今标题');

@@ -55,7 +55,7 @@
                 <li class="dropdown active" id="pageIndex">
                     <a href="/shenyangjy">首页 </a>
                 </li>
-                <li class="dropdown" id="pageAbout">
+                <li class="dropdown" id=" ">
                     <a href="/shenyangjy/Home/Pages/about_us">关于我们 </a>
                 </li>
                 <li class="dropdown" id="pageServer">
@@ -213,7 +213,7 @@
                     <div class="col-md-8">
                         <!--小图标小标题小内容-->
                         <div class="row">
-                            <?php $__FOR_START_10225__=1;$__FOR_END_10225__=6;for($i=$__FOR_START_10225__;$i < $__FOR_END_10225__;$i+=1){ ?><div class="col-md-6 col-sm-6">
+                            <?php $__FOR_START_2611__=1;$__FOR_END_2611__=6;for($i=$__FOR_START_2611__;$i < $__FOR_END_2611__;$i+=1){ ?><div class="col-md-6 col-sm-6">
                                     <div class="news-item margin-bottom-30px clearfix">
                                         <a href="#"><img src="/shenyangjy/Uploads/Images/Business/business<?php echo ($i + 1); ?>.png?ran=<?php echo ($ran); ?>" class="img-responsive pull-left"></a>
                                         <div class="right">
@@ -274,7 +274,7 @@
             <div class="container">
                 <h2 class="section-heading">合作单位</h2>
                 <ul class="list-inline list-client-logo">
-                    <?php $__FOR_START_8150__=1;$__FOR_END_8150__=19;for($i=$__FOR_START_8150__;$i < $__FOR_END_8150__;$i+=1){ ?><li>
+                    <?php $__FOR_START_4592__=1;$__FOR_END_4592__=19;for($i=$__FOR_START_4592__;$i < $__FOR_END_4592__;$i+=1){ ?><li>
                         <img src="/shenyangjy/Uploads/Images/FriendCom/logo<?php echo ($i); ?>.png" height="60px" style="margin: 15px" alt="logo">
                     </li><?php } ?>
                 </ul>
@@ -301,52 +301,58 @@
         <div class="row">
             <div class="col-md-4">
                 <!-- COLUMN 1 -->
-                <h3 class="sr-only">ABOUT US</h3>
                 <img src="/shenyangjy/Home/assets/img/logo/LogoTest.png" class="logo" alt="Repute" style="width: 280px;">
-                <p>沈阳市价业价格鉴证服务中心，成立于2009年，是沈阳市第一家价格鉴定评估机构，同时具备价格鉴证评估资质及沈阳市中级人民法院司法技术专业机构。</p>
-                <p>成立至今，以严谨的专业态度、成熟的工作经验、良好的沟通能力，为沈阳市中级人民法院及各辖区法院、沈阳铁路监督管理局、沈阳市交警支队、人保财险、中国平安保险公司、辽宁省石油有限公司、为近1000家委托行政主体、市场主体及公民提供高品质、全方位的评估服务。受理案件2万余件，鉴定评估总额达16亿元，标的金额超百万的有1000余件。为各级人民法院，机关企事业团体及个人提供价格参考依据。</p>
-                <p>凭借丰富的经验，一流的技术，我们价格鉴证评估领域内恪尽职守，秉承“客观、公平、公正、合理”的理念，使沈阳市价业价格鉴证服务中心更好的服务于司法、政府与社会。</p>
+                <div style="height: 80px; overflow:hidden; margin-bottom: 10px;">
+                    <?php echo ($com_info["com_text"]); ?>
+                </div>
+                <div>
+                    <div style="height: 180px;float: left;">
+                        <div style="margin:auto">
+                            <h3 style="font-size: 20px;" class="footer-heading">关注我们</h3>
+                            <span><li class="fa fa-hand-o-right fa-5x"></li></span>
+                        </div>
+                    </div>
+                    <div style="width: 180px; height: 180px; margin-left: 40px; border: 2px solid white;float: left;">
+                        <img src="#" alt="二维码">
+                    </div>
+                </div>
                 <!-- END COLUMN 1 -->
             </div>
+
             <div class="col-md-4">
                 <!-- COLUMN 2 -->
-                <h3 class="footer-heading">相关连接</h3>
-                <div class="row margin-bottom-30px">
+                <div class="row">
                     <div class="col-xs-6">
+                        <h3 class="footer-heading">站内链接</h3>
                         <ul class="list-unstyled footer-nav">
-                            <li><a href="#">关于我们</a></li>
-                            <li><a href="#">最新资讯</a></li>
-                            <li><a href="#">公司简介</a></li>
-                            <li><a href="#">测试文字</a></li>
-                            <li><a href="#">测试文字</a></li>
+                            <?php if(is_array($link_in_info)): foreach($link_in_info as $key=>$v): ?><!--<li><a href="<?php echo ($v["link_url"]); ?>"><?php echo ($v["link_name"]); ?></a></li>-->
+                                <li><a href="/shenyangjy/<?php echo ($v["link_url"]); ?>"><?php echo ($v["link_name"]); ?></a></li><?php endforeach; endif; ?>
                         </ul>
                     </div>
                     <div class="col-xs-6">
+                        <h3 class="footer-heading">相关链接</h3>
                         <ul class="list-unstyled footer-nav">
-                            <li><a href="#">测试文字</a></li>
-                            <li><a href="#">测试文字</a></li>
-                            <li><a href="#">测试文字</a></li>
-                            <li><a href="#">测试文字</a></li>
-                            <li><a href="#">测试文字</a></li>
+                            <?php if(is_array($link_out_info)): foreach($link_out_info as $key=>$v): ?><li><a href="<?php echo ($v["link_url"]); ?>"><?php echo ($v["link_name"]); ?></a></li><?php endforeach; endif; ?>
                         </ul>
                     </div>
-                    <div class="col-xs-6" style="width: 400px;margin-top: 30px;">
+                    <div class="col-xs-6" style="width: 400px;">
                         <h3 class="footer-heading">邮寄地址及联系方式</h3>
                         <ul class="list-unstyled">
-                            <li>地址：辽宁省沈阳市沈河区小北关街178号</li>
-                            <li>邮编：110000</li>
-                            <li>办公电话：024 - 88556897</li>
-                            <li>Email：email@yourdomain.com</li>
+                            <li>通讯地址：<?php echo ($com_info["com_address"]); ?></li>
+                            <li>邮政编码：<?php echo ($com_info["com_postal"]); ?></li>
+                            <li>办公电话：<?php echo ($com_info["com_tel"]); ?></li>
+                            <li>Email：<?php echo ($com_info["com_email"]); ?></li>
                         </ul>
                     </div>
                 </div>
                 <!-- END COLUMN 2 -->
             </div>
+
+            <h3 class="footer-heading">公司地址</h3>
             <div class="col-md-4">
-                <h3 class="footer-heading">公司地址</h3>
-                <p>辽宁省沈阳市沈河区小北关街178号</p>
+                <p><?php echo ($com_info["com_address"]); ?></p>
                 <div id="allmap">
-                    <iframe src="/shenyangjy/Home/View/Index/baiduMap.html" height="255px" width="390">
+                    <iframe src="/shenyangjy/Home/View/Index/baiduMap.html" height="261px" width="396">
                     </iframe>
                 </div>
             </div>

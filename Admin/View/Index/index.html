@@ -135,6 +135,7 @@
             <br>
             <h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disYearBtn">发展历程</h2>
             <h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disCaitaBtn">彩塔板块</h2>
+            <h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disFooterBtn">页脚部分</h2>
             <br>
             <br>
             <!-- END 导航按钮区 -->
@@ -402,6 +403,42 @@
                 </form>
             </div>
             <!-- END 彩电塔-->
+            <!--页脚部分-->
+            <div class="form-group" style="display: none;" id='editFooter'>
+                <form action="Admin/editIndex/footerUpdate" method="post" enctype="multipart/form-data">
+                    <table class="table table-hover" style="width: 80%;margin-left: 40px;">
+                        <tr>
+                            <td>公司简介：</td>
+                            <td>
+                                <textarea name="com_text" class="form-control" rows="2">{$com_info.com_text}</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>通讯地址：</td>
+                            <td><input type="text" class="form-control"  name="com_address" value="{$com_info.com_address}"></td>
+                        </tr>
+                        <tr>
+                            <td>邮政编码：</td>
+                            <td><input type="text" class="form-control"  name="com_postal" value="{$com_info.com_postal}"></td>
+                        </tr>
+                        <tr>
+                            <td>联系电话：</td>
+                            <td><input type="text" class="form-control"  name="com_tel" value="{$com_info.com_tel}"></td>
+                        </tr>
+                        <tr>
+                            <td>邮箱地址：</td>
+                            <td><input type="text" class="form-control"  name="com_email" value="{$com_info.com_email}"></td>
+                        </tr>
+
+                        <tr><td colspan="2"><hr></td></tr>
+
+                        <tr align="center">
+                            <td colspan="2"><input type="submit" value="更新页脚公司信息"> &nbsp; | &nbsp; <input type="reset"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <!--END 页脚部分-->
 		</div>
 
 		<div class="clearfix"></div>
@@ -452,6 +489,10 @@
             $("#disCaitaBtn").click(function(event) {
                 /* Act on the event */
                 btnDown($("#editCaita"), $(this));
+			});
+            $("#disFooterBtn").click(function(event) {
+                /* Act on the event */
+                btnDown($("#editFooter"), $(this));
 			});
             function btnDown(div,btn){
                 $("div[class='form-group']").hide()

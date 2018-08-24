@@ -50,10 +50,6 @@ class IndexController extends Controller {
         $com_info = $com->find();
         $this->assign("com_info", $com_info);
 
-        $link_in = M("link_in_index");
-        $link_in_info = $link_in->select();
-        $this->assign("link_in_info", $link_in_info);
-
         $link_out = M("link_out_index");
         $link_out_info = $link_out->select();
         $this->assign("link_out_info", $link_out_info);

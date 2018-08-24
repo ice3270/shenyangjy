@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50721
 File Encoding         : 65001
 
-Date: 2018-08-23 18:07:50
+Date: 2018-08-24 15:15:30
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -158,11 +158,11 @@ CREATE TABLE `link_out_index` (
 -- ----------------------------
 -- Records of link_out_index
 -- ----------------------------
-INSERT INTO `link_out_index` VALUES ('1', '友情链接1', '/Home/Pages/about_us');
-INSERT INTO `link_out_index` VALUES ('2', '友情链接2', '/Home/Pages/server');
-INSERT INTO `link_out_index` VALUES ('3', '友情链接3', '/Home/Pages/ex');
-INSERT INTO `link_out_index` VALUES ('4', '友情链接4', '/Home/Pages/com_new');
-INSERT INTO `link_out_index` VALUES ('5', '友情链接5', '/Home/Pages/law');
+INSERT INTO `link_out_index` VALUES ('1', '百度一下', 'www.baidu.com');
+INSERT INTO `link_out_index` VALUES ('2', '网易163', 'www.163.com');
+INSERT INTO `link_out_index` VALUES ('3', '新浪网', 'www.sina.com');
+INSERT INTO `link_out_index` VALUES ('4', '搜狐网', 'www.sohu.com');
+INSERT INTO `link_out_index` VALUES ('5', '中央电视台', 'www.cctv.com');
 
 -- ----------------------------
 -- Table structure for serve_index

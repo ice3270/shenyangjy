@@ -195,4 +195,47 @@ class editIndexController extends Controller {
 
         $this->success("更新成功", U("/Admin/"), 3);
     }
+
+    public function footerUpdate(){
+        $com_footer = M("company_info_footer");
+        $com_footer->where("id='1'")->save($_POST);    //更新数据库中标题、描述
+
+        $this->success("更新成功", U("/Admin/"), 3);
+    }
+
+    public function erweiUpdate(){
+        //文件上传初始化
+        $upload = new \Think\Upload();
+        $upload->maxSize = 4096000; //限制文件大小
+        $upload->exts = array('png'); //上传文件类型
+        $upload->savePath = './Images/';    //文件上传目录
+        $upload->replace = true; //如果同名则覆盖
+        $upload->autoSub = false; //不适用子目录名保存
+        $upload->saveName = "erwei";	//指定文件名
+
+        if($_FILES['ImageErwei']['size']){
+            $info = $upload->uploadOne($_FILES['ImageErwei']);    //上传单个文件
+            if(!$info){ //如果不成功则输出错误信息
+                $this->error($upload->getError());
+            }
+        }
+
+        $this->success("更新成功", U("/Admin/"), 3);
+    }
+
+    public function linkUpdate(){
+        $link = M("link_out_index");
+
+        foreach($_POST as $k => $v){
+            foreach($v as $kk => $vv){
+                $data[$kk][$k] = $vv;
+            }
+        }
+
+        foreach ($data as $k => $v){
+            $kk = $k + 1;
+            $link->where("id=".$kk)->save($v);    //更新数据库中标题、描述
+        }
+        $this->success("更新成功", U("/Admin/"), 3);
+    }
 }

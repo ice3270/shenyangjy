@@ -213,7 +213,7 @@
                     <div class="col-md-8">
                         <!--小图标小标题小内容-->
                         <div class="row">
-                            <?php $__FOR_START_2611__=1;$__FOR_END_2611__=6;for($i=$__FOR_START_2611__;$i < $__FOR_END_2611__;$i+=1){ ?><div class="col-md-6 col-sm-6">
+                            <?php $__FOR_START_16044__=1;$__FOR_END_16044__=6;for($i=$__FOR_START_16044__;$i < $__FOR_END_16044__;$i+=1){ ?><div class="col-md-6 col-sm-6">
                                     <div class="news-item margin-bottom-30px clearfix">
                                         <a href="#"><img src="/shenyangjy/Uploads/Images/Business/business<?php echo ($i + 1); ?>.png?ran=<?php echo ($ran); ?>" class="img-responsive pull-left"></a>
                                         <div class="right">
@@ -274,7 +274,7 @@
             <div class="container">
                 <h2 class="section-heading">合作单位</h2>
                 <ul class="list-inline list-client-logo">
-                    <?php $__FOR_START_4592__=1;$__FOR_END_4592__=19;for($i=$__FOR_START_4592__;$i < $__FOR_END_4592__;$i+=1){ ?><li>
+                    <?php $__FOR_START_18293__=1;$__FOR_END_18293__=19;for($i=$__FOR_START_18293__;$i < $__FOR_END_18293__;$i+=1){ ?><li>
                         <img src="/shenyangjy/Uploads/Images/FriendCom/logo<?php echo ($i); ?>.png" height="60px" style="margin: 15px" alt="logo">
                     </li><?php } ?>
                 </ul>
@@ -289,7 +289,7 @@
                     <h2 class="section-heading">联系我们</h2>
                 </div>
                 <div class="pull-right">
-                    <p>TEL： (024) 88516304 <br> E-mail： xxxx@xx.com</p>
+                    <p>TEL： <?php echo ($com_info["com_tel"]); ?> <br> E-mail： <?php echo ($com_info["com_email"]); ?></p>
                 </div>
             </div>
         </section>
@@ -312,8 +312,8 @@
                             <span><li class="fa fa-hand-o-right fa-5x"></li></span>
                         </div>
                     </div>
-                    <div style="width: 180px; height: 180px; margin-left: 40px; border: 2px solid white;float: left;">
-                        <img src="#" alt="二维码">
+                    <div style="width: 180px; height: 180px; margin-left: 40px; float: left;">
+                        <img src="/shenyangjy/Uploads/Images/erwei.png" width="180" alt="二维码">
                     </div>
                 </div>
                 <!-- END COLUMN 1 -->
@@ -332,7 +332,7 @@
                     <div class="col-xs-6">
                         <h3 class="footer-heading">相关链接</h3>
                         <ul class="list-unstyled footer-nav">
-                            <?php if(is_array($link_out_info)): foreach($link_out_info as $key=>$v): ?><li><a href="<?php echo ($v["link_url"]); ?>"><?php echo ($v["link_name"]); ?></a></li><?php endforeach; endif; ?>
+                            <?php if(is_array($link_out_info)): foreach($link_out_info as $key=>$v): ?><li><a href="http://<?php echo ($v["link_url"]); ?>"><?php echo ($v["link_name"]); ?></a></li><?php endforeach; endif; ?>
                         </ul>
                     </div>
                     <div class="col-xs-6" style="width: 400px;">
@@ -360,7 +360,7 @@
     </div>
     <!-- COPYRIGHT -->
     <div class="text-center copyright">
-        More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
+        <a href="http://www.spesc.cn/" title="沈阳价格价业鉴证服务中心">沈阳价格价业鉴证服务中心 - Shenyang Price Evaluation Service Center</a>
     </div>
     <!-- END COPYRIGHT -->
 </footer>

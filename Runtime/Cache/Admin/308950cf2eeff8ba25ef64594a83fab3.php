@@ -391,10 +391,28 @@
                 </form>
             </div>
             <!-- END 彩电塔-->
+
             <!--页脚部分-->
             <div class="form-group" style="display: none;" id='editFooter'>
-                <form action="Admin/editIndex/footerUpdate" method="post" enctype="multipart/form-data">
-                    <table class="table table-hover" style="width: 80%;margin-left: 40px;">
+                <table class="table table-hover" style="width: 80%;margin-left: 40px;">
+                    <form action="Admin/editIndex/erweiUpdate" method="post" enctype="multipart/form-data">
+                        <tr>
+                            <td>原图预览：</td>
+                            <td>
+                                <img src="../Uploads/Images/erwei.png?ran=<?php echo ($ran); ?>" height="100px">
+                                <p style="margin-top: 5px;">温馨提示：为保证上传图片与网站布局的美观，上传图片最好为：180 * 180</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>上传更新 - 选择新的二维码：</td>
+                            <td><input type="file" class="form-control" name="ImageErwei"></td>
+                        </tr>
+                        <tr><td colspan="2"><hr></td></tr>
+                        <tr align="center">
+                            <td colspan="2"><input type="submit" value="更新二维码"> &nbsp; | &nbsp; <input type="reset"></td>
+                        </tr>
+                    </form>
+                    <form action="Admin/editIndex/footerUpdate" method="post" enctype="multipart/form-data">
                         <tr>
                             <td>公司简介：</td>
                             <td>
@@ -423,10 +441,24 @@
                         <tr align="center">
                             <td colspan="2"><input type="submit" value="更新页脚公司信息"> &nbsp; | &nbsp; <input type="reset"></td>
                         </tr>
-                    </table>
-                </form>
+                    </form>
+                    <form action="Admin/editIndex/linkUpdate" method="post">
+                        <?php if(is_array($link_out_info)): foreach($link_out_info as $key=>$v): ?><tr>
+                                <td><input type="text" class="form-control"  name="link_name[]" value="<?php echo ($v["link_name"]); ?>"></td>
+                                <td><input type="text" class="form-control"  name="link_url[]" value="<?php echo ($v["link_url"]); ?>"></td>
+                            </tr><?php endforeach; endif; ?>
+
+
+                        <tr><td colspan="2"><hr></td></tr>
+
+                        <tr align="center">
+                            <td colspan="2"><input type="submit" value="更新相关链接"> &nbsp; | &nbsp; <input type="reset"></td>
+                        </tr>
+                    </form>
+                </table>
             </div>
             <!--END 页脚部分-->
+
 		</div>
 
 		<div class="clearfix"></div>

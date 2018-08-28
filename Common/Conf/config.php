@@ -1,7 +1,7 @@
 <?php
 return array(
 	//'配置项'=>'配置值'
-    "URL_MODEL" =>  1,
+    "URL_MODEL" =>  2,
     'DB_TYPE'=>'mysql', //数据库类型 –>注意该项
 //    'DB_USER'=>'bdm272982120', //用户名
 //    'DB_PWD'=>'Senlin49sql', //密码

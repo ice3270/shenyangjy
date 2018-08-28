@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50721
 File Encoding         : 65001
 
-Date: 2018-08-24 15:15:30
+Date: 2018-08-28 17:19:27
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -30,9 +30,9 @@ CREATE TABLE `banner` (
 -- ----------------------------
 -- Records of banner
 -- ----------------------------
-INSERT INTO `banner` VALUES ('1', '展示图一 测试标题1234567890-', '展示图一 测试描述 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '1533642072');
-INSERT INTO `banner` VALUES ('2', '展示图二 测试标题', '展示图二 测试描述 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '1533642072');
-INSERT INTO `banner` VALUES ('3', '展示图三 测试标题', '展示图三 测试描述 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '1533642072');
+INSERT INTO `banner` VALUES ('1', '展示图一 测试标题1234567890-', '展示图一 测试描述 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '1535437937');
+INSERT INTO `banner` VALUES ('2', '展示图二 测试标题', '展示图二 测试描述 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '1535437937');
+INSERT INTO `banner` VALUES ('3', '展示图三 测试标题', '展示图三 测试描述 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '1535437937');
 
 -- ----------------------------
 -- Table structure for business_index
@@ -104,7 +104,7 @@ CREATE TABLE `company_info_footer` (
 -- ----------------------------
 -- Records of company_info_footer
 -- ----------------------------
-INSERT INTO `company_info_footer` VALUES ('1', '沈阳市价业价格鉴证服务中心，成立于2009年，是沈阳市第一家价格鉴定评估机构，同时具备价格鉴证评估资质及沈阳市中级人民法院司法技术专业机构。', '辽宁省沈阳市沈河区小北关街178号', '110000', '024 - 88556897', 'email@spesc.cn');
+INSERT INTO `company_info_footer` VALUES ('1', '沈阳市价业价格鉴证服务中心，成立于2009年，是沈阳市第一家价格鉴定评估机构，同时具备价格鉴证评估资质及沈阳市中级人民法院司法技术专业机构。', '辽宁省沈阳市沈河区小北关街178号', '110000', '024 - 88556897', 'syjy@spesc.cn');
 
 -- ----------------------------
 -- Table structure for company_show_index
@@ -123,6 +123,24 @@ CREATE TABLE `company_show_index` (
 INSERT INTO `company_show_index` VALUES ('1', '测试标题一', '测试描述文字一');
 INSERT INTO `company_show_index` VALUES ('2', '测试标题二', '测试描述文字二');
 INSERT INTO `company_show_index` VALUES ('3', '测试标题三', '测试描述文字三');
+
+-- ----------------------------
+-- Table structure for introduce_aboutus
+-- ----------------------------
+DROP TABLE IF EXISTS `introduce_aboutus`;
+CREATE TABLE `introduce_aboutus` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `header` varchar(255) NOT NULL,
+  `contents` varchar(4096) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of introduce_aboutus
+-- ----------------------------
+INSERT INTO `introduce_aboutus` VALUES ('1', '企业介绍（可变）', '公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字。公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字');
+INSERT INTO `introduce_aboutus` VALUES ('2', '我的XX（可变）', '测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
+INSERT INTO `introduce_aboutus` VALUES ('3', '我们的XX（可变）', '测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试试文字测试文字测试文字测试文字测试文字');
 
 -- ----------------------------
 -- Table structure for link_in_index
@@ -203,6 +221,26 @@ INSERT INTO `slogan_index` VALUES ('1', '（一）服务宗旨标题测试文字
 INSERT INTO `slogan_index` VALUES ('2', '（二）服务宗旨标题测试文字：最强最强我最强，最棒最棒我最棒', '（二）服务宗旨详情测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '服务二');
 INSERT INTO `slogan_index` VALUES ('3', '（三）服务宗旨标题测试文字：最强最强我最强，最棒最棒我最棒', '（三）服务宗旨详情测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '服务三');
 INSERT INTO `slogan_index` VALUES ('4', '（四）服务宗旨标题测试文字：最强最强我最强，最棒最棒我最棒', '（四）服务宗旨详情测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', '服务四');
+
+-- ----------------------------
+-- Table structure for team_aboutus
+-- ----------------------------
+DROP TABLE IF EXISTS `team_aboutus`;
+CREATE TABLE `team_aboutus` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(32) NOT NULL,
+  `post` varchar(32) NOT NULL,
+  `about` varchar(2048) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of team_aboutus
+-- ----------------------------
+INSERT INTO `team_aboutus` VALUES ('1', '张三', '张三职位', '张三的个人介绍测试文字，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
+INSERT INTO `team_aboutus` VALUES ('2', '李四', '李四职位', '李四的个人介绍，张三的个人介绍测试文字，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
+INSERT INTO `team_aboutus` VALUES ('3', '王五', '王五的职位', '王五的个人介绍测试文字，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
+INSERT INTO `team_aboutus` VALUES ('4', '赵六', '赵六职位', '赵六的个人介绍测试文字，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
 
 -- ----------------------------
 -- Table structure for year_index

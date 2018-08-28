@@ -3,6 +3,16 @@ namespace Home\Controller;
 use Think\Controller;
 class PagesController extends Controller {
     public function about_us(){
+        //关于我们页面
+        $us = M("introduce_aboutus");
+        $us_info = $us->select();
+        $this->assign("us_info", $us_info);
+
+        $team = M("team_aboutus");
+        $team_info = $team->select();
+        $this->assign("team_info", $team_info);
+
+
         //start 页脚相关数据信息
         $com = M("company_info_footer");
         $com_info = $com->find();

@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class editIndexController extends Controller {
+class EditIndexController extends Controller {
     // 展示图更新部分
     public function bannerUpdate(){
        	//文件上传初始化

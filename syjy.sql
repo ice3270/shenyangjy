@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : MySQL
+Source Server         : MySQL-Localhost
 Source Server Version : 50721
 Source Host           : localhost:3306
 Source Database       : syjy
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50721
 File Encoding         : 65001
 
-Date: 2018-08-28 17:19:27
+Date: 2018-08-28 22:43:39
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -138,9 +138,9 @@ CREATE TABLE `introduce_aboutus` (
 -- ----------------------------
 -- Records of introduce_aboutus
 -- ----------------------------
-INSERT INTO `introduce_aboutus` VALUES ('1', '企业介绍（可变）', '公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字。公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字公司介绍测试文字，测试文字测试文字');
-INSERT INTO `introduce_aboutus` VALUES ('2', '我的XX（可变）', '测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
-INSERT INTO `introduce_aboutus` VALUES ('3', '我们的XX（可变）', '测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试试文字测试文字测试文字测试文字测试文字');
+INSERT INTO `introduce_aboutus` VALUES ('1', '公司介绍（可变）1', '测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
+INSERT INTO `introduce_aboutus` VALUES ('2', '我们的XX（可变）11111', '测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试试文字测试文字测试文字测试文字测试文字11111');
+INSERT INTO `introduce_aboutus` VALUES ('3', '我们的XX（可变）22222', '测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试试文字测试文字测试文字测试文字测试文字22222');
 
 -- ----------------------------
 -- Table structure for link_in_index
@@ -231,16 +231,17 @@ CREATE TABLE `team_aboutus` (
   `name` varchar(32) NOT NULL,
   `post` varchar(32) NOT NULL,
   `about` varchar(2048) NOT NULL,
+  `imgpath` varchar(64) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of team_aboutus
 -- ----------------------------
-INSERT INTO `team_aboutus` VALUES ('1', '张三', '张三职位', '张三的个人介绍测试文字，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
-INSERT INTO `team_aboutus` VALUES ('2', '李四', '李四职位', '李四的个人介绍，张三的个人介绍测试文字，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
-INSERT INTO `team_aboutus` VALUES ('3', '王五', '王五的职位', '王五的个人介绍测试文字，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
-INSERT INTO `team_aboutus` VALUES ('4', '赵六', '赵六职位', '赵六的个人介绍测试文字，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
+INSERT INTO `team_aboutus` VALUES ('1', '张三', '张三职位', '张三的个人介绍测试文字，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', 'person1.png');
+INSERT INTO `team_aboutus` VALUES ('2', '李四', '李四职位', '李四的个人介绍，张三的个人介绍测试文字，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', 'person2.png');
+INSERT INTO `team_aboutus` VALUES ('3', '王五', '王五的职位', '王五的个人介绍测试文字，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', 'person3.png');
+INSERT INTO `team_aboutus` VALUES ('4', '赵六', '赵六职位', '赵六的个人介绍测试文字，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', 'person4.png');
 
 -- ----------------------------
 -- Table structure for year_index

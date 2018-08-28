@@ -12,7 +12,6 @@ class PagesController extends Controller {
         $team_info = $team->select();
         $this->assign("team_info", $team_info);
 
-
         //start 页脚相关数据信息
         $com = M("company_info_footer");
         $com_info = $com->find();

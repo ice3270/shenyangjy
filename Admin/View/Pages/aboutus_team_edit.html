@@ -66,45 +66,37 @@
 		<!--//主窗口部分-->
 		<h3 style="margin-left: 40px;">关于我们 - 页面管理</h3>
 		<hr>
-		<h2 class="btn btn-default btnStyleDown" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;">企业展示</h2>
-		<a href="__ROOT__/index.php/Admin/Pages/abOther">
-			<h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;">企业相关</h2>
-		</a>
-		<a href="__ROOT__/index.php/Admin/Pages/abTeamShow">
-			<h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;">团队成员</h2>
-		</a>
+		<h2 class="btn btn-default " style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disCompanyBtn">企业展示</h2>
+		<h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disComOtherBtn">企业相关</h2>
+		<h2 class="btn btn-default btnStyleDown" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disTeamBtn">团队成员</h2>
 
-		<!--企业图文介绍-->
-		<div class="form-group" id="editCompany" style="display: none;">
-			<form action="__ROOT__/index.php/Admin/EditPages/companyUpdate" method="post" enctype="multipart/form-data">
-				<table class="table table-hover" style="width: 80%;margin-left: 40px;">
-					<tr>
-						<td width="200px">原企业展示图预览：</td>
-						<td>
-							<img src="__ROOT__/Uploads/Images/Company_show/abus.png?ran={$ran}" height="200px">
-							<p style="margin-top: 5px;">温馨提示：为保证上传图片与网站布局的美观，上传图片最好为：555 * 280</p>
-						</td>
-					</tr>
-					<tr>
-						<td width="200px">上传企业展示图：</td>
-						<td><input type="file" class="form-control" name="company_img"></td>
-					</tr>
-					<tr>
-						<td width="200px">企业介绍标题：</td>
-						<td><input type="text" class="form-control" name="header" value="{$company_info[0].header}"></td>
-					</tr>
-					<tr>
-						<td width="200px">企业介绍正文：</td>
-						<td><textarea class="form-control" rows="3" name="contents">{$company_info[0].contents}</textarea></td>
-					</tr>
-					<tr><td colspan="2"><hr></td></tr>
-					<tr align="center">
-						<td colspan="2"><input type="submit" value="更新企业展示板块"> &nbsp; | &nbsp; <input type="reset"></td>
-					</tr>
-				</table>
-			</form>
-		</div>
-		<!--End 企业文化图文介绍-->
+		<h3 style="margin-left: 40px;">{$edit|default="添加"}团队成员</h3>
+		<form action="__ROOT__/index.php/Admin/EditPages/{$do|default='abTeamAdd'}" method="post">
+			<table class="table table-hover" style="width: 80%;margin-left: 40px;">
+				<tr>
+					<th>上传头像：</th>
+					<td><input type="file" name="headImg"> {$prompt|default=""}</td>
+				</tr>
+				<tr>
+					<th>成员姓名：</th>
+					<td><input type="text" name="name" value="{$m_info.name|default=''}"></td>
+				</tr>
+				<tr>
+					<th>岗位职责：</th>
+					<td><input type="text" name="post" value="{$m_info.post|default=''}"></td>
+				</tr>
+				<tr>
+					<th>成员描述：</th>
+					<td><textarea name="about" id="" cols="100" rows="5">{$m_info.about|default=""}</textarea></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="submit" value="添加成员"> |
+						<input type="reset" value="清空编辑">
+					</td>
+				</tr>
+			</table>
+		</form>
 	</div>
 	<!-- END MAIN -->
 	<div class="clearfix"></div>
@@ -125,7 +117,20 @@
 <script src="__ROOT__/Admin/assets/scripts/klorofil-common.js"></script>
 <script>
 	$(function(){
-        $("#editCompany").slideDown('slow');
+        function btnDown(div,btn){
+            $("div[class='form-group']").hide()
+            $("h2").removeClass('btnStyleDown');
+            div.slideDown('slow');
+            btn.addClass('btnStyleDown');
+        }
+        $("#disCompanyBtn").click(function(event) {
+            /* Act on the event */
+            btnDown($("#editCompany"), $(this));
+        });
+        $("#disComOtherBtn").click(function(event) {
+            /* Act on the event */
+            btnDown($("#editComOther"), $(this));
+        });
 	});
 </script>
 </body>

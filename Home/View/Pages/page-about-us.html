@@ -63,21 +63,11 @@
                         <foreach name="team_info" item="v" key="k">
                             <if condition="$k % 2 eq 0">
                                 <div class="col-md-5">
-                                    <div class="team-member media">
-                                        <img src="__ROOT__/Uploads/Images/team/person{$k+1}.png" class="media-object img-circle pull-left" alt="" />
-                                        <div class="media-body">
-                                            <h3 class="media-heading team-name">{$v.name}</h3>
-                                            <strong>{$v.post}</strong>
-                                            <hr class="pull-left">
-                                            <div class="clearfix"></div>
-                                            <p>{$v.about}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <else />
+                            <else />
                                 <div class="col-md-5 col-md-offset-2">
+                            </if>
                                     <div class="team-member media">
-                                        <img src="__ROOT__/Uploads/Images/team/person{$k+1}.png" class="media-object img-circle pull-left" alt="" />
+                                        <img src="__ROOT__/Uploads/Images/team/{$v.imgpath}" class="media-object img-circle pull-left" alt="" />
                                         <div class="media-body">
                                             <h3 class="media-heading team-name">{$v.name}</h3>
                                             <strong>{$v.post}</strong>
@@ -87,8 +77,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </if>
-                        </foreach>
+                    </foreach>
                     </div>
                 </section>
                 <!-- END TEAM -->

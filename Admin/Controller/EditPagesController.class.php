@@ -23,7 +23,31 @@ class EditPagesController extends Controller {
 			}
     	}
 
-    	$this->success("更新成功", U("/Admin/"), 3);
+    	$this->success("更新成功", U("/Admin/Pages/aboutus"), 3);
+    }
+    public function comOtherUpdate(){
+        $other = M("introduce_aboutus");
+        foreach($_POST as $k => $v){
+            foreach($v as $kk => $vv){
+                $data[$kk][$k] = $vv;
+            }
+        }
+
+        foreach ($data as $k => $v){
+            $kk = $k + 2;
+            $other->where("id=".$kk)->save($v);    //更新数据库中标题、描述
+        }
+        $this->success("更新成功", U("/Admin/Pages/abOther"), 3);
+    }
+
+    public function abTeamAdd(){
+        die("add");
+    }
+    public function abTeamUpdate(){
+        die("update");
+    }
+    public function abTeamDel(){
+        die("del");
     }
     //===============================================
     public function serveUpdate(){
@@ -155,12 +179,7 @@ class EditPagesController extends Controller {
         $this->success("更新成功", U("/Admin/"), 3);
     }
 
-    public function caitaUpdate(){
-        $caita = M("caita_index");
-        $caita->where("id='1'")->save($_POST);    //更新数据库中标题、描述
 
-        $this->success("更新成功", U("/Admin/"), 3);
-    }
 
     public function footerUpdate(){
         $com_footer = M("company_info_footer");

@@ -67,7 +67,7 @@
                                 <div class="col-md-5 col-md-offset-2">
                             </if>
                                     <div class="team-member media">
-                                        <img src="__ROOT__/Uploads/Images/team/{$v.imgpath}" class="media-object img-circle pull-left" alt="" />
+                                        <img width="120px" height="120px" src="__ROOT__/Uploads/Images/team/{$v.imgpath}" class="media-object img-circle pull-left" alt="" />
                                         <div class="media-body">
                                             <h3 class="media-heading team-name">{$v.name}</h3>
                                             <strong>{$v.post}</strong>
@@ -77,20 +77,35 @@
                                         </div>
                                     </div>
                                 </div>
-                    </foreach>
+                        </foreach>
+                        <if condition="$k % 2 eq 0">
+                            <div class="col-md-5 col-md-offset-2">
+                                <div class="team-member media">
+                                    <img width="120px" height="120px" src="__ROOT__/Uploads/Images/team/shenlue.png" class="media-object img-circle pull-left" alt="" />
+                                    <div class="media-body">
+                                        <h3 class="media-heading team-name">More</h3>
+                                        <strong>. . . . . .</strong>
+                                        <hr class="pull-left">
+                                        <div class="clearfix"></div>
+                                        <p>. . . . . .</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </if>
                     </div>
                 </section>
                 <!-- END TEAM -->
+
                 <!-- OUR CLIENTS -->
                 <section class="clients no-margin">
                     <div class="container">
                         <h2 class="section-heading">合作单位</h2>
                         <ul class="list-inline list-client-logo">
-                            <for start="1" end="19">
-                                <li>
-                                    <img src="__ROOT__/Uploads/Images/FriendCom/logo{$i}.png" width="60px" height="60px" style="margin: 28px" alt="logo">
-                                </li>
-                            </for>
+                            <foreach name="data" item="v" key="k">
+                                <foreach name="v" item="vv">
+                                    <img src="__ROOT__/Uploads/Images/FriendCom/{$vv.imgpathname}"  width="60px" height="60px" style="margin: 28px">
+                                </foreach>
+                            </foreach>
                         </ul>
                     </div>
                 </section>

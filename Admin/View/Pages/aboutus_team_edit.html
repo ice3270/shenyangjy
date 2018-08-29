@@ -56,6 +56,7 @@
 					<li><a href="__ROOT__/index.php/Admin/Pages/example" class=""><i class="lnr lnr-cog"></i> <span>合作案例</span></a></li>
 					<li><a href="__ROOT__/index.php/Admin/Pages/comnew" class=""><i class="lnr lnr-alarm"></i> <span>公司动态</span></a></li>
 					<li><a href="__ROOT__/index.php/Admin/Pages/law" class=""><i class="lnr lnr-dice"></i> <span>法律法规</span></a></li>
+					<li><a href="__ROOT__/index.php/Admin/Pages/collaborate" class=""><i class="lnr lnr-dice"></i> <span>合作单位</span></a></li>
 				</ul>
 			</nav>
 		</div>
@@ -66,16 +67,23 @@
 		<!--//主窗口部分-->
 		<h3 style="margin-left: 40px;">关于我们 - 页面管理</h3>
 		<hr>
-		<h2 class="btn btn-default " style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disCompanyBtn">企业展示</h2>
-		<h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disComOtherBtn">企业相关</h2>
-		<h2 class="btn btn-default btnStyleDown" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disTeamBtn">团队成员</h2>
+		<a href="__ROOT__/index.php/Admin/Pages/aboutus">
+			<h2 class="btn btn-default " style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;">企业展示</h2>
+		</a>
+		<a href="__ROOT__/index.php/Admin/Pages/abOther">
+			<h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;">企业相关</h2>
+		</a>
+		<h2 class="btn btn-default btnStyleDown" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;">团队成员</h2>
 
 		<h3 style="margin-left: 40px;">{$edit|default="添加"}团队成员</h3>
-		<form action="__ROOT__/index.php/Admin/EditPages/{$do|default='abTeamAdd'}" method="post">
+		<form action="__ROOT__/index.php/Admin/EditPages/{$do|default='abTeamAdd'}" method="post" enctype="multipart/form-data">
+			<eq name="do" value="abTeamUpdate">
+				<input type="hidden" name="id" value="{$m_info.id}">
+			</eq>
 			<table class="table table-hover" style="width: 80%;margin-left: 40px;">
 				<tr>
 					<th>上传头像：</th>
-					<td><input type="file" name="headImg"> {$prompt|default=""}</td>
+					<td><input type="file" name="headImg"> 头像尺寸：120 * 120 {$prompt|default=""}</td>
 				</tr>
 				<tr>
 					<th>成员姓名：</th>
@@ -91,7 +99,7 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<input type="submit" value="添加成员"> |
+						<input type="submit" value="{$update|default="添加"}成员"> |
 						<input type="reset" value="清空编辑">
 					</td>
 				</tr>

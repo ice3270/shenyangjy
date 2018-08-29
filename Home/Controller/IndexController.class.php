@@ -45,6 +45,21 @@ class IndexController extends Controller {
         $ta_info = $ta->find();
         $this->assign("ta_info", $ta_info);
 
+        //合作单位
+        $c = M("collaborate");
+        $c_info = $c->select();
+        $count = count($c_info);
+        $pages = $count % 6 != 0 ? (int)($count / 6) + 1 : (int)($count / 6);
+
+        for ($i = 0, $k = 0; $i < $pages; $i++){
+            for ($j = 0; $j < 6; $j++, $k++){
+                if (!empty($c_info[$k]))
+                    $data[$i][$j] = $c_info[$k];
+            }
+        }
+
+        $this->assign("data", $data);
+
         //start 页脚相关数据信息
         $com = M("company_info_footer");
         $com_info = $com->find();

@@ -35,12 +35,29 @@ class PagesController extends Controller {
             $m_info = $m->where("id = {$_GET['id']}")->find();
             $this->assign("m_info", $m_info);
             $this->assign("edit", "编辑");
+            $this->assign("update", "更新");
             $this->assign("do", "abTeamUpdate");
             $this->assign("prompt", "(温馨提示：不上传新头像则不修改头像)");
         }
         $this->display("aboutus_team_edit");
     }
+    public function collaborate(){
+        $c = M("collaborate");
+        $c_info = $c->select();
+        $count = count($c_info);
+        $pages = $count % 6 != 0 ? (int)($count / 6) + 1 : (int)($count / 6);
 
+        for ($i = 0, $k = 0; $i < $pages; $i++){
+            for ($j = 0; $j < 6; $j++, $k++){
+                if (!empty($c_info[$k]))
+                    $data[$i][$j] = $c_info[$k];
+            }
+        }
+
+        $this->assign("data", $data);
+
+        $this->display();
+    }
     public function server(){
         $this->display();
     }

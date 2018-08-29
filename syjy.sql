@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : MySQL-Localhost
+Source Server         : MySQL
 Source Server Version : 50721
 Source Host           : localhost:3306
 Source Database       : syjy
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50721
 File Encoding         : 65001
 
-Date: 2018-08-28 22:43:39
+Date: 2018-08-29 16:36:28
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -70,6 +70,40 @@ CREATE TABLE `caita_index` (
 -- Records of caita_index
 -- ----------------------------
 INSERT INTO `caita_index` VALUES ('1', '彩电塔标题111', '彩电塔测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
+
+-- ----------------------------
+-- Table structure for collaborate
+-- ----------------------------
+DROP TABLE IF EXISTS `collaborate`;
+CREATE TABLE `collaborate` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `imgPathName` varchar(64) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of collaborate
+-- ----------------------------
+INSERT INTO `collaborate` VALUES ('1', 'logo1.png');
+INSERT INTO `collaborate` VALUES ('2', 'logo2.png');
+INSERT INTO `collaborate` VALUES ('3', 'logo3.png');
+INSERT INTO `collaborate` VALUES ('4', 'logo4.png');
+INSERT INTO `collaborate` VALUES ('5', 'logo5.png');
+INSERT INTO `collaborate` VALUES ('6', 'logo6.png');
+INSERT INTO `collaborate` VALUES ('7', 'logo7.png');
+INSERT INTO `collaborate` VALUES ('8', 'logo8.png');
+INSERT INTO `collaborate` VALUES ('9', 'logo9.png');
+INSERT INTO `collaborate` VALUES ('10', 'logo10.png');
+INSERT INTO `collaborate` VALUES ('11', 'logo11.png');
+INSERT INTO `collaborate` VALUES ('12', 'logo12.png');
+INSERT INTO `collaborate` VALUES ('13', 'logo13.png');
+INSERT INTO `collaborate` VALUES ('14', 'logo14.png');
+INSERT INTO `collaborate` VALUES ('15', 'logo15.png');
+INSERT INTO `collaborate` VALUES ('16', 'logo16.png');
+INSERT INTO `collaborate` VALUES ('17', 'logo17.png');
+INSERT INTO `collaborate` VALUES ('18', 'logo18.png');
+INSERT INTO `collaborate` VALUES ('24', '5b865461e90ff.png');
+INSERT INTO `collaborate` VALUES ('23', '5b86542e08a89.png');
 
 -- ----------------------------
 -- Table structure for company_index
@@ -203,6 +237,23 @@ INSERT INTO `serve_index` VALUES ('3', 'asl-interpreting', '服务于公司', '�
 INSERT INTO `serve_index` VALUES ('4', 'users', '服务于百姓', '竭诚服务于百姓 测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
 
 -- ----------------------------
+-- Table structure for serve_page
+-- ----------------------------
+DROP TABLE IF EXISTS `serve_page`;
+CREATE TABLE `serve_page` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `header` varchar(64) NOT NULL,
+  `title` varchar(128) NOT NULL,
+  `contents` varchar(4096) NOT NULL,
+  `imgpath` varchar(128) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of serve_page
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for slogan_index
 -- ----------------------------
 DROP TABLE IF EXISTS `slogan_index`;
@@ -233,7 +284,7 @@ CREATE TABLE `team_aboutus` (
   `about` varchar(2048) NOT NULL,
   `imgpath` varchar(64) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of team_aboutus
@@ -241,7 +292,7 @@ CREATE TABLE `team_aboutus` (
 INSERT INTO `team_aboutus` VALUES ('1', '张三', '张三职位', '张三的个人介绍测试文字，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', 'person1.png');
 INSERT INTO `team_aboutus` VALUES ('2', '李四', '李四职位', '李四的个人介绍，张三的个人介绍测试文字，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', 'person2.png');
 INSERT INTO `team_aboutus` VALUES ('3', '王五', '王五的职位', '王五的个人介绍测试文字，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', 'person3.png');
-INSERT INTO `team_aboutus` VALUES ('4', '赵六', '赵六职位', '赵六的个人介绍测试文字，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', 'person4.png');
+INSERT INTO `team_aboutus` VALUES ('4', '赵六子', '赵六职位', '赵六的个人介绍测试文字，测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字', 'person4.png');
 
 -- ----------------------------
 -- Table structure for year_index

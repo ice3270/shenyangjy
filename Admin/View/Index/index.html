@@ -84,7 +84,7 @@
             <!-- END 导航按钮区 -->
 
             <!-- banner 展示图部分 -->
-            <div class="form-group" style="display: block;" id='editBanner'>
+            <div class="form-group" style="display: none;" id='editBanner'>
                 <form action="__ROOT__/index.php/Admin/editIndex/bannerUpdate" method="post" enctype="multipart/form-data">
                     <table class="table table-hover" style="width: 80%;margin-left: 40px;">
                         <foreach name='banner_info' item='v' key='k'>
@@ -438,6 +438,7 @@
 	<!--<script src="../Admin/assets/scripts/klorofil-common.js"></script>-->
 	<script type="text/javascript">
 		$(function(){
+            $("#editBanner").slideDown('slow');
 			$("#disBannerBtn").click(function(event) {
 				/* Act on the event */
                 btnDown($("#editBanner"), $(this));

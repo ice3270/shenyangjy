@@ -21,6 +21,11 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400italic,700,400,300' rel='stylesheet' type='text/css'>
     <!-- FAVICONS -->
     <link rel="shortcut icon" href="__ROOT__/Home/assets/ico/favicon.png">
+    <style>
+        p{
+            text-indent: 2em;  /*em是相对单位，2em即现在一个字大小的两倍*/
+        }
+    </style>
 </head>
 
 <body>
@@ -46,10 +51,10 @@
                     <br>
                     <hr>
                     <h2 class="section-heading">{$us_info[1].header}</h2>
-                    <p class="lead"><span class="dropcap dropcap-big"> > </span>{$us_info[1].contents}</p>
+                    <p class="lead" style="text-indent: 0px;"><span class="dropcap dropcap-big"> > </span>{$us_info[1].contents}</p>
                     <br>
                     <h2 class="section-heading">{$us_info[2].header}</h2>
-                    <p class="lead"><span class="dropcap dropcap-big"> > </span>{$us_info[2].contents}</p>
+                    <p class="lead" style="text-indent: 0px;"><span class="dropcap dropcap-big"> > </span>{$us_info[2].contents}</p>
                     <hr>
                 </section>
                 <h2 class="section-heading">我们的团队</h2>

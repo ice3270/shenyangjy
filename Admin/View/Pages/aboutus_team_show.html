@@ -27,6 +27,9 @@
 			background-color: #00AAFF;
 			color: white;
 		}
+		p{
+			text-indent: 2em;  /*em是相对单位，2em即现在一个字大小的两倍*/
+		}
 	</style>
 </head>
 
@@ -86,7 +89,7 @@
 					<td><img src="__ROOT__/Uploads/Images/team/{$v.imgpath}?ran={$ran}" height="50px"></td>
                     <td>{$v.name}</td>
                     <td>{$v.post}</td>
-                    <td style="width: 600px">{$v.about}</td>
+                    <td style="width: 600px"><p>{$v.about}</p></td>
                     <td align="center">
                         <a href="__ROOT__/index.php/Admin/Pages/abTeamEdit?id={$v.id}">修改</a> |
                         <a href="__ROOT__/index.php/Admin/EditPages/abTeamDel?id={$v.id}">删除</a>

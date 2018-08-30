@@ -67,7 +67,7 @@
 				<table class="table table-hover" style="width: 80%;margin-left: 40px;">
 					<tr>
 						<th>服务配图：</th>
-						<td><input type="file" name="imgServer"> 尺寸：458 * 286 {$prompt|default=""}</td>
+						<td><input type="file" name="imgServer"> 尺寸：宽度-458px 高度等比例缩放 {$prompt|default=""}</td>
 					</tr>
 					<tr>
 						<th>服务标题：</th>
@@ -79,12 +79,16 @@
 					</tr>
 					<tr>
 						<th>详细描述：</th>
-						<td><textarea name="contents" id="" cols="100" rows="5">{$s_info.contents|default=""}</textarea></td>
+						<td>
+							<textarea name="contents" id="" cols="100" rows="5">{$s_info.contents|default=""}</textarea>
+							<br>
+							<button>另起一自然段</button>
+						</td>
 					</tr>
 					<tr>
 						<td colspan="2">
 							<input type="submit" value="{$update|default="添加"}服务内容"> |
-							<input type="reset" value="清空编辑">
+							<input type="reset" value="重置编辑">
 						</td>
 					</tr>
 				</table>

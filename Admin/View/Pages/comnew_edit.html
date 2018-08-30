@@ -21,11 +21,6 @@
 	<link rel="apple-touch-icon" sizes="76x76" href="__ROOT__/Admin/assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="__ROOT__/Admin/assets/img/favicon.png">
 	<script src="__ROOT__/Admin/assets/vendor/jquery/jquery.min.js"></script>
-	<style>
-		p{
-			text-indent: 2em;  /*em是相对单位，2em即现在一个字大小的两倍*/
-		}
-	</style>
 </head>
 
 <body>
@@ -50,9 +45,9 @@
 				<ul class="nav">
 					<li><a href="__ROOT__/index.php/Admin/Index" class=""><i class="lnr lnr-home"></i> <span>首页设置</span></a></li>
 					<li><a href="__ROOT__/index.php/Admin/Pages/aboutus" class=""><i class="lnr lnr-code"></i> <span>关于我们</span></a></li>
-					<li><a href="__ROOT__/index.php/Admin/Pages/server" class=""><i class="lnr lnr-chart-bars"></i> <span>服务内容</span></a></li>
+					<li><a href="__ROOT__/index.php/Admin/Pages/server" class="active"><i class="lnr lnr-chart-bars"></i> <span>服务内容</span></a></li>
 					<li><a href="__ROOT__/index.php/Admin/Pages/example" class=""><i class="lnr lnr-cog"></i> <span>合作案例</span></a></li>
-					<li><a href="__ROOT__/index.php/Admin/Pages/comnew" class="active"><i class="lnr lnr-alarm"></i> <span>公司动态</span></a></li>
+					<li><a href="__ROOT__/index.php/Admin/Pages/comnew" class=""><i class="lnr lnr-alarm"></i> <span>公司动态</span></a></li>
 					<li><a href="__ROOT__/index.php/Admin/Pages/law" class=""><i class="lnr lnr-dice"></i> <span>法律法规</span></a></li>
 					<li><a href="__ROOT__/index.php/Admin/Pages/collaborate" class=""><i class="lnr lnr-dice"></i> <span>合作单位</span></a></li>
 				</ul>
@@ -63,45 +58,53 @@
 	<!-- MAIN -->
 	<div class="main">
 		<!--//主窗口部分-->
-		<h3 style="margin-left: 40px;">公司动态 - 页面管理</h3>
-		<hr>
-		<div id="disNew" style="display: none;">
-			<h3 style="margin-left: 40px;">浏览公司动态列表</h3>
-			<table class="table table-hover" style="width: 80%;margin-left: 40px;">
-				<tr>
-					<th>配图</th><th>时间</th><th>标题</th><th>详细描述</th><th>操作</th>
-				</tr>
-				<foreach name="n_info" item="v" key="k">
+		<div id="disNewEdit" style="display: none;">
+			<h3 style="margin-left: 40px;">{$edit|default="添加"}公司动态</h3>
+			<form action="__ROOT__/index.php/Admin/EditPages/{$do|default='newAdd'}" method="post" enctype="multipart/form-data">
+				<eq name="do" value="newUpdate">
+					<input type="hidden" name="id" value="{$n_info.id}">
+				</eq>
+				<table class="table table-hover" style="width: 80%;margin-left: 40px;">
 					<tr>
-						<td><img src="__ROOT__/Uploads/Images/ComNew/{$v.imgpath}?ran={$ran}" height="50px"></td>
-						<td>{$v.year} 年 {$v.month} 月 {$v.day} 日</td>
-						<td>{$v.header}</td>
-						<td style="width: 600px"><p>{$v.contents}</p></td>
-						<td align="center">
-							<a href="__ROOT__/index.php/Admin/Pages/comnewEdit?id={$v.id}">修改</a> |
-							<a href="__ROOT__/index.php/Admin/EditPages/comnewDel?id={$v.id}">删除</a>
+						<th>动态配图：</th>
+						<td><input type="file" name="imgNew"> 尺寸：宽度-458px 高度等比例缩放 {$prompt|default=""}</td>
+					</tr>
+					<tr>
+						<th>动态日期：</th>
+						<td>
+							<input type="number" name="year" max="9999" min="0" value="{$n_info.year|default=''}"> 年
+							<input type="number" name="month" max="12" min="1" value="{$n_info.month|default=''}"> 月
+							<input type="number" name="day" max="31" min="1" value="{$n_info.day|default=''}"> 日
 						</td>
 					</tr>
-				</foreach>
-				<tr>
-					<td colspan="5">
-						<a href="__ROOT__/index.php/Admin/Pages/comnewEdit" style="float: right;">
-							<h2 class="btn btn-default" style="font-size: 10px; margin-left: 40px;margin-bottom: 10px;">添加公司动态</h2>
-						</a>
-					</td>
-				</tr>
-			</table>
+					<tr>
+						<th>动态标题：</th>
+						<td><input type="text" name="header" value="{$n_info.header|default=''}"></td>
+					</tr>
+					<tr>
+						<th>动态描述：</th>
+						<td><textarea name="contents" id="" cols="100" rows="5">{$n_info.contents|default=""}</textarea></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<input type="submit" value="{$update|default="添加"}动态信息"> |
+							<input type="reset" value="重置编辑">
+						</td>
+					</tr>
+				</table>
+			</form>
 		</div>
 	</div>
-	<!-- END MAIN -->
-	<div class="clearfix"></div>
-	<footer>
-		<div class="container-fluid">
-			<p class="copyright">
-				<a href="http://www.spasc.cn/" title="沈阳价格价业鉴证服务中心">沈阳价格价业鉴证服务中心 - Shenyang Price Assessment Service Center</a>
-			</p>
-		</div>
-	</footer>
+</div>
+<!-- END MAIN -->
+<div class="clearfix"></div>
+<footer>
+	<div class="container-fluid">
+		<p class="copyright">
+			<a href="http://www.spasc.cn/" title="沈阳价格价业鉴证服务中心">沈阳价格价业鉴证服务中心 - Shenyang Price Assessment Service Center</a>
+		</p>
+	</div>
+</footer>
 </div>
 <!-- END WRAPPER -->
 <!-- Javascript -->
@@ -112,7 +115,7 @@
 <script src="__ROOT__/Admin/assets/scripts/klorofil-common.js"></script>
 <script>
     $(function(){
-        $("#disNew").slideDown("slow");
+        $("#disNewEdit").slideDown("slow");
     });
 </script>
 </body>

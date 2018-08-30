@@ -83,7 +83,25 @@ class PagesController extends Controller {
         $this->display("server_edit");
     }
     public function comnew(){
+        $n = M("new_page");
+        $n_info = $n->select();
+        $this->assign("n_info", $n_info);
+        $this->assign("ran", time());
+
         $this->display();
+    }
+    public function comnewEdit(){
+        //编辑公司动态页面
+        if(isset($_GET['id'])){
+            $n = M("new_page");
+            $n_info = $n->where("id = {$_GET['id']}")->find();
+            $this->assign("n_info", $n_info);
+            $this->assign("edit", "编辑");
+            $this->assign("update", "更新");
+            $this->assign("do", "newUpdate");
+            $this->assign("prompt", "(温馨提示：不上传新图像则不修改图像)");
+        }
+        $this->display("comnew_edit");
     }
     public function example(){
         //服务页面

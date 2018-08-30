@@ -270,4 +270,70 @@ class EditPagesController extends Controller
         $m->where("id = {$_GET['id']}")->delete();
         $this->success("删除成功", U("/Admin/Pages/example"), 3);
     }//End 删除团队成员功能
+
+    public function newAdd()
+    {
+        //文件上传初始化
+        $data = $_POST;
+
+        $upload = new \Think\Upload();
+        $upload->maxSize = 4096000; //限制文件大小
+        $upload->exts = array('png'); //上传文件类型
+        $upload->savePath = './Images/ComNew/';    //文件上传目录
+        $upload->replace = true; //如果同名则覆盖
+        $upload->autoSub = false; //不适用子目录名保存
+
+        $info = $upload->uploadOne($_FILES['imgNew']);    //上传单个文件
+        if (!$info) { //如果不成功则输出错误信息
+            $this->error($upload->getError());
+        }
+
+        //数据库操作
+        $data['imgpath'] = $info['savename']; //获取并保存文件名
+
+        $n = M("new_page");//创建数据库对象
+        $n->data($data)->add();//向数据库中插入数据
+
+        $this->success("添加成功", U("/Admin/Pages/comnew"), 3);
+    }//End 添加公司动态
+
+    public function newUpdate()
+    {
+        //文件上传初始化
+        $n = M("new_page");//创建数据库对象
+        $n_info = $n->where("id={$_POST['id']}")->find();
+        $imgpath = $n_info['imgpath'];
+
+        if ($_FILES['imgNew']['size'] > 0) {
+            $upload = new \Think\Upload();
+            $upload->maxSize = 4096000; //限制文件大小
+            $upload->exts = array('png'); //上传文件类型
+            $upload->savePath = './Images/ComNew/';    //文件上传目录
+            $upload->replace = true; //如果同名则覆盖
+            $upload->autoSub = false; //不适用子目录名保存
+            $upload->saveName = rtrim($imgpath, ".png");
+
+            $info = $upload->uploadOne($_FILES['imgNew']);    //上传单个文件
+            if (!$info) { //如果不成功则输出错误信息
+                $this->error($upload->getError());
+            }
+        }
+
+        $data = $_POST;
+        $data['imgpath'] = $imgpath;
+        $n->where("id={$_POST['id']}")->save($data);//向数据库中插入数据
+
+        $this->success("修改成功", U("/Admin/Pages/comnew"), 3);
+    }//End 更新公司动态
+
+    public function comnewDel()
+    {
+        //数据库操作
+        $m = M("new_page");
+        $m_info = $m->where("id = {$_GET['id']}")->find();
+        $imgpath = "./Uploads/Images/ComNew/" . $m_info['imgpath'];
+        unlink($imgpath);
+        $m->where("id = {$_GET['id']}")->delete();
+        $this->success("删除成功", U("/Admin/Pages/comnew"), 3);
+    }//End 删除公司动态
 }

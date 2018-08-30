@@ -59,7 +59,7 @@
     <div class="main">
         <!--//主窗口部分-->
         <div id="disExEdit" style="display: none;">
-            <h3 style="margin-left: 40px;">{$edit|default="添加"}服务内容</h3>
+            <h3 style="margin-left: 40px;">{$edit|default="添加"}合作案例</h3>
             <form action="__ROOT__/index.php/Admin/EditPages/{$do|default='exAdd'}" method="post" enctype="multipart/form-data">
                 <eq name="do" value="exUpdate">
                     <input type="hidden" name="id" value="{$e_info.id}">
@@ -80,7 +80,7 @@
                     <tr>
                         <td colspan="2">
                             <input type="submit" value="{$update|default="添加"}案例"> |
-                            <input type="reset" value="清空编辑">
+                            <input type="reset" value="重置编辑">
                         </td>
                     </tr>
                 </table>

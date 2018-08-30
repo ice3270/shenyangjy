@@ -21,6 +21,11 @@
 	<link rel="apple-touch-icon" sizes="76x76" href="__ROOT__/Admin/assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="__ROOT__/Admin/assets/img/favicon.png">
     <script src="__ROOT__/Admin/assets/vendor/jquery/jquery.min.js"></script>
+    <style>
+        p{
+            text-indent: 2em;  /*em是相对单位，2em即现在一个字大小的两倍*/
+        }
+    </style>
 </head>
 
 <body>
@@ -71,7 +76,7 @@
 						<td><img src="__ROOT__/Uploads/Images/blog/{$v.imgpath}?ran={$ran}" height="50px"></td>
 						<td>{$v.header}</td>
 						<td>{$v.title}</td>
-						<td style="width: 600px">{$v.contents}</td>
+						<td style="width: 600px"><p>{$v.contents}</p></td>
 						<td align="center">
 							<a href="__ROOT__/index.php/Admin/Pages/serverEdit?id={$v.id}">修改</a> |
 							<a href="__ROOT__/index.php/Admin/EditPages/serverDel?id={$v.id}">删除</a>

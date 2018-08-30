@@ -27,6 +27,9 @@
         .tlength{
             width: 220px;
         }
+        p{
+            text-indent: 2em;  /*em是相对单位，2em即现在一个字大小的两倍*/
+        }
     </style>
 </head>
 
@@ -227,7 +230,10 @@
                     <div id="dd{$k + 1}" class="col-sm-3 col-xs-6 tlength">
                         <div class="number-info horizontal text-white-color">
                             <i class="fa fa-clock-o pull-left"></i>
-                            <p>{$v.year_num} <span>{$v.year_title}</span></p>
+                            <p style="text-indent: 0px;">
+                                {$v.year_num}
+                                <span>{$v.year_title}</span>
+                            </p>
                         </div>
                     </div>
                     </foreach>

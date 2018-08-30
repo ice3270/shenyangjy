@@ -58,6 +58,12 @@ class PagesController extends Controller {
         $this->display("page-callus");
     }
     public function com_new(){
+        //数据库操作部分
+        $n = M("new_page");
+        $n_info = $n->select();
+        $this->assign("n_info", $n_info);
+        $this->assign("ran", time());
+
         //start 页脚相关数据信息
         $com = M("company_info_footer");
         $com_info = $com->find();
@@ -116,6 +122,7 @@ class PagesController extends Controller {
         $s = M("serve_page");
         $s_info = $s->select();
         $this->assign("s_info", $s_info);
+        $this->assign("ran", time());
 
         //start 页脚相关数据信息
         $com = M("company_info_footer");

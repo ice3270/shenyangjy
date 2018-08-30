@@ -58,33 +58,33 @@
     <!-- MAIN -->
     <div class="main">
         <!--//主窗口部分-->
-        <h3 style="margin-left: 40px;">合作案例 - 页面管理</h3>
-        <hr>
-        <div id="disEx" style="display: none;">
-            <h3 style="margin-left: 40px;">浏览合作案例列表</h3>
-            <table class="table table-hover" style="width: 80%;margin-left: 40px;">
-                <tr>
-                    <th>图像</th><th>标题</th><th>描述</th><th>操作</th>
-                </tr>
-                <foreach name="e_info" item="v" key="k">
+        <div id="disExEdit" style="display: none;">
+            <h3 style="margin-left: 40px;">{$edit|default="添加"}服务内容</h3>
+            <form action="__ROOT__/index.php/Admin/EditPages/{$do|default='exAdd'}" method="post" enctype="multipart/form-data">
+                <eq name="do" value="exUpdate">
+                    <input type="hidden" name="id" value="{$e_info.id}">
+                </eq>
+                <table class="table table-hover" style="width: 80%;margin-left: 40px;">
                     <tr>
-                        <td><img src="__ROOT__/Uploads/Images/portfolio/{$v.imgpath}?ran={$ran}" height="50px"></td>
-                        <td>{$v.header}</td>
-                        <td>{$v.title}</td>
-                        <td align="center">
-                            <a href="__ROOT__/index.php/Admin/Pages/exampleEdit?id={$v.id}">修改</a> |
-                            <a href="__ROOT__/index.php/Admin/EditPages/exDel?id={$v.id}">删除</a>
+                        <th>案例配图：</th>
+                        <td><input type="file" name="imgEx"> 尺寸：285 * 285 {$prompt|default=""}</td>
+                    </tr>
+                    <tr>
+                        <th>案例标题：</th>
+                        <td><input type="text" name="header" value="{$e_info.header|default=''}"></td>
+                    </tr>
+                    <tr>
+                        <th>案例描述：</th>
+                        <td><textarea name="title" id="" cols="100" rows="5">{$e_info.title|default=""}</textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="{$update|default="添加"}案例"> |
+                            <input type="reset" value="清空编辑">
                         </td>
                     </tr>
-                </foreach>
-                <tr>
-                    <td colspan="5">
-                        <a href="__ROOT__/index.php/Admin/Pages/exampleEdit" style="float: right;">
-                            <h2 class="btn btn-default" style="font-size: 10px; margin-left: 40px;margin-bottom: 10px;">添加合作案例</h2>
-                        </a>
-                    </td>
-                </tr>
-            </table>
+                </table>
+            </form>
         </div>
     </div>
     <!-- END MAIN -->
@@ -106,7 +106,7 @@
 <script src="__ROOT__/Admin/assets/scripts/klorofil-common.js"></script>
 <script>
     $(function(){
-        $("#disEx").slideDown("slow");
+        $("#disExEdit").slideDown("slow");
     });
 </script>
 </body>

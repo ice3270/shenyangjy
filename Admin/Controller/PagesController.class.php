@@ -86,7 +86,26 @@ class PagesController extends Controller {
         $this->display();
     }
     public function example(){
+        //服务页面
+        $e = M("ex_page");
+        $e_info = $e->select();
+        $this->assign("e_info", $e_info);
+        $this->assign("ran", time());
+
         $this->display();
+    }
+    public function exampleEdit(){
+        //编辑案例页面
+        if(isset($_GET['id'])){
+            $e = M("ex_page");
+            $e_info = $e->where("id = {$_GET['id']}")->find();
+            $this->assign("e_info", $e_info);
+            $this->assign("edit", "编辑");
+            $this->assign("update", "更新");
+            $this->assign("do", "exUpdate");
+            $this->assign("prompt", "(温馨提示：不上传新图像则不修改图像)");
+        }
+        $this->display("example_edit");
     }
     public function law(){
         $this->display();

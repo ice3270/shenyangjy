@@ -74,6 +74,12 @@ class PagesController extends Controller {
         $this->display("page-com-new");
     }
     public function ex(){
+        //案例页面
+        $e = M("ex_page");
+        $e_info = $e->select();
+        $this->assign("e_info", $e_info);
+        $this->assign("ran", time());
+
         //start 页脚相关数据信息
         $com = M("company_info_footer");
         $com_info = $com->find();

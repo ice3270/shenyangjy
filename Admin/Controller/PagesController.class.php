@@ -26,6 +26,7 @@ class PagesController extends Controller {
         $team = M("team_aboutus");
         $team_info = $team->select();
         $this->assign("team_info", $team_info);
+        $this->assign("ran", time());
 
         $this->display("aboutus_team_show");
     }
@@ -59,7 +60,27 @@ class PagesController extends Controller {
         $this->display();
     }
     public function server(){
+        //服务页面
+        $s = M("serve_page");
+        $s_info = $s->select();
+        $this->assign("s_info", $s_info);
+        $this->assign("ran", time());
+
         $this->display();
+    }
+    public function serverEdit()
+    {
+        //编辑服务页面
+        if(isset($_GET['id'])){
+            $s = M("serve_page");
+            $s_info = $s->where("id = {$_GET['id']}")->find();
+            $this->assign("s_info", $s_info);
+            $this->assign("edit", "编辑");
+            $this->assign("update", "更新");
+            $this->assign("do", "serverUpdate");
+            $this->assign("prompt", "(温馨提示：不上传新图像则不修改图像)");
+        }
+        $this->display("server_edit");
     }
     public function comnew(){
         $this->display();

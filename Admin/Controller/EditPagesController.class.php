@@ -84,7 +84,7 @@ class EditPagesController extends Controller
             $upload->savePath = './Images/team/';    //文件上传目录
             $upload->replace = true; //如果同名则覆盖
             $upload->autoSub = false; //不适用子目录名保存
-            $upload->saveName = $imgpath;
+            $upload->saveName = rtrim($imgpath, ".png");
 
             $info = $upload->uploadOne($_FILES['headImg']);    //上传单个文件
             if (!$info) { //如果不成功则输出错误信息
@@ -97,7 +97,7 @@ class EditPagesController extends Controller
         $m->where("id={$_POST['id']}")->save($data);//向数据库中插入数据
 
         $this->success("修改成功", U("/Admin/Pages/abTeamShow"), 3);
-    }
+    }//End 更新团队成员
 
     public function abTeamDel()
     {
@@ -138,5 +138,70 @@ class EditPagesController extends Controller
         unlink($imgpath);
         $m->where("id = {$_GET['id']}")->delete();
         $this->success("企业Logo删除成功", U("/Admin/Pages/collaborate"), 3);
-    }
+    }//End 删除Logo
+
+    public function serverAdd()
+    {
+        //文件上传初始化
+        $data = $_POST;
+
+        $upload = new \Think\Upload();
+        $upload->maxSize = 4096000; //限制文件大小
+        $upload->exts = array('png'); //上传文件类型
+        $upload->savePath = './Images/blog/';    //文件上传目录
+        $upload->replace = true; //如果同名则覆盖
+        $upload->autoSub = false; //不适用子目录名保存
+
+        $info = $upload->uploadOne($_FILES['imgServer']);    //上传单个文件
+        if (!$info) { //如果不成功则输出错误信息
+            $this->error($upload->getError());
+        }
+
+        //数据库操作
+        $data['imgpath'] = $info['savename']; //获取并保存文件名
+
+        $s = M("serve_page");//创建数据库对象
+        $s->data($data)->add();//向数据库中插入数据
+
+        $this->success("添加成功", U("/Admin/Pages/server"), 3);
+    }//End 添加服务内容功能
+
+    public function serverUpdate()
+    {
+        //文件上传初始化
+        $s = M("serve_page");//创建数据库对象
+        $s_info = $s->where("id={$_POST['id']}")->find();
+        $imgpath = $s_info['imgpath'];
+
+        if ($_FILES['imgServer']['size'] > 0) {
+            $upload = new \Think\Upload();
+            $upload->maxSize = 4096000; //限制文件大小
+            $upload->exts = array('png'); //上传文件类型
+            $upload->savePath = './Images/blog/';    //文件上传目录
+            $upload->replace = true; //如果同名则覆盖
+            $upload->autoSub = false; //不适用子目录名保存
+            $upload->saveName = rtrim($imgpath, ".png");
+
+            $info = $upload->uploadOne($_FILES['imgServer']);    //上传单个文件
+            if (!$info) { //如果不成功则输出错误信息
+                $this->error($upload->getError());
+            }
+        }
+
+        $data = $_POST;
+        $data['imgpath'] = $imgpath;
+        $s->where("id={$_POST['id']}")->save($data);//向数据库中插入数据
+
+        $this->success("修改成功", U("/Admin/Pages/server"), 3);
+    }//End 更新服务内容
+    public function serverDel()
+    {
+        //数据库操作
+        $m = M("serve_page");
+        $m_info = $m->where("id = {$_GET['id']}")->find();
+        $imgpath = "./Uploads/Images/blog/" . $m_info['imgpath'];
+        unlink($imgpath);
+        $m->where("id = {$_GET['id']}")->delete();
+        $this->success("删除成功", U("/Admin/Pages/server"), 3);
+    }//End 删除团队成员功能
 }

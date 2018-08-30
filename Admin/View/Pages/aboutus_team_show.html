@@ -83,7 +83,7 @@
 			</tr>
 			<foreach name="team_info" item="v" key="k">
 				<tr>
-					<td><img src="__ROOT__/Uploads/Images/team/{$v.imgpath}" width="50px"></td>
+					<td><img src="__ROOT__/Uploads/Images/team/{$v.imgpath}?ran={$ran}" height="50px"></td>
                     <td>{$v.name}</td>
                     <td>{$v.post}</td>
                     <td style="width: 600px">{$v.about}</td>

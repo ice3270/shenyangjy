@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Blog | Repute Lite - Free Bootstrap Business Template</title>
+    <title>沈阳价格价业鉴证服务中心</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Free Bootstrap Business Template">
@@ -20,10 +20,6 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400italic,700,400,300' rel='stylesheet' type='text/css'>
     <!-- FAVICONS -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="__ROOT__/Home/assets/ico/repute144x144.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="__ROOT__/Home/assets/ico/repute114x114.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="__ROOT__/Home/assets/ico/repute72x72.png">
-    <link rel="apple-touch-icon-precomposed" href="__ROOT__/Home/assets/ico/repute57x57.png">
     <link rel="shortcut icon" href="__ROOT__/Home/assets/ico/favicon.png">
 </head>
 
@@ -42,36 +38,38 @@
                         <!-- BLOG ENTRIES -->
                         <div class="blog medium-thumbnail margin-bottom-30px">
                             <!-- blog post -->
-                            <article class="entry-post">
-                                <header class="entry-header">
-                                    <h2 class="entry-title">
-									<a href="blog-single.html">可变标题</a>
-								</h2>
-                                    <div class="meta-line clearfix">
-                                        <div class="meta-author-category pull-left">
-                                            <span class="post-author">简要描述</span>
+                            <foreach name="s_info" item="v" key="k">
+                                <article class="entry-post">
+                                    <header class="entry-header">
+                                        <h2 class="entry-title">
+                                        <a href="blog-single.html">{$v.header}</a>
+                                    </h2>
+                                        <div class="meta-line clearfix">
+                                            <div class="meta-author-category pull-left">
+                                                <span class="post-author">{$v.title}</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </header>
-                                <div class="entry-content clearfix">
-                                    <div class="row">
-                                        <div class="col-sm-5">
-                                            <figure class="featured-image">
-                                                <a href="blog-single.html">
-                                                    <img src="__ROOT__/Home/assets/img/blog/buildings-med.jpg" class="img-responsive" alt="featured-image" />
-                                                </a>
-                                            </figure>
-                                        </div>
-                                        <div class="col-sm-7">
-                                            <div class="excerpt">
-                                                <p>服务描述测试文字，述测试文字，述测试文字，述测试文字，述测试文字，述测试文字，</p>
+                                    </header>
+                                    <div class="entry-content clearfix">
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <figure class="featured-image">
+                                                    <a href="blog-single.html">
+                                                        <img src="__ROOT__/Uploads/Images/blog/{$v.imgpath}" class="img-responsive" alt="featured-image" />
+                                                    </a>
+                                                </figure>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                <div class="excerpt">
+                                                    <p>{$v.contents}</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </article>
+                                </article>
+                                <hr />
+                            </foreach>
                             <!-- end blog post -->
-                            <hr />
                         </div>
                         <!-- END BLOG ENTRIES -->
                     </div>

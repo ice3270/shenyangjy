@@ -106,6 +106,11 @@ class PagesController extends Controller {
         $this->display("page-law");
     }
     public function server(){
+        //服务页面
+        $s = M("serve_page");
+        $s_info = $s->select();
+        $this->assign("s_info", $s_info);
+
         //start 页脚相关数据信息
         $com = M("company_info_footer");
         $com_info = $com->find();

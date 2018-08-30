@@ -20,46 +20,77 @@
 	<!-- ICONS -->
 	<link rel="apple-touch-icon" sizes="76x76" href="__ROOT__/Admin/assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="__ROOT__/Admin/assets/img/favicon.png">
-	<script src="__ROOT__/Admin/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="__ROOT__/Admin/assets/vendor/jquery/jquery.min.js"></script>
 </head>
 
 <body>
 <!-- WRAPPER -->
 <div id="wrapper">
-	<!-- 导航栏 -->
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="brand" style="height: 81px">
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="brand" style="height: 81px">
                 <span style="color: #2B333E; font-weight: bold; font-size: 25px; line-height: 0px">
                     沈阳价格价业鉴证服务中心
                 </span>
-			<span style="color: #00AAFF; font-weight: bold; font-size: 20px; line-height: 0px">
+            <span style="color: #00AAFF; font-weight: bold; font-size: 20px; line-height: 0px">
                     Shenyang Price Assessment Service Center
                 </span>
-		</div>
-	</nav>
-	<!-- END 导航栏杆 -->
+        </div>
+    </nav>
+    <!-- END 导航栏杆 -->
 	<!-- LEFT SIDEBAR -->
 	<div id="sidebar-nav" class="sidebar">
 		<div class="sidebar-scroll">
-			<nav>
-				<ul class="nav">
-					<li><a href="__ROOT__/index.php/Admin/Index" class=""><i class="lnr lnr-home"></i> <span>首页设置</span></a></li>
-					<li><a href="__ROOT__/index.php/Admin/Pages/aboutus" class=""><i class="lnr lnr-code"></i> <span>关于我们</span></a></li>
-					<li><a href="__ROOT__/index.php/Admin/Pages/server" class=""><i class="lnr lnr-chart-bars"></i> <span>服务内容</span></a></li>
-					<li><a href="__ROOT__/index.php/Admin/Pages/example" class=""><i class="lnr lnr-cog"></i> <span>合作案例</span></a></li>
-					<li><a href="__ROOT__/index.php/Admin/Pages/comnew" class=""><i class="lnr lnr-alarm"></i> <span>公司动态</span></a></li>
-					<li><a href="__ROOT__/index.php/Admin/Pages/law" class="active"><i class="lnr lnr-dice"></i> <span>法律法规</span></a></li>
+            <nav>
+                <ul class="nav">
+                    <li><a href="__ROOT__/index.php/Admin/Index" class=""><i class="lnr lnr-home"></i> <span>首页设置</span></a></li>
+                    <li><a href="__ROOT__/index.php/Admin/Pages/aboutus" class=""><i class="lnr lnr-code"></i> <span>关于我们</span></a></li>
+                    <li><a href="__ROOT__/index.php/Admin/Pages/server" class="active"><i class="lnr lnr-chart-bars"></i> <span>服务内容</span></a></li>
+                    <li><a href="__ROOT__/index.php/Admin/Pages/example" class=""><i class="lnr lnr-cog"></i> <span>合作案例</span></a></li>
+                    <li><a href="__ROOT__/index.php/Admin/Pages/comnew" class=""><i class="lnr lnr-alarm"></i> <span>公司动态</span></a></li>
+                    <li><a href="__ROOT__/index.php/Admin/Pages/law" class=""><i class="lnr lnr-dice"></i> <span>法律法规</span></a></li>
 					<li><a href="__ROOT__/index.php/Admin/Pages/collaborate" class=""><i class="lnr lnr-dice"></i> <span>合作单位</span></a></li>
-				</ul>
-			</nav>
+                </ul>
+            </nav>
 		</div>
 	</div>
 	<!-- END LEFT SIDEBAR -->
 	<!-- MAIN -->
 	<div class="main">
 		<!--//主窗口部分-->
-		<h3 style="margin-left: 40px;">公司动态 - 页面管理</h3>
-		<hr>
+		<div id="disServeEdit" style="display: none;">
+		<h3 style="margin-left: 40px;">{$edit|default="添加"}服务内容</h3>
+		<form action="__ROOT__/index.php/Admin/EditPages/{$do|default='serverAdd'}" method="post" enctype="multipart/form-data">
+			<eq name="do" value="serverUpdate">
+				<input type="hidden" name="id" value="{$s_info.id}">
+			</eq>
+			<table class="table table-hover" style="width: 80%;margin-left: 40px;">
+				<tr>
+					<th>服务配图：</th>
+					<td><input type="file" name="imgServer"> 尺寸：458 * 286 {$prompt|default=""}</td>
+				</tr>
+				<tr>
+					<th>服务标题：</th>
+					<td><input type="text" name="header" value="{$s_info.header|default=''}"></td>
+				</tr>
+				<tr>
+					<th>简要描述：</th>
+					<td><input type="text" name="title" value="{$s_info.title|default=''}"></td>
+				</tr>
+				<tr>
+					<th>详细描述：</th>
+					<td><textarea name="contents" id="" cols="100" rows="5">{$s_info.contents|default=""}</textarea></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="submit" value="{$update|default="添加"}服务内容"> |
+						<input type="reset" value="清空编辑">
+					</td>
+				</tr>
+			</table>
+		</form>
+		</div>
+	</div>
 	</div>
 	<!-- END MAIN -->
 	<div class="clearfix"></div>
@@ -78,6 +109,11 @@
 <script src="__ROOT__/Admin/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <script src="__ROOT__/Admin/assets/vendor/toastr/toastr.min.js"></script>
 <script src="__ROOT__/Admin/assets/scripts/klorofil-common.js"></script>
+<script>
+    $(function(){
+        $("#disServeEdit").slideDown("slow");
+    });
+</script>
 </body>
 
 </html>

@@ -60,6 +60,33 @@
 		<!--//主窗口部分-->
         <h3 style="margin-left: 40px;">服务内容 - 页面管理</h3>
         <hr>
+		<div id="disServe" style="display: none;">
+			<h3 style="margin-left: 40px;">浏览服务内容列表</h3>
+			<table class="table table-hover" style="width: 80%;margin-left: 40px;">
+				<tr>
+					<th>头像</th><th>姓名</th><th>职位</th><th>描述</th><th>操作</th>
+				</tr>
+				<foreach name="s_info" item="v" key="k">
+					<tr>
+						<td><img src="__ROOT__/Uploads/Images/blog/{$v.imgpath}?ran={$ran}" height="50px"></td>
+						<td>{$v.header}</td>
+						<td>{$v.title}</td>
+						<td style="width: 600px">{$v.contents}</td>
+						<td align="center">
+							<a href="__ROOT__/index.php/Admin/Pages/serverEdit?id={$v.id}">修改</a> |
+							<a href="__ROOT__/index.php/Admin/EditPages/serverDel?id={$v.id}">删除</a>
+						</td>
+					</tr>
+				</foreach>
+				<tr>
+					<td colspan="5">
+						<a href="__ROOT__/index.php/Admin/Pages/serverEdit" style="float: right;">
+							<h2 class="btn btn-default" style="font-size: 10px; margin-left: 40px;margin-bottom: 10px;">添加服务内容</h2>
+						</a>
+					</td>
+				</tr>
+			</table>
+		</div>
 	</div>
 	<!-- END MAIN -->
 	<div class="clearfix"></div>
@@ -78,6 +105,11 @@
 <script src="__ROOT__/Admin/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <script src="__ROOT__/Admin/assets/vendor/toastr/toastr.min.js"></script>
 <script src="__ROOT__/Admin/assets/scripts/klorofil-common.js"></script>
+<script>
+    $(function(){
+        $("#disServe").slideDown("slow");
+    });
+</script>
 </body>
 
 </html>

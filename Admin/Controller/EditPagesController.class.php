@@ -336,4 +336,71 @@ class EditPagesController extends Controller
         $m->where("id = {$_GET['id']}")->delete();
         $this->success("删除成功", U("/Admin/Pages/comnew"), 3);
     }//End 删除公司动态
+
+    public function lawUpdate(){
+        //文件上传初始化
+        $upload = new \Think\Upload();
+        $upload->maxSize = 4096000; //限制文件大小
+        $upload->exts = array('png'); //上传文件类型
+        $upload->savePath = './Images/Law/';    //文件上传目录
+        $upload->replace = true; //如果同名则覆盖
+        $upload->autoSub = false; //不适用子目录名保存
+        $upload->saveName = "law";    //指定文件名
+
+        $l = M("law_page");
+        $l->where("id='1'")->save($_POST);    //更新数据库中标题、描述
+
+        if ($_FILES['imgLaw']['size']) {
+            $info = $upload->uploadOne($_FILES['imgLaw']);    //上传单个文件
+            if (!$info) { //如果不成功则输出错误信息
+                $this->error($upload->getError());
+            }
+        }
+
+        $this->success("更新成功", U("/Admin/Pages/law"), 3);
+    }
+
+    public function lawFileAdd(){
+        $fName = $_FILES['lawFile']['name'];
+        $fName = substr($fName,0,strpos($fName, '.'));    //指定文件名
+        //文件上传初始化
+        $upload = new \Think\Upload();
+        $upload->maxSize = 4096000; //限制文件大小
+        $upload->exts = array('doc','docx','pdf','txt','ppt','pptx','zip','rar','xlsx','xls','jpg','jpeg','png','bmp'); //上传文件类型
+        $upload->savePath = './LawFiles/';    //文件上传目录
+        $upload->replace = false; //如果同名则覆盖
+        $upload->autoSub = false; //不适用子目录名保存
+        $upload->saveName = $fName;
+
+        if ($_FILES['lawFile']['size']) {
+            $info = $upload->uploadOne($_FILES['lawFile']);    //上传单个文件
+            if (!$info) { //如果不成功则输出错误信息
+                $this->error($upload->getError());
+            }
+            $data['filename'] = $info['savename'];
+            $data['time'] = time();
+            $l = M("law_file_page");
+            $l->data($data)->add();//向数据库中插入数据
+            $this->success("添加成功", U("/Admin/Pages/lawFile"), 3);
+        }else{
+            $this->error('没有文件上传',U("/Admin/Pages/lawFile"),3);
+        }
+    }
+    public function lawFileDel(){
+        //数据库操作
+        $m = M("law_file_page");
+        $m_info = $m->where("id = {$_GET['id']}")->find();
+        $imgpath = "./Uploads/LawFiles/" . $m_info['filename'];
+        unlink($imgpath);
+        $m->where("id = {$_GET['id']}")->delete();
+        $this->success("删除成功", U("/Admin/Pages/lawFile"), 3);
+    }
+    public function lawFileDownload(){
+        $fName =  $_GET['fName'];
+        $downloadfile = "./Uploads/LawFiles/".$fName;
+
+        $http = new \Org\Net\Http;
+
+        $http::download($downloadfile, $fName);
+    }
 }

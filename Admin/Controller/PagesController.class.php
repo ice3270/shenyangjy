@@ -126,6 +126,20 @@ class PagesController extends Controller {
         $this->display("example_edit");
     }
     public function law(){
+        //数据库操作
+        $l = M("law_page");
+        $l_info = $l->find();
+        $this->assign("l_info", $l_info);
+        $this->assign("ran", time());
+
         $this->display();
+    }
+
+    public function lawFile(){
+        $lf = M("law_file_page");
+        $lf_info = $lf->select();
+        $this->assign("lf_info", $lf_info);
+
+        $this->display("law_file");
     }
 }

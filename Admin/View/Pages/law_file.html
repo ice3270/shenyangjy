@@ -70,42 +70,43 @@
 			<h3 style="margin-left: 40px;">法律法规 - 页面管理</h3>
 			<hr>
 			<a href="__ROOT__/Admin/Pages/law">
-				<h2 class="btn btn-default btnStyleDown" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;">图文描述</h2>
+				<h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;">图文描述</h2>
 			</a>
 			<a href="__ROOT__/Admin/Pages/lawFile">
-				<h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;">文件管理</h2>
+				<h2 class="btn btn-default btnStyleDown" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;">文件管理</h2>
 			</a>
-			<!--法律法规图文-->
-			<div class="form-group" id="editLaw" style="display: none;">
-				<form action="__ROOT__/index.php/Admin/EditPages/lawUpdate" method="post" enctype="multipart/form-data">
-					<table class="table table-hover" style="width: 80%;margin-left: 40px;">
+			<div id="disLawFile" style="display: none;">
+				<h3 style="margin-left: 40px;">浏览法律法规文件列表</h3>
+				<table class="table table-hover" style="width: 80%;margin-left: 40px;">
+					<tr>
+						<th>序号</th><th>文件名</th><th>上传时间</th><th>操作</th>
+					</tr>
+					<foreach name="lf_info" item="v" key="k">
 						<tr>
-							<td width="200px">原法律法规展示图预览：</td>
-							<td>
-								<img src="__ROOT__/Uploads/Images/Law/law.png?ran={$ran}" height="200px">
-								<p style="margin-top: 5px;">温馨提示：为保证上传图片与网站布局的美观，上传图片最好为：848 * 367</p>
+							<td>{$k+1}</td>
+							<td>{$v.filename}</td>
+							<td>{$v.time|date="Y-m-d H:i:s",###}</td>
+							<td align="center">
+								<a href="__ROOT__/index.php/Admin/EditPages/lawFileDel?id={$v.id}">删除</a>
 							</td>
 						</tr>
+					</foreach>
+					<tr><td colspan="5"><hr></td></tr>
+				</table>
+				<h4 style="margin-left: 40px;">添加文件</h4>
+				<form action="__ROOT__/Admin/EditPages/lawFileAdd" method="post" enctype="multipart/form-data">
+					<table class="table table-hover" style="width: 80%;margin-left: 40px;">
+						<tr><th>选择上传文件（服务器文件大小上限制：4MB）</th></tr>
+						<tr><td><input type="file" name="lawFile"></td></tr>
 						<tr>
-							<td width="200px">上传企业展示图：</td>
-							<td><input type="file" class="form-control" name="imgLaw"></td>
-						</tr>
-						<tr>
-							<td width="200px">法律法规标题：</td>
-							<td><input type="text" class="form-control" name="header" value="{$l_info.header}"></td>
-						</tr>
-						<tr>
-							<td width="200px">法律法规描述：</td>
-							<td><textarea class="form-control" rows="3" name="contents">{$l_info.contents}</textarea></td>
-						</tr>
-						<tr><td colspan="2"><hr></td></tr>
-						<tr align="center">
-							<td colspan="2"><input type="submit" value="更新法律法规板块"> &nbsp; | &nbsp; <input type="reset"></td>
+							<td colspan="2" align="right">
+								<button class="btn btn-default" style="font-size: 10px; margin-left: 40px;margin-bottom: 10px;">确认上传</button>
+							</td>
 						</tr>
 					</table>
 				</form>
 			</div>
-			<!--End 法律法规图文-->
+
 		</div>
 		<!-- END MAIN -->
 		<div class="clearfix"></div>
@@ -126,7 +127,7 @@
 	<script src="__ROOT__/Admin/assets/scripts/klorofil-common.js"></script>
 	<script>
         $(function(){
-            $("#editLaw").slideDown('slow');
+            $("#disLawFile").slideDown('slow');
         });
 	</script>
 </body>

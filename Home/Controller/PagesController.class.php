@@ -102,6 +102,15 @@ class PagesController extends Controller {
         $this->display("page-ex");
     }
     public function law(){
+        //数据库操作
+        $l = M("law_page");
+        $l_info = $l->find();
+        $this->assign("l_info", $l_info);
+        $this->assign("ran", time());
+        $lf = M("law_file_page");
+        $lf_info = $lf->select();
+        $this->assign("lf_info", $lf_info);
+
         //start 页脚相关数据信息
         $com = M("company_info_footer");
         $com_info = $com->find();

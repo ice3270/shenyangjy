@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : MySQL
+Source Server         : MySQL-Localhost
 Source Server Version : 50721
 Source Host           : localhost:3306
 Source Database       : syjy
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50721
 File Encoding         : 65001
 
-Date: 2018-08-30 19:18:35
+Date: 2018-08-31 22:31:57
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -193,9 +193,41 @@ CREATE TABLE `introduce_aboutus` (
 -- ----------------------------
 -- Records of introduce_aboutus
 -- ----------------------------
-INSERT INTO `introduce_aboutus` VALUES ('1', '公司介绍（可变）1', '测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
+INSERT INTO `introduce_aboutus` VALUES ('1', '法律法规测试标题', '法律法规描述测试文字。。。。。。测试文字、测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
 INSERT INTO `introduce_aboutus` VALUES ('2', '我们的XX（可变）11111', '测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试试文字测试文字测试文字测试文字测试文字11111');
 INSERT INTO `introduce_aboutus` VALUES ('3', '我们的XX（可变）22222', '测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试试文字测试文字测试文字测试文字测试文字22222');
+
+-- ----------------------------
+-- Table structure for law_file_page
+-- ----------------------------
+DROP TABLE IF EXISTS `law_file_page`;
+CREATE TABLE `law_file_page` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `filename` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `time` varchar(255) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of law_file_page
+-- ----------------------------
+INSERT INTO `law_file_page` VALUES ('3', 'wenjian.docx', '1535724836');
+
+-- ----------------------------
+-- Table structure for law_page
+-- ----------------------------
+DROP TABLE IF EXISTS `law_page`;
+CREATE TABLE `law_page` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `header` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `contents` varchar(8192) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of law_page
+-- ----------------------------
+INSERT INTO `law_page` VALUES ('1', '法律法规测试标题1', '法律法规描述测试文字。。。。。。测试文字、测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字');
 
 -- ----------------------------
 -- Table structure for link_in_index

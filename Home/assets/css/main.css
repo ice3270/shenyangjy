@@ -1272,6 +1272,9 @@ div[class*="col-"] > .form-group {
   background-attachment: fixed;
   background-position: center center;
   color: #fff;
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
 }
 .testimonial-with-bg .testimonial-body p {
   color: #fff;

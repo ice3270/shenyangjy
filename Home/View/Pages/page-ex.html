@@ -21,6 +21,11 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400italic,700,400,300' rel='stylesheet' type='text/css'>
     <!-- FAVICONS -->
     <link rel="shortcut icon" href="__ROOT__/Home/assets/ico/favicon.png">
+    <style>
+        p{
+            text-indent: 2em;  /*em是相对单位，2em即现在一个字大小的两倍*/
+        }
+    </style>
 </head>
 
 <body>
@@ -42,7 +47,7 @@
                                 <div class="info">
                                     <h4 class="title">{$v.header}</h4>
                                     <p class="brief-description">{$v.title}</p>
-                                    <a href="#" class="btn">查看详情</a>
+                                    <!--<a href="#" class="btn">查看详情</a>-->
                                 </div>
                                 <div class="media-wrapper">
                                     <img src="__ROOT__/Uploads/Images/portfolio/{$v.imgpath}?ran={$ran}" width="285px" height="285px">

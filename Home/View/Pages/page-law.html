@@ -68,10 +68,10 @@
                         <div class="widget">
                             <form action="#" class="form-search">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="输入您要搜索的关键词">
+                                    <input id="sInfo" type="text" class="form-control" placeholder="输入您要搜索的关键词">
                                     <span class="input-group-btn">
-				<button class="btn btn-primary" type="button">搜索</button>
-			</span>
+                                        <button id="sBtn" class="btn btn-primary" type="button">搜索</button>
+                                    </span>
                                 </div>
                             </form>
                         </div>
@@ -111,6 +111,11 @@
         $(function() {
             $(".dropdown").removeClass("active");
             $("#pageDown").addClass("active");
+
+            $("#sBtn").click(function () {
+                var info = $("#sInfo").val();
+                window.location.replace("__ROOT__/Home/Pages/law?info="+info);
+            });
         });
     </script>
 </body>

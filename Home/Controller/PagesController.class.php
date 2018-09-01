@@ -102,13 +102,18 @@ class PagesController extends Controller {
         $this->display("page-ex");
     }
     public function law(){
+//        dump($_GET['info']);die;
         //数据库操作
         $l = M("law_page");
         $l_info = $l->find();
         $this->assign("l_info", $l_info);
         $this->assign("ran", time());
         $lf = M("law_file_page");
-        $lf_info = $lf->select();
+        if (isset($_GET['info'])){
+            $lf_info = $lf->where("filename like '%{$_GET['info']}%'")->select();
+        }else{
+            $lf_info = $lf->select();
+        }
         $this->assign("lf_info", $lf_info);
 
         //start 页脚相关数据信息

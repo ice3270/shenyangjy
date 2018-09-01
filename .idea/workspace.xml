@@ -1,43 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4b3c0ad-4452-4c08-aa11-78c1abd1bbfc" name="默认" comment="搜索功能完成，index页面未调整">
-      <change afterPath="$PROJECT_DIR$/Admin/View/Index/css/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/View/Pages/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/View/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/View/leftNav.html" afterDir="false" />
+    <list default="true" id="d4b3c0ad-4452-4c08-aa11-78c1abd1bbfc" name="默认" comment="功能完成，首页测试到业务范围">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/Controller/EditIndexController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Controller/EditIndexController.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/Controller/EditPagesController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Controller/EditPagesController.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/Controller/IndexController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Controller/IndexController.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/Controller/PagesController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Controller/PagesController.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/View/Index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/View/Index/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/View/Pages/aboutus.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/View/Pages/aboutus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/View/Pages/aboutus_other.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/View/Pages/aboutus_other.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/View/Pages/aboutus_team_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/View/Pages/aboutus_team_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/View/Pages/aboutus_team_show.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/View/Pages/aboutus_team_show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/View/Pages/collaborate.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/View/Pages/collaborate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/View/Pages/comnew.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/View/Pages/comnew.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/View/Pages/comnew_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/View/Pages/comnew_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/View/Pages/example.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/View/Pages/example.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/View/Pages/example_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/View/Pages/example_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/View/Pages/law.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/View/Pages/law.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/View/Pages/law_file.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/View/Pages/law_file.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/View/Pages/server.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/View/Pages/server.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/View/Pages/server_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/View/Pages/server_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Home/View/Index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Home/View/Index/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Home/View/footer-home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Home/View/footer-home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Uploads/Images/Banner/banner1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Uploads/Images/Banner/banner1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Uploads/Images/Banner/banner2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Uploads/Images/Banner/banner2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Uploads/Images/Banner/banner3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Uploads/Images/Banner/banner3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Uploads/Images/Company/companyIndex.png" beforeDir="false" afterPath="$PROJECT_DIR$/Uploads/Images/Company/companyIndex.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Uploads/Images/Company_show/work1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Uploads/Images/Company_show/work1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Uploads/Images/Company_show/work2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Uploads/Images/Company_show/work2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Uploads/Images/Slogan/sloganImg1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Uploads/Images/Slogan/sloganImg1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Uploads/Images/Slogan/sloganImg2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Uploads/Images/Slogan/sloganImg2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Uploads/Images/Slogan/sloganImg3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Uploads/Images/Slogan/sloganImg3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Uploads/Images/Slogan/sloganImg4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Uploads/Images/Slogan/sloganImg4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Uploads/Images/blog/5b87692043f6f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syjy.sql" beforeDir="false" afterPath="$PROJECT_DIR$/syjy.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +94,7 @@
           <entry key="dummy" value="1" />
           <entry key="html" value="8553" />
           <entry key="php" value="6393" />
-          <entry key="txt" value="278" />
+          <entry key="txt" value="296" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -136,7 +102,7 @@
           <entry key="CSS" value="5" />
           <entry key="HTML" value="8551" />
           <entry key="PHP" value="6393" />
-          <entry key="PLAIN_TEXT" value="279" />
+          <entry key="PLAIN_TEXT" value="297" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -821,7 +787,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535776096913</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="功能完成，首页测试到业务范围">
+      <created>1535792568808</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1535792568808</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -857,7 +830,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188098000" />
+    <option name="totallyTimeSpent" value="188260000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -937,7 +910,8 @@
     <MESSAGE value="除搜索功能外，其他功能基本完成，补录数据库" />
     <MESSAGE value="除搜索功能外，其他功能基本完成，首页调整Logo间距" />
     <MESSAGE value="搜索功能完成，index页面未调整" />
-    <option name="LAST_COMMIT_MESSAGE" value="搜索功能完成，index页面未调整" />
+    <MESSAGE value="功能完成，首页测试到业务范围" />
+    <option name="LAST_COMMIT_MESSAGE" value="功能完成，首页测试到业务范围" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Home/View/Index/.idea/misc.xml" />

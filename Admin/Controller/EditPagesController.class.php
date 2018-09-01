@@ -4,8 +4,10 @@ use Think\Controller;
 class EditPagesController extends Controller
 {
 
-    public function companyUpdate()
-    {
+    public function companyUpdate(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //文件上传初始化
         $upload = new \Think\Upload();
         $upload->maxSize = 4096000; //限制文件大小
@@ -28,8 +30,10 @@ class EditPagesController extends Controller
         $this->success("更新成功", U("/Admin/Pages/aboutus"), 3);
     }//End 公司图文介绍
 
-    public function comOtherUpdate()
-    {
+    public function comOtherUpdate(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         $other = M("introduce_aboutus");
         foreach ($_POST as $k => $v) {
             foreach ($v as $kk => $vv) {
@@ -44,8 +48,10 @@ class EditPagesController extends Controller
         $this->success("更新成功", U("/Admin/Pages/abOther"), 3);
     }//End 公司其他简介
 
-    public function abTeamAdd()
-    {
+    public function abTeamAdd(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //文件上传初始化
         $data = $_POST;
 
@@ -70,8 +76,10 @@ class EditPagesController extends Controller
         $this->success("添加成功", U("/Admin/Pages/abTeamShow"), 3);
     }//End 添加团队成员功能
 
-    public function abTeamUpdate()
-    {
+    public function abTeamUpdate(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //文件上传初始化
         $m = M("team_aboutus");//创建数据库对象
         $m_info = $m->where("id={$_POST['id']}")->find();
@@ -99,8 +107,10 @@ class EditPagesController extends Controller
         $this->success("修改成功", U("/Admin/Pages/abTeamShow"), 3);
     }//End 更新团队成员
 
-    public function abTeamDel()
-    {
+    public function abTeamDel(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //数据库操作
         $m = M("team_aboutus");
         $m_info = $m->where("id = {$_GET['id']}")->find();
@@ -111,6 +121,9 @@ class EditPagesController extends Controller
     }//End 删除团队成员功能
 
     public function addLogo(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //数据库操作
         $upload = new \Think\Upload();
         $upload->maxSize = 4096000; //限制文件大小
@@ -131,6 +144,9 @@ class EditPagesController extends Controller
     }//End  添加企业Logo
 
     public function delLogo(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //数据库操作
         $m = M("collaborate");
         $m_info = $m->where("id = {$_GET['id']}")->find();
@@ -140,8 +156,10 @@ class EditPagesController extends Controller
         $this->success("企业Logo删除成功", U("/Admin/Pages/collaborate"), 3);
     }//End 删除Logo
 
-    public function serverAdd()
-    {
+    public function serverAdd(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //文件上传初始化
         $data = $_POST;
 
@@ -166,8 +184,10 @@ class EditPagesController extends Controller
         $this->success("添加成功", U("/Admin/Pages/server"), 3);
     }//End 添加服务内容功能
 
-    public function serverUpdate()
-    {
+    public function serverUpdate(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //文件上传初始化
         $s = M("serve_page");//创建数据库对象
         $s_info = $s->where("id={$_POST['id']}")->find();
@@ -194,8 +214,11 @@ class EditPagesController extends Controller
 
         $this->success("修改成功", U("/Admin/Pages/server"), 3);
     }//End 更新服务内容
-    public function serverDel()
-    {
+
+    public function serverDel(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //数据库操作
         $m = M("serve_page");
         $m_info = $m->where("id = {$_GET['id']}")->find();
@@ -205,8 +228,10 @@ class EditPagesController extends Controller
         $this->success("删除成功", U("/Admin/Pages/server"), 3);
     }//End 删除团队成员功能
 
-    public function exAdd()
-    {
+    public function exAdd(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //文件上传初始化
         $data = $_POST;
 
@@ -233,6 +258,9 @@ class EditPagesController extends Controller
 
     public function exUpdate()
     {
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //文件上传初始化
         $e = M("ex_page");//创建数据库对象
         $e_info = $e->where("id={$_POST['id']}")->find();
@@ -262,6 +290,9 @@ class EditPagesController extends Controller
 
     public function exDel()
     {
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //数据库操作
         $m = M("ex_page");
         $m_info = $m->where("id = {$_GET['id']}")->find();
@@ -273,6 +304,9 @@ class EditPagesController extends Controller
 
     public function newAdd()
     {
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //文件上传初始化
         $data = $_POST;
 
@@ -299,6 +333,9 @@ class EditPagesController extends Controller
 
     public function newUpdate()
     {
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //文件上传初始化
         $n = M("new_page");//创建数据库对象
         $n_info = $n->where("id={$_POST['id']}")->find();
@@ -328,6 +365,9 @@ class EditPagesController extends Controller
 
     public function comnewDel()
     {
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //数据库操作
         $m = M("new_page");
         $m_info = $m->where("id = {$_GET['id']}")->find();
@@ -338,6 +378,9 @@ class EditPagesController extends Controller
     }//End 删除公司动态
 
     public function lawUpdate(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //文件上传初始化
         $upload = new \Think\Upload();
         $upload->maxSize = 4096000; //限制文件大小
@@ -361,6 +404,9 @@ class EditPagesController extends Controller
     }
 
     public function lawFileAdd(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         $fName = $_FILES['lawFile']['name'];
         $fName = substr($fName,0,strpos($fName, '.'));    //指定文件名
         //文件上传初始化
@@ -386,7 +432,11 @@ class EditPagesController extends Controller
             $this->error('没有文件上传',U("/Admin/Pages/lawFile"),3);
         }
     }
+
     public function lawFileDel(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //数据库操作
         $m = M("law_file_page");
         $m_info = $m->where("id = {$_GET['id']}")->find();
@@ -395,7 +445,11 @@ class EditPagesController extends Controller
         $m->where("id = {$_GET['id']}")->delete();
         $this->success("删除成功", U("/Admin/Pages/lawFile"), 3);
     }
+
     public function lawFileDownload(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         $fName =  $_GET['fName'];
         $downloadfile = "./Uploads/LawFiles/".$fName;
 

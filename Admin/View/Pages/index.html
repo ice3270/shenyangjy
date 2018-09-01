@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Admin</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="__ROOT__/font_awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="__ROOT__/Admin/assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="__ROOT__/Admin/assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="__ROOT__/Admin/assets/vendor/linearicons/style.css">
+	<link rel="stylesheet" href="__ROOT__/Admin/assets/vendor/chartist/css/chartist-custom.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="__ROOT__/Admin/assets/css/main.css">
+	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+	<link rel="stylesheet" href="__ROOT__/Admin/assets/css/demo.css">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="__ROOT__/Admin/assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../Admin/assets/img/favicon.png">
+	<script src="__ROOT__/Admin/assets/vendor/jquery/jquery.min.js"></script>
+	<style>
+        .btnStyleDown{
+            background-color: #00AAFF;
+            color: white;
+        }
+        p{text-indent: 2em;}
+    </style>
+</head>
+
+<body>
+    <!-- WRAPPER -->
+    <div id="wrapper">
+        <!-- 导航栏 -->
+        <include file="./Admin/View/header.html" />
+        <!-- END 导航栏杆 -->
+
+        <!--//左侧导航栏-->
+        <include file="./Admin/View/leftNav.html" />
+        
+        <!-- MAIN -->
+        <div class="main">
+            <!-- 导航按钮区 -->
+            <h3 style="margin-left: 40px;">首页 - 页面管理</h3>
+            <hr>
+            <h2 class="btn btn-default btnStyleDown" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disBannerBtn">顶部展示</h2>
+            <h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disCompanyBtn">企业展示</h2>
+            <h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disServeBtn">服务范围1</h2>
+            <h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disSloganBtn">服务范围2</h2>
+            <h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disWorkBtn">工作展示</h2>
+            <h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disBusinesskBtn">业务范围</h2>
+            <br>
+            <h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disYearBtn">发展历程</h2>
+            <h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disCaitaBtn">彩塔板块</h2>
+            <h2 class="btn btn-default" style="font-size: 20px; margin-left: 40px;margin-bottom: 10px;" id="disFooterBtn">页脚部分</h2>
+            <br>
+            <br>
+            <!-- END 导航按钮区 -->
+
+            <!-- banner 展示图部分 -->
+            <div class="form-group" style="display: none;" id='editBanner'>
+                <form action="__ROOT__/index.php/Admin/editIndex/bannerUpdate" method="post" enctype="multipart/form-data">
+                    <table class="table table-hover" style="width: 80%;margin-left: 40px;">
+                        <foreach name='banner_info' item='v' key='k'>
+                            <tr>
+                                <td>原图预览</td>
+                                <td>
+                                    <img src="__ROOT__/Uploads/Images/Banner/banner{$k+1}.png?ran={$ran}" height="100px">
+                                    <p style="margin-top: 5px;">温馨提示：为保证上传图片与网站布局的美观，上传图片最好为：1920 * 500</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>上传更新 - 展示图({$k + 1})：</td>
+                                <td><input type="file" class="form-control" name="bannerImg{$k}"></td>
+                            </tr>
+                            <tr>
+                                <td width="200px">展示图({$k + 1}) - 标题：</td>
+                                <td><input name="banner_header[]" class="form-control" value="{$v.banner_header}"></td>
+                            </tr>
+                            <tr>
+                                <td>展示图({$k + 1}) - 描述：</td>
+                                <td><input name="banner_text[]" class="form-control" value="{$v.banner_text}"></td>
+                            </tr>
+                            <tr>
+                                <td collspan="2">展示图 ({$k + 1}) 最近更新时间 </td>
+                                <!--<td><?php echo date("Y-m-d H:i:s", $v['banner_time']);?></td>-->
+                                <td>{$v.banner_time|date="Y - m - d ------ H : i : s", ###}</td>
+                            </tr>
+                            <tr><td colspan="2"><hr></td></tr>
+                        </foreach>
+                        <tr align="center">
+                            <td colspan="2"><input type="submit" value="更新顶部展示图板块"> &nbsp; | &nbsp; <input type="reset"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <!-- <hr> -->
+
+            <!-- 企业介绍部分 -->
+
+            <div class="form-group" id="editCompany" style="display: none;">
+                <form action="__ROOT__/index.php/Admin/editIndex/companyUpdate" method="post" enctype="multipart/form-data">
+                    <table class="table table-hover" style="width: 80%;margin-left: 40px;">
+                        <tr>
+                            <td width="200px">原企业展示图预览：</td>
+                            <td>
+                                <img src="__ROOT__/Uploads/Images/Company/companyIndex.png?ran={$ran}" height="200px">
+                                <p style="margin-top: 5px;">温馨提示：为保证上传图片与网站布局的美观，上传图片最好为：800 * 550</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="200px">上传企业展示图：</td>
+                            <td><input type="file" class="form-control" name="company_img"></td>
+                        </tr>
+                        <tr>
+                            <td width="200px">企业介绍标题：</td>
+                            <td><input type="text" class="form-control" name="company_header" value="{$company_info.company_header}"></td>
+                        </tr>
+                        <tr>
+                            <td width="200px">企业介绍正文：</td>
+                            <td>
+                                <textarea class="form-control" rows="3" name="company_text">{$company_info.company_text}</textarea>
+                                <br>
+                                另起一自然段使用：“<span id="pe">&lt;\p&gt;&lt;p&gt;</span>” 作为分段落隔符 （引号内复制粘贴即可）
+                            </td>
+                        </tr>
+                        <tr><td colspan="2"><hr></td></tr>
+                        <tr align="center">
+                            <td colspan="2"><input type="submit" value="更新企业展示板块"> &nbsp; | &nbsp; <input type="reset"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <!-- 服务范围简介区 -->
+			<div class="form-group" id="editServe" style="display: none;">
+				<form action="__ROOT__/index.php/Admin/editIndex/ServeUpdate" method="post" enctype="multipart/form-data">
+					<table class="table table-hover" style="width: 80%;margin-left: 40px;">
+					<foreach name='serve_info' item='v' key='k'>
+						<tr>
+							<td width="200px">
+								<a href="http://fontawesome.dashgame.com/" target="_blank"><i class="fa fa-{$v.serve_icon} fa-2x"></i></a> 
+                            </td>
+                            <td>
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control" name="serve_icon[]" value="{$v.serve_icon}" style="width: auto;">
+                                    <a href="__ROOT__/Res/Help/iconHelp.png" target="_bank"><i class="fa fa-hand-o-right" style="margin-left: 40px;vertical-align: middle;"> 如何修改图标</i></a>
+                                </div>
+                            </td>
+						</tr>
+						<tr>
+							<td width="200px">服务范围标题：</td>
+							<td><input type="text" class="form-control" name="serve_header[]" value="{$v.serve_header}"></td>
+						</tr>
+						<tr>
+							<td width="200px">服务范围正文：</td>
+							<td><textarea class="form-control" rows="3" name="serve_text[]">{$v.serve_text}</textarea></td>
+						</tr>
+                        <tr><td colspan="2"><hr></td></tr>
+					</foreach>
+						<tr align="center">
+							<td colspan="2"><input type="submit" value="更新服务范围板块"> &nbsp; | &nbsp; <input type="reset"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<!-- END 服务范围简介区 -->
+
+			<!-- END 企业介绍部分 -->
+            
+            <!-- 服务宗旨 -->
+            <div class="form-group" style="display: none;" id='editSlogan'>
+                <form action="__ROOT__/index.php/Admin/editIndex/sloganUpdate" method="post" enctype="multipart/form-data">
+                    <table class="table table-hover" style="width: 80%;margin-left: 40px;">
+                        <foreach name='slogan_info' item='v' key='k'>
+                            <tr>
+                                <td>原图预览</td>
+                                <td>
+                                    <img src="__ROOT__/Uploads/Images/Slogan/sloganImg{$k+1}.png?ran={$ran}" height="100px">
+                                    <p style="margin-top: 5px;">温馨提示：为保证上传图片与网站布局的美观，上传图片高度最好为：220px</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>上传更新 - 服务宗旨配图({$k + 1})：</td>
+                                <td><input type="file" class="form-control" name="sloganImg{$k}"></td>
+                            </tr>
+                            <tr>
+                                <td width="200px">服务宗旨按钮列表({$k + 1}) - 标题：</td>
+                                <td><input name="slogan_btn[]" class="form-control" value="{$v.slogan_btn}"></td>
+                            </tr>
+                            <tr>
+                                <td width="200px">服务宗旨({$k + 1}) - 标题：</td>
+                                <td><input name="slogan_header[]" class="form-control" value="{$v.slogan_header}"></td>
+                            </tr>
+                            <tr>
+                                <td>服务宗旨({$k + 1}) - 描述：</td>
+                                <td><input name="slogan_text[]" class="form-control" value="{$v.slogan_text}"></td>
+                            </tr>
+                            <tr><td colspan="2"><hr></td></tr>
+                        </foreach>
+                        <tr align="center">
+                            <td colspan="2"><input type="submit" value="更新服务宗旨板块"> &nbsp; | &nbsp; <input type="reset"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <!-- END 服务宗旨 -->
+
+            <!-- 公司展示 -->
+            <div class="form-group" style="display: none;" id='editWork'>
+                <form action="__ROOT__/index.php/Admin/editIndex/workUpdate" method="post" enctype="multipart/form-data">
+                    <table class="table table-hover" style="width: 80%;margin-left: 40px;">
+                        <foreach name='company_show_info' item='v' key='k'>
+                            <tr>
+                                <td>原图预览</td>
+                                <td>
+                                    <img src="__ROOT__/Uploads/Images/Company_show/work{$k+1}.png?ran={$ran}" height="100px">
+                                    <p style="margin-top: 5px;">温馨提示：为保证上传图片与网站布局的美观，上传图片最好为：800 * 500</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>上传更新 - 公司展示图({$k + 1})：</td>
+                                <td><input type="file" class="form-control" name="workImg{$k}"></td>
+                            </tr>
+                            <tr>
+                                <td width="200px">公司展示图({$k + 1}) - 标题：</td>
+                                <td><input name="company_show_title[]" class="form-control" value="{$v.company_show_title}"></td>
+                            </tr>
+                            <tr>
+                                <td>公司展示图({$k + 1}) - 描述：</td>
+                                <td><input name="company_show_text[]" class="form-control" value="{$v.company_show_text}"></td>
+                            </tr>
+                            <tr><td colspan="2"><hr></td></tr>
+                        </foreach>
+                        <tr align="center">
+                            <td colspan="2"><input type="submit" value="更新公司展示板块"> &nbsp; | &nbsp; <input type="reset"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <!-- END 公司展示 -->
+
+            <!--业务范围-->
+            <div class="form-group" style="display: none;" id='editBusiness'>
+                <form action="__ROOT__/index.php/Admin/editIndex/businessUpdate" method="post" enctype="multipart/form-data">
+                    <table class="table table-hover" style="width: 80%;margin-left: 40px;">
+                        <foreach name='business_info' item='v' key='k'>
+                            <tr>
+                                <td>原图预览</td>
+                                <td>
+                                    <img src="__ROOT__/Uploads/Images/Business/business{$k+1}.png?ran={$ran}" height="100px">
+                                    <p style="margin-top: 5px;">温馨提示：为保证上传图片与网站布局的美观，上传图片最好为：360 * 189</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>上传更新 - 业务范围示意图({$k + 1})：</td>
+                                <td><input type="file" class="form-control" name="businessImg{$k}"></td>
+                            </tr>
+                            <tr>
+                                <td width="200px">业务范围({$k + 1})标题：</td>
+                                <td><input name="business_header[]" class="form-control" value="{$v.business_header}"></td>
+                            </tr>
+                            <tr>
+                                <td>范围({$k + 1}) - 描述：</td>
+                                <td><input name="business_text[]" class="form-control" value="{$v.business_text}"></td>
+                            </tr>
+                            <tr><td colspan="2"><hr></td></tr>
+                        </foreach>
+                        <tr align="center">
+                            <td colspan="2"><input type="submit" value="更新业务范围板块"> &nbsp; | &nbsp; <input type="reset"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <!--END 业务范围-->
+
+            <!-- 发展历程-->
+            <div class="form-group" style="display: none;" id='editYear'>
+                <form action="__ROOT__/index.php/Admin/editIndex/yearUpdate" method="post" enctype="multipart/form-data">
+                    <table class="table table-hover" style="width: 80%;margin-left: 40px;">
+                        <foreach name='year_info' item='v' key='k'>
+                            <tr>
+                                <td>年份 ({$k + 1})：</td>
+                                <td><input type="text" class="form-control"  name="year_num[]" value="{$v.year_num}"></td>
+                            </tr>
+                            <tr>
+                                <td width="200px">年份 ({$k + 1})标题：</td>
+                                <td><input name="year_title[]" class="form-control" value="{$v.year_title}"></td>
+                            </tr>
+                            <tr>
+                                <td>年份 ({$k + 1}) - 详情描述：</td>
+                                <td>
+                                    <textarea name="year_text[]" class="form-control" rows="3">{$v.year_text}</textarea>
+                                </td>
+                            </tr>
+                            <tr><td colspan="2"><hr></td></tr>
+                        </foreach>
+                        <tr align="center">
+                            <td colspan="2"><input type="submit" value="更新发展历程板块"> &nbsp; | &nbsp; <input type="reset"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <!-- END 发展历程-->
+
+            <!-- 彩电塔-->
+            <div class="form-group" style="display: none;" id='editCaita'>
+                <form action="__ROOT__/index.php/Admin/editIndex/caitaUpdate" method="post" enctype="multipart/form-data">
+                    <table class="table table-hover" style="width: 80%;margin-left: 40px;">
+                        <tr>
+                            <td>彩电塔标题：</td>
+                            <td><input type="text" class="form-control"  name="caita_header" value="{$ta_info.caita_header}"></td>
+                        </tr>
+                        <tr>
+                            <td>彩电塔描述：</td>
+                            <td>
+                                <textarea name="caita_text" class="form-control" rows="3">{$ta_info.caita_text}</textarea>
+                            </td>
+                        </tr>
+
+                        <tr><td colspan="2"><hr></td></tr>
+
+                        <tr align="center">
+                            <td colspan="2"><input type="submit" value="更新发展历程板块"> &nbsp; | &nbsp; <input type="reset"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <!-- END 彩电塔-->
+
+            <!--页脚部分-->
+            <div class="form-group" style="display: none;" id='editFooter'>
+                <table class="table table-hover" style="width: 80%;margin-left: 40px;">
+                    <form action="__ROOT__/index.php/Admin/editIndex/erweiUpdate" method="post" enctype="multipart/form-data">
+                        <tr>
+                            <td>原图预览：</td>
+                            <td>
+                                <img src="__ROOT__/Uploads/Images/erwei.png?ran={$ran}" height="100px">
+                                <p style="margin-top: 5px;">温馨提示：为保证上传图片与网站布局的美观，上传图片最好为：180 * 180</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>上传更新 - 选择新的二维码：</td>
+                            <td><input type="file" class="form-control" name="ImageErwei"></td>
+                        </tr>
+                        <tr><td colspan="2"><hr></td></tr>
+                        <tr align="center">
+                            <td colspan="2"><input type="submit" value="更新二维码"> &nbsp; | &nbsp; <input type="reset"></td>
+                        </tr>
+                    </form>
+                    <form action="Admin/editIndex/footerUpdate" method="post" enctype="multipart/form-data">
+                        <tr>
+                            <td>公司简介：</td>
+                            <td>
+                                <textarea name="com_text" class="form-control" rows="2">{$com_info.com_text}</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>通讯地址：</td>
+                            <td><input type="text" class="form-control"  name="com_address" value="{$com_info.com_address}"></td>
+                        </tr>
+                        <tr>
+                            <td>邮政编码：</td>
+                            <td><input type="text" class="form-control"  name="com_postal" value="{$com_info.com_postal}"></td>
+                        </tr>
+                        <tr>
+                            <td>联系电话：</td>
+                            <td><input type="text" class="form-control"  name="com_tel" value="{$com_info.com_tel}"></td>
+                        </tr>
+                        <tr>
+                            <td>邮箱地址：</td>
+                            <td><input type="text" class="form-control"  name="com_email" value="{$com_info.com_email}"></td>
+                        </tr>
+
+                        <tr><td colspan="2"><hr></td></tr>
+
+                        <tr align="center">
+                            <td colspan="2"><input type="submit" value="更新页脚公司信息"> &nbsp; | &nbsp; <input type="reset"></td>
+                        </tr>
+                    </form>
+                    <form action="Admin/editIndex/linkUpdate" method="post">
+                        <foreach name="link_out_info" item="v">
+                            <tr>
+                                <td><input type="text" class="form-control"  name="link_name[]" value="{$v.link_name}"></td>
+                                <td><input type="text" class="form-control"  name="link_url[]" value="{$v.link_url}"></td>
+                            </tr>
+                        </foreach>
+
+
+                        <tr><td colspan="2"><hr></td></tr>
+
+                        <tr align="center">
+                            <td colspan="2"><input type="submit" value="更新相关链接"> &nbsp; | &nbsp; <input type="reset"></td>
+                        </tr>
+                    </form>
+                </table>
+            </div>
+            <!--END 页脚部分-->
+
+		</div>
+
+		<div class="clearfix"></div>
+		<footer>
+			<div class="container-fluid">
+                <p class="copyright">
+                    <a href="http://www.spasc.cn/" title="沈阳价格价业鉴证服务中心">沈阳价格价业鉴证服务中心 - Shenyang Price Assessment Service Center</a>
+                </p>
+			</div>
+		</footer>
+	</div>
+	<!-- END WRAPPER -->
+	<!-- Javascript -->
+	<!--<script src="../Admin/assets/vendor/bootstrap/js/bootstrap.min.js"></script>-->
+	<!--<script src="../Admin/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>-->
+	<!--<script src="../Admin/assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>-->
+	<!--<script src="../Admin/assets/vendor/chartist/js/chartist.min.js"></script>-->
+	<!--<script src="../Admin/assets/scripts/klorofil-common.js"></script>-->
+	<script type="text/javascript">
+		$(function(){
+            $(".dropdown").removeClass("active");
+            $("#eIndex").addClass("active");
+
+            $("#editBanner").slideDown('slow');
+			$("#disBannerBtn").click(function(event) {
+				/* Act on the event */
+                btnDown($("#editBanner"), $(this));
+            });
+            $("#disCompanyBtn").click(function(event) {
+                /* Act on the event */
+                btnDown($("#editCompany"), $(this));
+            });
+            $("#disServeBtn").click(function(event) {
+                /* Act on the event */
+                btnDown($("#editServe"), $(this));
+            });
+            $("#disSloganBtn").click(function(event) {
+                /* Act on the event */
+                btnDown($("#editSlogan"), $(this));
+			});
+            $("#disWorkBtn").click(function(event) {
+                /* Act on the event */
+                btnDown($("#editWork"), $(this));
+			});
+            $("#disBusinesskBtn").click(function(event) {
+                /* Act on the event */
+                btnDown($("#editBusiness"), $(this));
+			});
+            $("#disYearBtn").click(function(event) {
+                /* Act on the event */
+                btnDown($("#editYear"), $(this));
+			});
+            $("#disCaitaBtn").click(function(event) {
+                /* Act on the event */
+                btnDown($("#editCaita"), $(this));
+			});
+            $("#disFooterBtn").click(function(event) {
+                /* Act on the event */
+                btnDown($("#editFooter"), $(this));
+			});
+            function btnDown(div,btn){
+                $("div[class='form-group']").hide()
+                $("h2").removeClass('btnStyleDown');
+                div.slideDown('slow');
+                btn.addClass('btnStyleDown');
+            }
+		});
+	</script>
+</body>
+
+</html>

@@ -4,6 +4,9 @@ use Think\Controller;
 class EditIndexController extends Controller {
     // 展示图更新部分
     public function bannerUpdate(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
        	//文件上传初始化
 		$upload = new \Think\Upload();
 		$upload->maxSize = 4096000; //限制文件大小
@@ -38,6 +41,9 @@ class EditIndexController extends Controller {
     }// End 展示图更新
 
     public function companyUpdate(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
     	//文件上传初始化
 		$upload = new \Think\Upload();
 		$upload->maxSize = 4096000; //限制文件大小
@@ -61,6 +67,9 @@ class EditIndexController extends Controller {
     }
 
     public function serveUpdate(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
     	$serve = M("serve_index");
     	foreach($_POST as $k => $v){
             foreach($v as $kk => $vv){
@@ -76,6 +85,9 @@ class EditIndexController extends Controller {
     }
 
     public function sloganUpdate(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //文件上传初始化
         $upload = new \Think\Upload();
         $upload->maxSize = 4096000; //限制文件大小
@@ -109,6 +121,9 @@ class EditIndexController extends Controller {
     }
 
     public function workUpdate(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //文件上传初始化
         $upload = new \Think\Upload();
         $upload->maxSize = 4096000; //限制文件大小
@@ -129,8 +144,8 @@ class EditIndexController extends Controller {
             $kk = $k + 1;
             $upload->saveName = "work".$kk;
             // echo "bannerImg{$k}";die;
-            if($_FILES['sloganImg'.$k]['size']){//判断文件大小是否大于0，如果大于0说明有文件要上传
-                $info = $upload->uploadOne($_FILES['sloganImg'.$k]);    //上传单个文件
+            if($_FILES['workImg'.$k]['size']){//判断文件大小是否大于0，如果大于0说明有文件要上传
+                $info = $upload->uploadOne($_FILES['workImg'.$k]);    //上传单个文件
                 if(!$info){ //如果不成功则输出错误信息
                     $this->error($upload->getError());
                 }
@@ -142,6 +157,9 @@ class EditIndexController extends Controller {
     }
 
     public function businessUpdate(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //文件上传初始化
         $upload = new \Think\Upload();
         $upload->maxSize = 4096000; //限制文件大小
@@ -175,6 +193,9 @@ class EditIndexController extends Controller {
     }
 
     public function yearUpdate(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         $year = M("year_index");
         foreach($_POST as $k => $v){
             foreach($v as $kk => $vv){
@@ -190,6 +211,9 @@ class EditIndexController extends Controller {
     }
 
     public function caitaUpdate(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         $caita = M("caita_index");
         $caita->where("id='1'")->save($_POST);    //更新数据库中标题、描述
 
@@ -197,6 +221,9 @@ class EditIndexController extends Controller {
     }
 
     public function footerUpdate(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         $com_footer = M("company_info_footer");
         $com_footer->where("id='1'")->save($_POST);    //更新数据库中标题、描述
 
@@ -204,6 +231,9 @@ class EditIndexController extends Controller {
     }
 
     public function erweiUpdate(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         //文件上传初始化
         $upload = new \Think\Upload();
         $upload->maxSize = 4096000; //限制文件大小
@@ -224,6 +254,9 @@ class EditIndexController extends Controller {
     }
 
     public function linkUpdate(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
         $link = M("link_out_index");
 
         foreach($_POST as $k => $v){

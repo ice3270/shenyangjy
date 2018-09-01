@@ -22,9 +22,7 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="__ROOT__/Admin/assets/img/favicon.png">
 	<script src="__ROOT__/Admin/assets/vendor/jquery/jquery.min.js"></script>
 	<style>
-		p{
-			text-indent: 2em;  /*em是相对单位，2em即现在一个字大小的两倍*/
-		}
+		p{text-indent: 2em;}
 	</style>
 </head>
 
@@ -32,34 +30,10 @@
 <!-- WRAPPER -->
 <div id="wrapper">
 	<!-- 导航栏 -->
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="brand" style="height: 81px">
-                <span style="color: #2B333E; font-weight: bold; font-size: 25px; line-height: 0px">
-                    沈阳价格价业鉴证服务中心
-                </span>
-			<span style="color: #00AAFF; font-weight: bold; font-size: 20px; line-height: 0px">
-                    Shenyang Price Assessment Service Center
-                </span>
-		</div>
-	</nav>
+	<include file="./Admin/View/header.html" />
 	<!-- END 导航栏杆 -->
-	<!-- LEFT SIDEBAR -->
-	<div id="sidebar-nav" class="sidebar">
-		<div class="sidebar-scroll">
-			<nav>
-				<ul class="nav">
-					<li><a href="__ROOT__/index.php/Admin/Index" class=""><i class="lnr lnr-home"></i> <span>首页设置</span></a></li>
-					<li><a href="__ROOT__/index.php/Admin/Pages/aboutus" class=""><i class="lnr lnr-code"></i> <span>关于我们</span></a></li>
-					<li><a href="__ROOT__/index.php/Admin/Pages/server" class=""><i class="lnr lnr-chart-bars"></i> <span>服务内容</span></a></li>
-					<li><a href="__ROOT__/index.php/Admin/Pages/example" class=""><i class="lnr lnr-cog"></i> <span>合作案例</span></a></li>
-					<li><a href="__ROOT__/index.php/Admin/Pages/comnew" class="active"><i class="lnr lnr-alarm"></i> <span>公司动态</span></a></li>
-					<li><a href="__ROOT__/index.php/Admin/Pages/law" class=""><i class="lnr lnr-dice"></i> <span>法律法规</span></a></li>
-					<li><a href="__ROOT__/index.php/Admin/Pages/collaborate" class=""><i class="lnr lnr-dice"></i> <span>合作单位</span></a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-	<!-- END LEFT SIDEBAR -->
+	<!--//左侧导航栏-->
+	<include file="./Admin/View/leftNav.html" />
 	<!-- MAIN -->
 	<div class="main">
 		<!--//主窗口部分-->
@@ -77,7 +51,7 @@
 						<td>{$v.year} 年 {$v.month} 月 {$v.day} 日</td>
 						<td>{$v.header}</td>
 						<td style="width: 600px"><p>{$v.contents}</p></td>
-						<td align="center">
+						<td align="center" style="width: 100px">
 							<a href="__ROOT__/index.php/Admin/Pages/comnewEdit?id={$v.id}">修改</a> |
 							<a href="__ROOT__/index.php/Admin/EditPages/comnewDel?id={$v.id}">删除</a>
 						</td>
@@ -112,6 +86,8 @@
 <script src="__ROOT__/Admin/assets/scripts/klorofil-common.js"></script>
 <script>
     $(function(){
+        $(".dropdown").removeClass("active");
+        $("#eNew").addClass("active");
         $("#disNew").slideDown("slow");
     });
 </script>

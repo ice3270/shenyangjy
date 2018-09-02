@@ -153,4 +153,11 @@ class PagesController extends Controller {
         //end 页脚相关数据信息
         $this->display("page-server");
     }
+
+    public function subCallus(){
+        $m = M("callus_mes");
+        $m->data($_POST)->add();
+
+        $this->success("感谢您的留言", U("/Home/Index"), 3);
+    }
 }

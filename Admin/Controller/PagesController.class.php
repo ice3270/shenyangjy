@@ -251,4 +251,27 @@ class PagesController extends Controller {
 
         $this->display("law_file");
     }
+
+    public function callus(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
+
+        $User = M('callus_mes');
+        $count = $User->count();// 查询满足要求的总记录数
+        $page=new \Org\Bjy\Page($count,10);
+        $list=$User->limit($page->firstRow.','.$page->listRows)->select();
+        $show=$page->show();
+
+        $this->assign('list',$list);// 赋值数据集
+        $this->assign('page',$show);// 赋值分页输出
+        $this->display("callus_mes"); // 输出模板
+
+
+
+//        $c = M("callus_mes");
+//        $c_info = $c->select();
+//        $this->assign("c_info", $c_info);
+//        $this->display("callus_mes");
+    }
 }

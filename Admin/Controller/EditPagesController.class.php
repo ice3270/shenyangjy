@@ -457,4 +457,14 @@ class EditPagesController extends Controller
 
         $http::download($downloadfile, $fName);
     }
+
+    public function cMesDel(){
+        if(empty(session("username"))){
+            $this->error("管理员没有登录，请先登录！", U("/Admin/Index/index") ,3);
+        }
+        //数据库操作
+        $m = M("callus_mes");
+        $m->where("id = {$_GET['id']}")->delete();
+        $this->success("删除成功", U("/Admin/Pages/callus"), 3);
+    }
 }

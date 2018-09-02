@@ -52,7 +52,7 @@
                     <!-- 一组 Banner元素-->
                     <foreach name="banner_info" item="v" key="k">
                         <div class="item active">
-                            <img src="__ROOT__/Uploads/Images/Banner/banner{$k + 1}.png?ran={$ran}" class="img-responsive" alt="Slider Image">
+                            <img src="__ROOT__/Uploads/Images/Banner/banner{$k + 1}.png" class="img-responsive" alt="Slider Image">
                             <div class="carousel-caption">
                                 <h2 class="hero-heading">{$v.banner_header}</h2>
                                 <br><br>
@@ -108,7 +108,7 @@
                         <p>{$company_info.company_text}</p>
                     </div>
                     <div class="col-md-6">
-                        <img src="__ROOT__/Uploads/Images/Company/companyIndex.png?ran={$ran}" class="img-responsive" alt="Image Intro" style="height: 380px;margin:0 auto;">
+                        <img src="__ROOT__/Uploads/Images/Company/companyIndex.png" class="img-responsive" alt="Image Intro" style="height: 380px;margin:0 auto;">
                     </div>
                 </div>
             </div>
@@ -140,7 +140,7 @@
                 <div class="tab-content">
                 <foreach name="slogan_info" item="v" key="k">
                     <div class="tab-pane fade in text-center" id="tab-bottom{$k + 1}">
-                        <img src="__ROOT__/Uploads/Images/Slogan/sloganImg{$k + 1}.png?ran={$ran}" class="img-responsive center-block margin-bottom-30px" style="height: 220px;">
+                        <img src="__ROOT__/Uploads/Images/Slogan/sloganImg{$k + 1}.png" class="img-responsive center-block margin-bottom-30px" style="height: 220px;">
                         <h3 class="text-accent-color">{$v.slogan_header}</h3>
                         <p class="lead">{$v.slogan_text}</p>
                     </div>
@@ -195,7 +195,7 @@
                     <div class="col-md-4">
                         <!--大图标大标题大内容-->
                         <div class="news-item news-featured">
-                            <img src="__ROOT__/Uploads/Images/Business/business1.png?ran={$ran}" class="img-responsive">
+                            <img src="__ROOT__/Uploads/Images/Business/business1.png" class="img-responsive">
                             <h3 class="news-title">{$business_info[0].business_header}</h3>
                             <p style="text-indent: 0px;">{$business_info[0].business_text}</p>
                         </div>
@@ -206,7 +206,7 @@
                             <for start="1" end="6">
                                 <div class="col-md-6 col-sm-6">
                                     <div class="news-item margin-bottom-30px clearfix">
-                                        <img src="__ROOT__/Uploads/Images/Business/business{$i + 1}.png?ran={$ran}" class="img-responsive pull-left" style="height: 73px">
+                                        <img src="__ROOT__/Uploads/Images/Business/business{$i + 1}.png" class="img-responsive pull-left" style="height: 73px">
                                         <div class="right">
                                             <h3 class="news-title">{$business_info[$i].business_header}</h3>
                                             <p style="text-indent: 0px;">{$business_info[$i].business_text}</p>
